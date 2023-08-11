@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Running PyCharm remotely - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Telegram/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Type_hints/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#running-pycharm-remotely" class="nav-link">Running PyCharm remotely</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#current-situation" class="nav-link">Current situation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#how-to-run-our-cmamp-container-directly-from-pycharm" class="nav-link">How to run our cmamp container directly from PyCharm</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#how-to-review-a-pr-inside-pycharm" class="nav-link">How to review a PR inside Pycharm</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#how-to-edit-remote-code" class="nav-link">How to edit remote code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#general-ssh-config" class="nav-link">General ssh config</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#db-connection-via-ssh" class="nav-link">DB connection via ssh</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#deployment-with-remote-repository-through-sync" class="nav-link">Deployment with remote repository (through sync)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#pudb-remote-debugging-todo" class="nav-link">PUDB - remote debugging - ToDo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#how-to-run-tests-inside-a-container" class="nav-link">How to run tests inside a container</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#installing-pycharm-professional" class="nav-link">Installing PyCharm Professional</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#windows" class="nav-link">Windows</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#macos" class="nav-link">macOS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#linux" class="nav-link">Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#connecting-via-pycharm-gateway-ssh" class="nav-link">Connecting via PyCharm gateway (SSH)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#connecting-via-vnc" class="nav-link">Connecting via VNC</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#configuration" class="nav-link">Configuration</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#reflow" class="nav-link">Reflow</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#some-recommended-plug-ins" class="nav-link">Some recommended plug-ins</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="running-pycharm-remotely">Running PyCharm remotely</h1>
+<p>There are multiple ways to develop on a remote server using PyCharm</p>
+<ol>
+<li>
+<p>VNC approach</p>
+<ul>
+<li>PyCharm runs locally on the server using a "virtual screen"</li>
+<li>Your laptop interacts with a VNC server to get the GUI locally</li>
+<li>Pros:</li>
+<li>Everything works</li>
+<li>You can run anything like you are local on the server, since you are in
+    practice just using a virtual screen</li>
+<li>Cons:</li>
+<li>Without enough bandwidth it's slow and not snappy enough</li>
+</ul>
+</li>
+<li>
+<p>X11 approach</p>
+<ul>
+<li>Same as VNC, but instead of sending bitmaps through VNC, a "compressed"
+  version of the GUI is sent to the local computer directly</li>
+<li>Pros:</li>
+<li>Maybe faster than VNC</li>
+<li>PyCharm window is like a native window on your laptop</li>
+<li>Cons:</li>
+<li>X11 is old crap developed long time again and not really supported any
+    more</li>
+<li>One needs to tunnel X11 traffic, set things up, and so on</li>
+</ul>
+</li>
+<li>
+<p>PyCharm Gateway</p>
+<ul>
+<li>New client-server architecture for PyCharm</li>
+<li>A "headless" PyCharm runs on the server</li>
+<li>A GUI client PyCharm runs on your laptop</li>
+<li>Pros</li>
+<li>It's as fast as possible, probably as fast as running locally</li>
+<li>Cons</li>
+<li>Need a PyCharm pro license (not a problem, we have money)</li>
+<li>It's not super polished: kind of beta, but it will get better and better</li>
+</ul>
+</li>
+<li>
+<p>PyCharm Remote Set-up</p>
+<ul>
+<li>This is described below in
+  <a href="https://docs.google.com/document/d/1atNNMnmT6ZdIPSEtDaWZiBkL_fo5BHjPHy06He6zEZU/edit#heading=h.e0xo9fe70sks">PyCharm - Advanced tip and tricks</a></li>
+<li>Edit locally and then PyCharm moves the files back and forth</li>
+<li>Pros</li>
+<li>Only requires ssh</li>
+<li>Cons</li>
+<li>You can't run / debug remotely</li>
+</ul>
+</li>
+</ol>
+<h2 id="current-situation">Current situation</h2>
+<p>Approach 1) seems to require lots of memory and CPU and it's not really fast.</p>
+<p>Approach 2) works but it's a pain to set-up and slow.</p>
+<p>We want to try with 3)</p>
+<ul>
+<li>
+<p>TODO(gp): @Juraj pls a short tutorial on how to install</p>
+</li>
+<li>
+<p>TODO(gp): @Juraj understand if it works, if it's fast, and if it requires less
+  memory</p>
+</li>
+</ul>
+<h1 id="how-to-run-our-cmamp-container-directly-from-pycharm">How to run our cmamp container directly from PyCharm</h1>
+<p>PyCharm allows to run commands directly inside a container</p>
+<p>See
+<a href="https://www.jetbrains.com/help/pycharm/using-docker-as-a-remote-interpreter.html">https://www.jetbrains.com/help/pycharm/using-docker-as-a-remote-interpreter.html</a></p>
+<p>In fact when we do <code>i docker_bash</code> we launch a container and run bash inside it,
+but PyCharm can do the same thing</p>
+<p>TODO(gp): @Juraj Let's both try this. There are some notes below about it</p>
+<h1 id="how-to-review-a-pr-inside-pycharm">How to review a PR inside Pycharm</h1>
+<p>CTRL + SHIFT + A -&gt; View Pull Request</p>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image13.png" />{width="3.612198162729659in"
+height="4.932292213473316in"}</p>
+<h1 id="how-to-edit-remote-code">How to edit remote code</h1>
+<p>You need to use a certain local directory (e.g.,
+/Users/saggese/src/commodity_research1) and a remote directory (e.g.,
+/wd/saggese/src/commodity_research1)</p>
+<p>They need to be synced at the same git branch (e.g., master or
+AmpTask1112_Audit_amp_Docker_system_03)</p>
+<p>Set-up Deployment</p>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image3.png" />{width="4.810558836395451in"
+height="3.51540791776028in"}</p>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image10.png" />{width="3.9114588801399823in"
+height="1.6807655293088364in"}</p>
+<p>The deployment options are</p>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image9.png" />{width="3.123700787401575in"
+height="2.78830271216098in"}</p>
+<p>You can see what file is changed in the file transfer window:</p>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image14.png" />{width="6.5in"
+height="1.2083333333333333in"}</p>
+<p>pycharm</p>
+<ul>
+<li>Develop on one node, sync, run on the server</li>
+<li>
+<p>Run local application with venv</p>
+</li>
+<li>
+<p>Database</p>
+</li>
+<li>
+<p>Run application inside Docker</p>
+</li>
+<li>
+<p>Run application remotely inside Docker</p>
+</li>
+</ul>
+<h1 id="general-ssh-config">General ssh config</h1>
+<ul>
+<li>
+<p>File | Settings | Tools | SSH Configurations</p>
+</li>
+<li>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image7.png" />{width="3.802863079615048in"
+    height="1.4626399825021872in"}</p>
+</li>
+<li>
+<p>Once setup, ssh config can be used for all tools in PyCharm.</p>
+</li>
+<li>
+<p>Remote Interpreter</p>
+</li>
+<li>
+<p>DataGrip</p>
+</li>
+<li>
+<p>Deployment</p>
+</li>
+<li>
+<p>Etc.</p>
+</li>
+</ul>
+<h1 id="db-connection-via-ssh">DB connection via ssh</h1>
+<p>Note: PyCharm Professional DataGrip is used as an example. There are numerous
+open source alternatives such as <a href="https://dbeaver.io/">Beaver</a>. Config below
+should apply to them also.</p>
+<ul>
+<li>
+<p>To add a new data source in DataGrip, go to the database section in the lower
+  left corner.</p>
+</li>
+<li>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image4.png" />{width="2.7734372265966756in"
+    height="2.7734372265966756in"}</p>
+</li>
+<li>
+<p>Then pick your desired data source from the dropdown in the upper right
+  corner.</p>
+</li>
+<li>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image6.png" />{width="4.164062773403325in"
+    height="2.028646106736658in"}</p>
+</li>
+<li>
+<p>You will be presented with a dummy config that needs to be replaced with
+  proper data as shown below.</p>
+</li>
+<li>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image8.png" />{width="4.158922790901137in"
+    height="3.0320844269466316in"}</p>
+</li>
+<li>
+<p>Before that is done, be sure that proper ssh info is added in SSH/SSL section.</p>
+</li>
+<li>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image11.png" />{width="2.776042213473316in"
+    height="0.598069772528434in"}</p>
+</li>
+</ul>
+<h1 id="deployment-with-remote-repository-through-sync">Deployment with remote repository (through sync)</h1>
+<p>Note: Before setting up deployment, pull the cmamp repo on EC2 instance and use
+the same name as on your local machine (example: cmamp1). Always try to keep
+both repos in sync via git. For more subtle and simpler changes use File |
+Reload All From Disk . This will upload changes to the remote repo.</p>
+<ul>
+<li>
+<p>Tools | Deployment | Configuration</p>
+</li>
+<li>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image1.png" />{width="4.893396762904637in"
+    height="2.0781255468066493in"}</p>
+</li>
+<li>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image12.png" />{width="4.838542213473316in"
+    height="1.1398490813648294in"}</p>
+</li>
+<li>
+<p>Tools | Deployment | Options</p>
+</li>
+<li>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image2.png" />{width="4.671411854768154in"
+    height="3.2864588801399823in"}</p>
+<ul>
+<li>Uncheck "Skip external changes" and check "Delete remote files"</li>
+</ul>
+</li>
+<li>
+<p>Tools | Deployment | Automatic Upload</p>
+</li>
+<li>
+<p>Check it</p>
+</li>
+<li>
+<p>Tools | Deployment | Browse Remote Host</p>
+</li>
+<li>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image5.png" />{width="5.394192913385827in"
+    height="1.765625546806649in"}</p>
+</li>
+</ul>
+<h1 id="pudb-remote-debugging-todo">PUDB - remote debugging - ToDo</h1>
+<h1 id="how-to-run-tests-inside-a-container">How to run tests inside a container</h1>
+<p><a href="https://www.jetbrains.com/help/pycharm/using-docker-compose-as-a-remote-interpreter.html#docker-compose-remote">https://www.jetbrains.com/help/pycharm/using-docker-compose-as-a-remote-interpreter.html#docker-compose-remote</a></p>
+<p>Note that the "start SSH session..." action is available only in PyCharm
+Professional Edition, while the terminal itself is available in both
+Professional and Community editions.</p>
+<h1 id="installing-pycharm-professional">Installing PyCharm Professional</h1>
+<h2 id="windows">Windows</h2>
+<ol>
+<li>Download the installer using this
+   <a href="https://www.jetbrains.com/pycharm/download/#section=windows">link</a></li>
+<li>Run the installer and follow the wizard steps.</li>
+<li>To run PyCharm, find it in the Windows Start menu or use the desktop
+   shortcut.</li>
+</ol>
+<h2 id="macos">macOS</h2>
+<p>There are separate disk images for Intel and Apple Silicon processors.</p>
+<ol>
+<li>
+<p>Download the image, based on your processor using this
+   <a href="https://www.jetbrains.com/pycharm/download/#section=mac">link</a></p>
+</li>
+<li>
+<p>Mount the image and drag the PyCharm app to the Applications folder.</p>
+</li>
+<li>
+<p>Run the PyCharm app from the Applications directory, Launchpad, or Spotlight.</p>
+</li>
+</ol>
+<h2 id="linux">Linux</h2>
+<p>**Using tar archives **</p>
+<ol>
+<li>
+<p>Download the tar archive using this
+   <a href="https://www.jetbrains.com/pycharm/download/#section=linux">link</a></p>
+</li>
+<li>
+<p>Unpack the pycharm-*.tar.gz file to a different folder, if your current
+   Download folder doesn't support file execution:</p>
+</li>
+</ol>
+<p>```</p>
+<blockquote>
+<p>tar xzf pycharm-*.tar.gz -C <new_archive_folder>
+   ``
+   ```</p>
+</blockquote>
+<p>The recommended installation location according to the filesystem hierarchy
+standard (FHS) is <code>/opt</code>. To install PyCharm into this directory, enter the
+following command:</p>
+<pre><code>&gt; sudo tar xzf pycharm-\*.tar.gz -C /opt/
+</code></pre>
+<ol>
+<li>Switch to the <strong>bin</strong> subdirectory:</li>
+</ol>
+<p>```</p>
+<blockquote>
+<p>cd <new archive folder>/pycharm-*/bin
+   # E.g.,
+cd /opt/pycharm-*/bin
+   ```</p>
+</blockquote>
+<ol>
+<li>Run pycharm.sh from the bin subdirectory
+   ```<blockquote>
+<p>sh pycharm.sh
+   ```</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>Using snap packages</strong></p>
+<ol>
+<li>For Ubuntu 16.04 and later, you can use snap packages to install PyCharm.</li>
+</ol>
+<p>```</p>
+<blockquote>
+<p>sudo snap install pycharm-professional --classic
+   # or
+sudo snap install pycharm-community --classic
+   ```</p>
+</blockquote>
+<ol>
+<li>Run in the Terminalu
+   ```<blockquote>
+<p>pycharm-professional
+   # or
+pycharm-community
+   # or
+pycharm-educational
+   ```</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="connecting-via-pycharm-gateway-ssh">Connecting via PyCharm gateway (SSH)</h1>
+<p>The first thing you need to do is sign up for a free
+<a href="https://www.jetbrains.com/ru-ru/remote-development/gateway/">trial license</a> or
+use it if it already have</p>
+<p>Then make sure you have a VPN connection to our VPC</p>
+<ol>
+<li>Click on Connect via SSH</li>
+<li>Into Username: write &lt;<yours_dev_server_username>&gt; Example: richard</li>
+<li>Into Host: write &lt;<dev_server_ip_address>&gt; Example: 172.30.2.136</li>
+<li>Mark the Specify private key check box and locate the private key from the
+    zip which was sent in the onboarding process. Example: crypto.pub</li>
+<li>Leave Port: 22 as it is.</li>
+<li>Click on Check Connection and Continue.</li>
+<li>Select IDE version: PyCharm Py 213.6777.x</li>
+<li>Locate your directory. Example: /data/richard</li>
+<li>Click on Download and Start IDE.</li>
+</ol>
+<h2 id="connecting-via-vnc">Connecting via VNC</h2>
+<p>Make sure you have a VPN connection.</p>
+<p><strong>Installing VNC</strong></p>
+<p>Install VNC using this link:</p>
+<p><a href="https://www.realvnc.com/en/connect/download/viewer/windows/">https://www.realvnc.com/en/connect/download/viewer/windows/</a></p>
+<p>Sysadmin has sent you:</p>
+<ul>
+<li><code>os_password.txt</code></li>
+<li>your username <code>$USER</code></li>
+<li>a key <code>crypto.pub</code> that looks like:
+  <code>-----BEGIN OPENSSH PRIVATE KEY-----
+  b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+  NhAAAAAwEAAQAAAYEA0IQsLy1lL3bhPT+43sht2/m9tqZm8sEQrXMAVtfm4ji/LXMr7094 ...
+  hakqVTlQ2sr0YTAAAAHnNhZ2dlc2VAZ3BtYWMuZmlvcy1yb3V0ZXIuaG9tZQECAwQ=
+  -----END OPENSSH PRIVATE KEY-----</code></li>
+</ul>
+<p>Let's say you are connected via VNC.</p>
+<ol>
+<li>Login into the OS.</li>
+<li>
+<p>Run pycharm.sh using terminal (should be there)</p>
+<p>```</p>
+<blockquote>
+<p>bash /opt/pycharm-community-2021.2.3/bin/pycharm.sh
+```</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="configuration">Configuration</h1>
+<h2 id="reflow">Reflow</h2>
+<p>Set the reflow to reindent</p>
+<p><img alt="" src="docs/Tools-PyCharm_figs/image15.png" />{width="6.5in"
+height="4.486111111111111in"}</p>
+<h1 id="some-recommended-plug-ins">Some recommended plug-ins</h1>
+<ul>
+<li>vim</li>
+<li>Grazie</li>
+<li><a href="https://plugins.jetbrains.com/plugin/7234-wrap-to-column">Wrap-to-column</a></li>
+<li>GitHub Copilot</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>How to integrate repos - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../HTMLcov_server/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../How_to_organize_your_work/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#concepts" class="nav-link">Concepts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#invariants-for-the-integration-workflows" class="nav-link">Invariants for the integration workflows</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#integration-process" class="nav-link">Integration process</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#preparation" class="nav-link">Preparation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#integration" class="nav-link">Integration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#double-check-the-integration" class="nav-link">Double-check the integration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#run-tests" class="nav-link">Run tests</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<!--ts-->
+<ul>
+<li><a href="#concepts">Concepts</a></li>
+<li><a href="#invariants-for-the-integration-set-up">Invariants for the integration set-up</a></li>
+<li><a href="#integration-process">Integration process</a><ul>
+<li><a href="#preparation">Preparation</a></li>
+<li><a href="#integration">Integration</a></li>
+<li><a href="#double-check-the-integration">Double-check the integration</a></li>
+<li><a href="#run-tests">Run tests</a></li>
+</ul>
+</li>
+</ul>
+<!--te-->
+<h1 id="concepts">Concepts</h1>
+<ul>
+<li>We have two dirs storing two forks of the same repo<ul>
+<li>Files are touched (e.g., added, modified, deleted) in each forks</li>
+<li>The most problematic files are the files that are modified in both forks</li>
+<li>Files that are added or deleted in one fork, should be added / deleted also
+  in the other fork</li>
+</ul>
+</li>
+<li>Often we can integrate "by directory", i.e., finding entire directories that
+  were touched in one branch but not in the other<ul>
+<li>In this case we can simply copy the entire dir from one dir to the other</li>
+</ul>
+</li>
+<li>
+<p>Other times we need to integrate "by file"</p>
+</li>
+<li>
+<p>There are various interesting Git reference points:
+    1) the branch point for each fork, at which the integration branch was 
+       started
+    2) the last integration point for each fork, at which the repos are the same,
+       or at least aligned</p>
+</li>
+</ul>
+<h1 id="invariants-for-the-integration-workflows">Invariants for the integration workflows</h1>
+<ul>
+<li>The user runs commands in an abs dir, e.g., <code>/Users/saggese/src/{amp1,cmamp1}</code></li>
+<li>The user refers in the command line to <code>dir_basename</code>, which is the basename of
+  the integration directories (e.g., <code>amp1</code>, <code>cmamp1</code>, <code>sorrentum1</code>)</li>
+<li>The <code>src_dir_basename</code> is the one where the command is issued</li>
+<li>The <code>dst_dir_basename</code> is assumed to be parallel to the <code>src_dir_basename</code></li>
+<li>The dirs are then transformed in absolute dirs <code>abs_src_dir</code></li>
+</ul>
+<h1 id="integration-process">Integration process</h1>
+<h2 id="preparation">Preparation</h2>
+<ul>
+<li>
+<p>Pull master</p>
+</li>
+<li>
+<p>Crete the integration branches
+  ```</p>
+<blockquote>
+<p>cd cmamp1
+i integrate_create_branch --dir-basename cmamp1
+cd sorrentum1
+i integrate_create_branch --dir-basename sorrentum1
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>Remove white spaces from both source and destination repos:
+  ```bash</p>
+<blockquote>
+<p>dev_scripts/clean_up_text_files.sh
+git commit -am "Remove white spaces"; git push
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>One should still run the regressions out of paranoia since some golden
+    outcomes can be changed
+    <code>&gt; i gh_create_pr --no-draft
+    &gt; i gh_workflow_list</code></p>
+</li>
+<li>
+<p>Remove empty files:
+  ```bash</p>
+<blockquote>
+<p>find . -type f -empty -print | grep -v .git | grep -v <strong>init</strong> | grep -v ".log$" | grep -v ".txt$" | xargs git rm
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>TODO(gp): Add this step to <code>dev_scripts/clean_up_text_files.sh</code></p>
+</li>
+<li>
+<p>Align <code>lib_tasks.py</code>:
+  ```bash</p>
+<blockquote>
+<p>vimdiff ~/src/{amp1,cmamp1}/tasks.py; diff_to_vimdiff.py --dir1 ~/src/amp1 --dir2 ~/src/cmamp1 --subdir helpers
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>Lint both dirs:
+  ```bash</p>
+<blockquote>
+<p>cd amp1
+i lint --dir-name . --only-format
+cd cmamp1
+i lint --dir-name . --only-format
+  ```</p>
+</blockquote>
+</li>
+</ul>
+<p>or at least the files touched by both repos:
+  ```bash</p>
+<blockquote>
+<p>i integrate_files --file-direction only_files_in_src
+cat tmp.integrate_find_files_touched_since_last_integration.cmamp1.txt tmp.integrate_find_files_touched_since_last_integration.amp1.txt | sort | uniq &gt;files.txt
+FILES=$(cat files.txt)
+i lint --only-format -f "$FILES"
+  ```
+  - This should be done as a single separated PR to be reviewed separately</p>
+</blockquote>
+<ul>
+<li>Align <code>lib_tasks.py</code>:
+  ```bash<blockquote>
+<p>vimdiff ~/src/{amp1,cmamp1}/tasks.py; diff_to_vimdiff.py --dir1 ~/src/amp1 --dir2 ~/src/cmamp1 --subdir helpers
+  ```</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="integration">Integration</h2>
+<ul>
+<li>
+<p>Create the integration branches:
+  ```bash</p>
+<blockquote>
+<p>cd amp1
+i integrate_create_branch --dir-basename amp1
+i integrate_create_branch --dir-basename sorrentum1
+cd cmamp1
+i integrate_create_branch --dir-basename cmamp1
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>Check what files were modified in each fork since the last integration:
+  ```bash</p>
+<blockquote>
+<p>i integrate_files --file-direction common_files
+i integrate_files --file-direction common_files --src-dir-basename cmamp1 --dst-dir-basename sorrentum1</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>i integrate_files --file-direction only_files_in_src
+i integrate_files --file-direction only_files_in_dst
+  ```</p>
+</blockquote>
+<ul>
+<li>Look for directory touched on only one branch:
+  ```bash<blockquote>
+<p>i integrate_files --file-direction common_files --mode "print_dirs"
+i integrate_files --file-direction only_files_in_src --mode "print_dirs"
+i integrate_files --file-direction only_files_in_dst --mode "print_dirs"
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>If we find dirs that are touched in one branch but not in the other we can
+  copy / merge without running risks
+  ```bash</p>
+<blockquote>
+<p>i integrate_diff_dirs --subdir $SUBDIR -c
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>Check which change was made in each side since the last integration
+  ```bash
+  # Find the integration point:</p>
+<blockquote>
+<p>i integrate_files --file-direction common_files
+  ...
+  last_integration_hash='813c7e763'</p>
+</blockquote>
+</li>
+</ul>
+<p># Diff the changes in each side from the integration point:</p>
+<blockquote>
+<p>i git_branch_diff_with -t hash -h 813c7e763 -f ...
+git difftool 813c7e763 ...
+  ```</p>
+</blockquote>
+<ul>
+<li>
+<p>Check which files are different between the dirs:
+  ```bash</p>
+<blockquote>
+<p>i integrate_diff_dirs
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>Diff dir by dir
+  ```bash</p>
+<blockquote>
+<p>i integrate_diff_dirs --subdir dataflow/system
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>Copy by dir
+  ```bash</p>
+<blockquote>
+<p>i integrate_diff_dirs --subdir market_data -c
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>Sync a dir to handle moved files</p>
+</li>
+<li>Assume that there is a dir where files were moved
+  ```bash<blockquote>
+<p>invoke integrate_diff_dirs
+  ...
+  ... Only in .../cmamp1/.../alpha_numeric_data_snapshots: alpha
+  ... Only in .../amp1/.../alpha_numeric_data_snapshots: latest
+  ```</p>
+</blockquote>
+</li>
+<li>You can accept the <code>cmamp1</code> side with:
+  ```bash<blockquote>
+<p>invoke integrate_rsync .../cmamp1/.../alpha_numeric_data_snapshots/
+  ```</p>
+</blockquote>
+</li>
+<li>This corresponds to:
+  ```bash<blockquote>
+<p>rsync --delete -a -r {src_dir}/ {dst_dir}/
+  ```</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="double-check-the-integration">Double-check the integration</h2>
+<ul>
+<li>
+<p>Check that the regressions are passing on GH
+  ```bash</p>
+<blockquote>
+<p>i gh_create_pr --no-draft
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>Check the files that were changed in both branches (i.e., the "problematic
+  ones") since the last integration and compare them to the base in each branch
+  ```bash</p>
+<blockquote>
+<p>cd amp1
+i integrate_diff_overlapping_files --src-dir-basename "amp1" --dst-dir-basename "cmamp1"
+cd cmamp1
+i integrate_diff_overlapping_files --src-dir-basename "cmamp1" --dst-dir-basename "amp1"
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>Read the changes to Python files:
+  ```bash</p>
+<blockquote>
+<p>cd amp1
+i git_branch_diff_with -t base --keep-extensions py
+cd cmamp1
+i git_branch_diff_with -t base --keep-extensions py
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>Quickly scan all the changes in the branch compared to the base:
+  ```</p>
+<blockquote>
+<p>cd amp1
+i git_branch_diff_with -t base
+cd cmamp1
+i git_branch_diff_with -t base
+  ```</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="run-tests">Run tests</h2>
+<ul>
+<li>
+<p>Check <code>amp</code> / <code>cmamp</code> using GH actions:
+  ```bash</p>
+<blockquote>
+<p>i gh_create_pr --no-draft
+i pytest_collect_only
+i gh_workflow_list
+  ```</p>
+</blockquote>
+</li>
+<li>
+<p>Check <code>lem</code> on dev1
+  ```bash
+  # Clean everything.</p>
+<blockquote>
+<p>git reset --hard; git clean -fd; git pull; (cd amp; git reset --hard; git clean -fd; git pull)</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>i git_pull</p>
+<p>AM_BRANCH=AmpTask1786_Integrate_20220916
+(cd amp; gco $AM_BRANCH)</p>
+<p>i pytest_collect_only
+i pytest_buildmeister</p>
+<p>i git_branch_create -b $AM_BRANCH
+  ```</p>
+</blockquote>
+<ul>
+<li>
+<p>Check <code>lime</code> on dev4</p>
+</li>
+<li>
+<p>Check <code>orange</code> on dev1</p>
+</li>
+<li>
+<p>Check <code>dev_tools</code> on dev1</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

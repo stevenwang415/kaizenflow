@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>DataFlow specification - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Contributor_Scorecard/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../DataPull/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#dataflow-specification" class="nav-link">DataFlow specification</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#config" class="nav-link">Config</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#time-semantics" class="nav-link">Time semantics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#different-views-of-system-components" class="nav-link">Different views of System components</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#architecture" class="nav-link">Architecture</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dataflow-computing" class="nav-link">DataFlow computing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dataflow-computation-semantics" class="nav-link">DataFlow Computation Semantics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#backtest-and-experiment" class="nav-link">Backtest and Experiment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#oms" class="nav-link">OMS</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#high-level-invariants" class="nav-link">High-level invariants</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="dataflow-specification">DataFlow specification</h1>
+<h2 id="config">Config</h2>
+<p><strong>Config</strong>. A <code>Config</code> is a dictionary-like object that represents parameters
+used to build and configure other objects (e.g., a DAG or a System).</p>
+<p>Each config is a hierarchical structure which consists of <strong>Subconfigs</strong> and
+<strong>Leaves</strong>.</p>
+<p><strong>Subconfig</strong> is a nested object which represents a Config inside another
+config. A Subconfig of a Subconfig is a Subconfig of a Config, i.e. the relation
+is transitive.</p>
+<p><strong>Leaf</strong> is any object inside a Config that is used to build another object that
+is not in itself a Config.</p>
+<p>Note that a dictionary or other mapping objects are not permitted inside a
+Config: each dictionary-like object should be converted to a Config and become a
+Subconfig.</p>
+<h3 id="config-representation-and-properties">Config representation and properties</h3>
+<p>A Config can be represented as a dictionary or a string.</p>
+<p>Example of a dictionary representation:</p>
+<pre><code class="language-python">config1={
+    &quot;resample_1min&quot;: False,
+    &quot;client_config&quot;: {
+        &quot;universe&quot;: {
+            &quot;full_symbols&quot;: [&quot;binance::ADA_USDT&quot;],
+            &quot;universe_version&quot;: &quot;v3&quot;,
+        },
+    },
+    &quot;market_data_config&quot;: {&quot;start_ts&quot;: start_ts, &quot;end_ts&quot;: end_ts},
+}
+</code></pre>
+<p>In the example above:
+- "resample_1min" is a leaf of the <code>config1</code>
+- "client_config" is a subconfig of <code>config1</code>
+- "universe" is a subconfig of "client_config"
+- "market_data" config is a subconfig of "config1"
+- "start_ts" and "end_ts" are leaves of "market_data_config" and <code>config1</code></p>
+<p>Example of a string representation:</p>
+<p><img alt="" src="./sorrentum_figs/image14.png" />{width="6.854779090113736in"
+height="1.2303444881889765in"}</p>
+<ul>
+<li>The same values are annotated with <code>marked_as_used</code>, <code>writer</code> and <code>val_type</code><ul>
+<li><code>marked_as_used</code> determines whether the object was used to construct another
+  object</li>
+<li><code>writer</code> provides a stacktrace of the piece of code which marked the object
+  as used</li>
+<li><code>val_type</code> is a type of the object</li>
+</ul>
+</li>
+</ul>
+<h3 id="assigning-and-getting-config-items">Assigning and getting Config items</h3>
+<ul>
+<li>Config object has its own implementations of <code>__setitem__</code> and <code>__getitem__</code></li>
+<li>A new value can be set freely like in a python Dict object</li>
+<li>Overwriting the value is prohibited if the value has already been used</li>
+</ul>
+<p>Since Config is used to guarantee that the construction of any objects is
+reproducible, there are 2 methods to <code>get</code> the value.</p>
+<ul>
+<li>
+<p><code>get_and_mark_as_used</code> is utilized when a leaf of the config is used to
+  construct another object</p>
+<ul>
+<li>
+<p>When the value is used inside a constructor</p>
+</li>
+<li>
+<p>When the value is used as a parameter in a function</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Note that when selecting a subconfig the subconfig itself is not marked as used,
+but its leaves are. For this reason, the user should avoid marking subconfigs as
+used and instead select leaves separately.</p>
+<p>Example of marking the subconfig as used:</p>
+<pre><code class="language-python">_ = config.get_and_mark_as_used(&quot;market_data_config&quot;)
+</code></pre>
+<p><img alt="" src="./sorrentum_figs/image13.png" />{width="6.5in" height="1.1944444444444444in"}</p>
+<p>Example of marking the leaf as used:</p>
+<pre><code class="language-python">_ = config.get_and_mark_as_used((&quot;market_data_config&quot;, &quot;end_ts&quot;))
+</code></pre>
+<p><img alt="" src="./sorrentum_figs/image10.png" />{width="6.5in" height="1.1388888888888888in"}</p>
+<ul>
+<li>
+<p><code>__getitem__</code> is used to select items for uses which do not affect the
+  construction of other objects:</p>
+<ul>
+<li>Logging, debugging and printing</li>
+</ul>
+</li>
+</ul>
+<h2 id="time-semantics">Time semantics</h2>
+<p><strong>Time semantics</strong>. A DataFlow component can be executed or simulated
+accounting for different ways to represent the passing of time. E.g., it can be
+simulated in a timed or non-timed simulation, depending on how data is delivered
+to the system (as it is generated or in bulk with knowledge time).</p>
+<p><strong>Clock.</strong> A function that reports the current timestamp. There are 3 versions
+of clock:</p>
+<ol>
+<li>
+<p>Static clock. A clock that remains the same during a system run.</p>
+<p>a. Future peeking is allowed</p>
+</li>
+<li>
+<p>Replayed clock. A moving clock that can be in the past or future with
+    respect to a real clock</p>
+<p>a. Use time passing at the same pace of real-time wall-clock or</p>
+<p>b. Simulate time based on events, e.g., as soon as the workload
+corresponding to one timestamp is complete we move to the next timestamp,
+without waiting for the actual time to pass</p>
+<p>c. Future peeking is technically possible but is prohibited</p>
+</li>
+<li>
+<p>Real clock. The wall-clock time matches what we observe in real-life, data
+    is provided to processing units as it is produced by systems.</p>
+<p>a. Future peeking is not possible in principle</p>
+</li>
+</ol>
+<p><strong>Knowledge time.</strong> It is the time when data becomes available (e.g., downloaded
+or computed) to a system. Each row of data is tagged with the corresponding
+knowledge time. Data with knowledge time after the current clock time must not
+be observable in order to avoid future peeking.</p>
+<p><strong>Timed simulation</strong>. Sometimes referred to as historical, vectorized, bulk,
+batch simulation. In a timed simulation the data is provided with a clock that
+reports the current timestamp. Data with knowledge time after the current
+timestamp must not be observable in order to avoid future peeking.</p>
+<p>TODO(gp): Add an example of df with forecasts explaining the timing</p>
+<p><strong>Non-timed simulation</strong>. (Sometimes referred to as event-based, reactive
+simulation). Clock type is "static clock". Typically wall-clock time is a
+timestamp that corresponds to the latest knowledge time (or greater) in a
+dataframe. In this way all data in a dataframe is available because every row
+has a knowledge time that is less than or equal to the wall-clock time. Note
+that the clock is static, i.e. not moving. In a non-timed simulation, the data
+is provided in a dataframe for the entire period of interest.</p>
+<p>E.g., for a system predicting every 5 mins, all the input data are equally
+spaced on a 5-min grid and indexed with knowledge time.</p>
+<p>TODO(gp): Add an example of df with forecasts explaining the timing</p>
+<pre><code class="language-python">df[&quot;c&quot;] = (df[&quot;a&quot;] + df[&quot;b&quot;]).shift(1)
+</code></pre>
+<p><strong>Real-time execution</strong>. In real-time the clock type is "real clock".</p>
+<p>E.g., for a system predicting every 5 mins, one forecast is delivered every 5
+mins of wall-clock.</p>
+<p>TODO(Grisha): add an example.</p>
+<p><strong>Replayed simulation</strong>. In replayed simulation, the data is provided in the
+same "format" and with the same timing as it would be provided in real-time,
+but the clock type is "replayed clock".</p>
+<p>TODO(gp): Add an example of df with forecasts explaining the timing</p>
+<h2 id="different-views-of-system-components">Different views of System components</h2>
+<p><strong>Different implementations of a component</strong>. A DataFlow component is described
+in terms of an interface and can have several implementations at different
+levels of detail.</p>
+<p><strong>Reference implementation</strong>. A reference implementation is vendor-agnostic
+implementation of a component (e.g., DataFrameImClient, DataFrameBroker)</p>
+<p><strong>Vendor implementation</strong>. A vendor implementation is a vendor-specific
+implementation of a component (e.g., CcxtImClient, CcxtBroker).</p>
+<p><strong>Mocked implementation</strong>. A mocked implementation is a simulated version of a
+vendor-specific component (e.g., a DataFrameCcxtBroker). A mocked component can
+have the same timing semantics as the real-component (e.g., an asynchronous or
+reactive implementation) or not.</p>
+<h2 id="architecture">Architecture</h2>
+<p>In this section we summarize the responsibilities and the high level invariants
+of each component of a <code>System</code>.</p>
+<p>A <code>System</code> is represented in terms of a <code>Config</code>.
+- Each piece of a <code>Config</code> refers to and configures a specific part of the <code>System</code>
+- Each component should be completely configured in terms of a <code>Config</code></p>
+<h3 id="component-invariants">Component invariants</h3>
+<p>All data in components should be indexed by the knowledge time (i.e., when the
+data became available to that component) in terms of current time.</p>
+<p>Each component has a way to know:
+- what is the current time (e.g., the real-time machine time or the simulated
+  one)
+- the timestamp of the current data bar it's working on</p>
+<p>Each component
+- should print its state so that one can inspect how exactly it has been
+  initialized
+- can be serialized and deserialized from disk
+- can be mocked for simulating
+- should save data in a directory as it executes to make the system observable</p>
+<p>Models are described in terms of DAGs using the DataFlow framework</p>
+<p><strong>Misc</strong>. Models read data from historical and real-time data sets, typically
+not mixing these two styles.</p>
+<p>Raw data is typically stored in S3 bucket in the same format as it comes or in
+Parquet format.</p>
+<h2 id="dataflow-computing">DataFlow computing</h2>
+<p><strong>DataFlow framework</strong>. DataFlow is a computing framework to implement machine
+learning models that can run with minimal changes in timed, non-timed, replayed
+simulation and real-time execution.</p>
+<p>The working principle underlying DataFlow is to run a model in terms of time
+slices of data so that both historical and real-time semantics can be
+accommodated without changing the model.</p>
+<ul>
+<li>Some of the advantages of the DataFlow approach are:</li>
+<li>Tiling to fit in memory</li>
+<li>Cached computation</li>
+<li>Adapt a procedural semantic to a reactive / streaming semantic</li>
+<li>Handle notion of time</li>
+<li>Control for future peeking</li>
+<li>Suite of tools to replay and debug executions from real-time</li>
+<li>Support for market data and other tabular data feeds</li>
+<li>
+<p>Support for knowledge time</p>
+</li>
+<li>
+<p>TODO(gp): Explain the advantages</p>
+</li>
+</ul>
+<p>Resampling VWAP (besides potential errors). This implies hardcoded formula in a
+mix with resampling functions.</p>
+<pre><code class="language-python">vwap_approach_2 = (
+        converted_data[&quot;close&quot;] *
+      converted_data[&quot;volume&quot;]).resample(resampling_freq)
+    ).mean() /
+    converted_data[&quot;volume&quot;].resample(resampling_freq).sum()
+vwap_approach_2.head(3)
+</code></pre>
+<ul>
+<li>TODO(gp): Explain this piece of code</li>
+</ul>
+<p><strong>Dag Node</strong>. A Dag Node is a unit of computation of a DataFlow model.
+- A Dag Node has inputs, outputs, a unique node id (aka <code>nid</code>), and a state
+- Typically, inputs and outputs to a Dag Node are dataframes
+- A Dag node stores a value for each output and method name (e.g., methods are
+  <code>fit</code>, <code>predict</code>, <code>save_state</code>, <code>load_state</code>)
+- The DataFlow time slice semantics is implemented in terms of <code>Pandas</code> and
+  <code>Sklearn</code> libraries</p>
+<p>TODO(gp): Add picture.</p>
+<p><strong>DataFlow model</strong>. A DataFlow model (aka <code>DAG</code>) is a direct acyclic graph
+composed of DataFlow nodes. It allows to connect, query the structure</p>
+<p>Running a method on a Dag means running that method on all its nodes in
+topological order, propagating values through the Dag nodes.</p>
+<p>TODO(gp): Add picture.</p>
+<p><strong>DagConfig</strong>. A <code>Dag</code> can be built assembling Nodes using a function
+representing the connectivity of the nodes and parameters contained in a Config
+(e.g., through a call to a builder <code>DagBuilder.get_dag(config)</code>).</p>
+<p>A DagConfig is hierarchical and contains one subconfig per Dag node. It should
+only include <code>Dag</code> node configuration parameters, and not information about
+<code>Dag</code> connectivity, which is specified in the <code>Dag</code> builder part.</p>
+<h3 id="template-configs">Template configs</h3>
+<ul>
+<li>Are incomplete configs, with some "mandatory" parameters unspecified but
+  clearly identified with <code>cconfig.DUMMY</code> value</li>
+<li>Have reasonable defaults for specified parameters</li>
+<li>This facilitates config extension (e.g., if we add additional parameters /
+    flexibility in the future, then we should not have to regenerate old
+    configs)</li>
+<li>Leave dummy parameters for frequently-varying fields, such as <code>ticker</code></li>
+<li>Should be completable and be completed before use</li>
+<li>Should be associated with a <code>Dag</code> builder</li>
+</ul>
+<p><strong>DagBuilder</strong>. It is an object that builds a DAG and has a
+<code>get_config_template()</code> and a <code>get_dag()</code> method to keep the config and the Dag
+in sync.</p>
+<p>The client:
+- calls <code>get_config_template()</code> to receive the template config
+- fills / modifies the config
+- uses the final config to call <code>get_dag(config)</code> and get a fully built DAG</p>
+<p>A <code>DagBuilder</code> can be passed to other objects instead of <code>Dag</code> when the template
+config is fully specified and thus the <code>Dag</code> can be constructed from it.</p>
+<p><strong>DagRunner</strong>. It is an object that allows to run a <code>Dag</code>. Different
+implementations of a <code>DagRunner</code> allow to run a <code>Dag</code> on data in different ways,
+e.g.,</p>
+<ul>
+<li><code>FitPredictDagRunner</code>: implements two methods <code>fit</code> / <code>predict</code> when we want
+  to learn on in-sample data and predict on out-of-sample data</li>
+<li><code>RollingFitPredictDagRunner</code>: allows to fit and predict on some data using a
+  rolling pattern</li>
+<li><code>IncrementalDagRunner</code>: allows to run one step at a time like in real-time</li>
+<li><code>RealTimeDagRunner</code>: allows to run using nodes that have a real-time semantic</li>
+</ul>
+<h2 id="dataflow-computation-semantics">DataFlow Computation Semantics</h2>
+<p>Often raw data is available in a "long format", where the data is conditioned on
+the asset (e.g., full_symbol), e.g.,</p>
+<p><img alt="" src="./sorrentum_figs/image2.png" />{width="5.338542213473316in"
+height="1.1036406386701663in"}</p>
+<p>DataFlow represents data through multi-index dataframes, where</p>
+<ul>
+<li>
+<p>the outermost index is the "feature"</p>
+</li>
+<li>
+<p>the innermost index is the asset, e.g.,</p>
+</li>
+</ul>
+<p><img alt="" src="./sorrentum_figs/image6.png" />{width="6.5in" height="1.0416666666666667in"}</p>
+<p>The reason for this convention is that typically features are computed in a
+uni-variate fashion (e.g., asset by asset), and we can get vectorization over the
+assets by expressing operations in terms of the features. E.g., we can express a
+feature as <code>(df["close", "open"].max() - df["high"]).shift(2)</code>.</p>
+<p>Based on the example ./amp/dataflow/notebooks/gallery_dataflow_example.ipynb,
+one can work with DataFlow at 4 levels of abstraction:</p>
+<ol>
+<li>
+<p>Pandas long-format (non multi-index) dataframes and for-loops</p>
+<ul>
+<li>We can do a group-by or filter by full_symbol</li>
+<li>Apply the transformation on each resulting df</li>
+<li>Merge the data back into a single dataframe with the long-format</li>
+</ul>
+</li>
+<li>
+<p>Pandas multiindex dataframes</p>
+<ul>
+<li>The data is in the DataFlow native format</li>
+<li>We can apply the transformation in a vectorized way</li>
+<li>This approach is best for performance and with compatibility with DataFlow
+  point of view</li>
+<li>An alternative approach is to express multi-index transformations in terms
+  of approach 1 (i.e., single asset transformations and then concatenation).
+  This approach is functionally equivalent to a multi-index transformation,
+  but typically slow and memory inefficient</li>
+</ul>
+</li>
+<li>
+<p>DataFlow nodes</p>
+<ul>
+<li>A node implements a certain transformations on DataFrames according to the
+  DataFlow convention and interfaces</li>
+<li>Nodes operate on the multi-index representation by typically calling
+  functions from level 2 above</li>
+</ul>
+</li>
+<li>
+<p>DAG</p>
+<ul>
+<li>A series of transformations in terms of DataFlow nodes</li>
+</ul>
+</li>
+</ol>
+<p>Note that there are degrees of freedom in splitting the work between the various
+layers.</p>
+<p>E.g., code can be split in multiple functions at level 2) and then</p>
+<p><a href="http://172.30.2.136:10051/notebooks/dataflow_orange/pipelines/C1/notebooks/C1b_debugging.ipynb">[http://172.30.2.136:10051/notebooks/dataflow_orange/pipelines/C1/notebooks/C1b_debugging.ipynb]{.underline}</a></p>
+<p><a href="http://172.30.2.136:10051/notebooks/dataflow_orange/pipelines/C1/notebooks/Implement_RH1E.ipynb">[http://172.30.2.136:10051/notebooks/dataflow_orange/pipelines/C1/notebooks/Implement_RH1E.ipynb]{.underline}</a></p>
+<h2 id="backtest-and-experiment">Backtest and Experiment</h2>
+<h3 id="configbuilder"><code>ConfigBuilder</code></h3>
+<ul>
+<li>Generates a list of fully formed (not template) configs that can be then run</li>
+<li>These configs can correspond to one or multiple Experiments, tiled or not (see
+  below)</li>
+<li>Config builder accepts <code>BacktestConfig</code> as an input</li>
+</ul>
+<h3 id="experiment-in-strict-and-loose-sense">Experiment in strict and loose sense</h3>
+<p>Colloquially, we use experiment to mean different things, e.g., an experiment
+can consist in:</p>
+<ul>
+<li>a backtest where we run a single Dag with a single config (e.g., when we test
+  the predictive power of a single model)</li>
+<li>
+<p>running a Dag (e.g., E8d) through multiple configs (e.g., with longer /
+  shorter history) to perform an "A / B experiment"</p>
+</li>
+<li>
+<p>running completely different Dags (e.g., E1 vs E8c) to compare their
+  performance</p>
+</li>
+</ul>
+<p>Strictly speaking, we refer to:</p>
+<ul>
+<li>
+<p>The first one as a <code>Backtest</code> (which can be executed in terms of tiled configs
+  or not)</p>
+</li>
+<li>
+<p>The second and the third as an <code>Experiment</code></p>
+</li>
+</ul>
+<p>In practice almost any experiment we run consists of one or more backtests</p>
+<h3 id="backtest"><code>Backtest</code></h3>
+<ul>
+<li>
+<p>In general a "backtest" is simply code that is configured by a *single*
+  <code>Config</code>s</p>
+</li>
+<li>
+<p>The code contained in a backtest experiment can be anything</p>
+</li>
+<li>
+<p>Typically a backtest consists of:</p>
+</li>
+<li>
+<p>creating a <code>Dag</code>(e.g., through a <code>DagBuilder</code>) or a <code>System</code> based on a
+    config</p>
+</li>
+<li>
+<p>running it over a period of time (e.g., through a <code>DagRunner</code>)</p>
+</li>
+<li>
+<p>saving the result into a directory</p>
+</li>
+</ul>
+<h3 id="backtestconfig"><code>BacktestConfig</code></h3>
+<ul>
+<li>
+<p>= a config that has multiple parts configuring both what to run (e.g., a
+  <code>Dag</code>) and how to run it (e.g., the universe, the period of time)</p>
+</li>
+<li>
+<p>It can correspond to multiple configs (e.g., when running a <code>TiledBacktest</code>)</p>
+</li>
+<li>
+<p>The common pattern is <code>&lt;universe&gt;-&lt;top_n&gt;.&lt;trading_period&gt;.&lt;time_interval&gt;</code>,
+  e.g., <code>ccxt_v4-top3.5T.2019_2022</code> where</p>
+</li>
+<li>
+<p><code>ccxt_v4</code> is a specific version of universe</p>
+</li>
+<li>
+<p><code>top3</code> is top 3 assets, <code>all</code> means all assets in the universe</p>
+</li>
+<li>
+<p><code>5T</code> (5 minutes) is trading period</p>
+</li>
+<li>
+<p><code>2019-2022</code> is timeframe, i.e. run the model using data from 2019 to 2022</p>
+</li>
+</ul>
+<h3 id="experiment"><code>Experiment</code></h3>
+<ul>
+<li>
+<p>A set of backtests to run, each of which corresponds to conceptually a single
+  <code>Config</code></p>
+</li>
+<li>
+<p>Each backtest can then be executed in a tiled fashion (e.g., by expressing it
+  in terms of different configs, one per tile</p>
+</li>
+</ul>
+<p>In order to create the list of fully built configs, both a <code>Backtest</code> and a
+<code>Experiment</code> need:</p>
+<ul>
+<li>
+<p>an <code>BacktestBuilder</code> (what to run in a backtest)</p>
+</li>
+<li>
+<p>a <code>ConfigBuilder</code> (how to configure)</p>
+</li>
+<li>
+<p>dst_dir (destination dir of the entire experiment list, i.e., the one that the
+  user passes to the command)</p>
+</li>
+</ul>
+<h3 id="tiled-backtest-experiment">Tiled backtest / experiment</h3>
+<ul>
+<li>
+<p>An experiment / backtest that is run through multiple tiles for time and
+  assets</p>
+</li>
+<li>
+<p>In general this is just an implementation detail</p>
+</li>
+</ul>
+<h3 id="tiled-vs-tile">Tiled vs Tile</h3>
+<ul>
+<li>We call "tiled" objects that are split in tiles (e.g., <code>TiledBacktest</code>), and
+  "tile" objects that refer to tiling (e.g., <code>TileConfig</code>)</li>
+</ul>
+<h3 id="experiment-list-manager">Experiment (list) manager</h3>
+<ul>
+<li>
+<p>TODO(gp): experiment_list manager?</p>
+</li>
+<li>
+<p>Python code that runs experiments by:</p>
+</li>
+<li>
+<p>generating a list of <code>Config</code> object to run, based on a <code>ConfigBuilder</code>
+    (i.e., <code>run_experiment.py</code> and <code>run_notebook.py</code>)</p>
+</li>
+</ul>
+<h3 id="experimentbuilder"><code>ExperimentBuilder</code></h3>
+<ul>
+<li>
+<p>TODO(gp): -&gt; BacktestBuilder</p>
+</li>
+<li>
+<p>It is a function that:</p>
+</li>
+<li>Creates a DAG from the passed config</li>
+<li>Runs the DAG</li>
+<li>Saves the results in a specified directory</li>
+</ul>
+<h3 id="backtestrunner"><code>BacktestRunner</code></h3>
+<ul>
+<li>A test case object that:</li>
+<li>runs a backtest (experiment) on a Dag and a Config</li>
+<li>processes its results (e.g., check that the output is readable, extract a
+    PnL curve or other statistics)</li>
+</ul>
+<h3 id="system">System</h3>
+<ul>
+<li>An object representing a full trading system comprising of:</li>
+<li>MarketData<ul>
+<li>HistoricalMarketData (ImClient)</li>
+<li>RealTimeMarketData</li>
+</ul>
+</li>
+<li>Dag</li>
+<li>DagRunner</li>
+<li>Portfolio<ul>
+<li>Optimizer</li>
+<li>Broker</li>
+</ul>
+</li>
+</ul>
+<h3 id="systemrunner">SystemRunner</h3>
+<ul>
+<li>
+<p>An object that allows to build and run a System</p>
+</li>
+<li>
+<p>TODO(gp): Not sure it's needed</p>
+</li>
+</ul>
+<h3 id="system_testcase">System_TestCase</h3>
+<ul>
+<li>TODO(gp): IMO this is a TestCase + various helpers</li>
+</ul>
+<h3 id="data-structures">Data structures</h3>
+<p><strong>Fill</strong></p>
+<p><strong>Order</strong></p>
+<h3 id="major-software-components">Major software components</h3>
+<p><img alt="" src="./sorrentum_figs/image9.png" />{width="6.5in" height="1.875in"}</p>
+<p><a href="https://lucid.app/lucidchart/9ee80100-be76-42d6-ad80-531dcfee277e/edit?page=0_0&amp;invitationId=inv_5777ae4b-d8f4-41c6-8901-cdfb93d98ca8#">[https://lucid.app/lucidchart/9ee80100-be76-42d6-ad80-531dcfee277e/edit?page=0_0&amp;invitationId=inv_5777ae4b-d8f4-41c6-8901-cdfb93d98ca8#]{.underline}</a></p>
+<p><img alt="" src="./sorrentum_figs/image15.png" />{width="6.5in" height="4.319444444444445in"}</p>
+<p><strong>ImClient</strong></p>
+<p>Responsibilities:</p>
+<p>Interactions:</p>
+<p>Main methods:</p>
+<p><strong>MarketData</strong></p>
+<p>Responsibilities:</p>
+<p>Interactions:</p>
+<p>Main methods:</p>
+<p><strong>Forecaster.</strong> It is a DAG system that forecasts the value of the target
+economic quantities (e.g.,</p>
+<p>for each asset in the target</p>
+<p>Responsibilities:</p>
+<p>Interactions:</p>
+<p>Main methods:</p>
+<p><strong>process_forecasts.</strong> Interface to execute all the predictions in a Forecast
+dataframe through TargetPositionAndOrderGenerator.</p>
+<p>This is used as an interface to simulate the effect of given forecasts under
+different optimization conditions, spread, and restrictions, without running the
+Forecaster.</p>
+<p><strong>TargetPositionAndOrderGenerator</strong>. Execute the forecasts by generating the
+optimal target positions according to the desired criteria and by generating the
+corresponding orders needed to get the system from the current to the desired
+state.</p>
+<p>TODO(gp): It also submits the orders so ForecastProcessor?</p>
+<p>Responsibilities:</p>
+<ul>
+<li>
+<p>Retrieve the current holdings from Portfolio</p>
+</li>
+<li>
+<p>Perform optimization using forecasts and current holdings to compute the
+  target position</p>
+</li>
+<li>
+<p>Generate the orders needed to achieve the target positions</p>
+</li>
+<li>
+<p>Submit orders to the Broker</p>
+</li>
+</ul>
+<p>Interactions:</p>
+<ul>
+<li>
+<p>Forecaster to receive the forecasts of returns for each asset</p>
+</li>
+<li>
+<p>Portfolio to recover the current holdings</p>
+</li>
+</ul>
+<p>Main methods:</p>
+<ul>
+<li>
+<p>compute_target_positions_and_generate_orders(): compute the target positions
+  and generate the orders needed to reach</p>
+</li>
+<li>
+<p>_compute_target_holdings_shares(): call the Optimizer to compute the target
+  holdings in shares</p>
+</li>
+</ul>
+<p><strong>Locates</strong>.</p>
+<p><strong>Restrictions</strong>.</p>
+<p><strong>Optimizer.</strong></p>
+<p>Responsibilities:</p>
+<p>Interactions:</p>
+<p>Main methods:</p>
+<p><strong>Portfolio</strong>. A Portfolio stores information about asset and cash holdings of a
+System over time.</p>
+<p>Responsibilities:</p>
+<ul>
+<li>hold the holdings in terms of shares of each asset id and cash available</li>
+</ul>
+<p>Interactions:</p>
+<ul>
+<li>
+<p>MarketData to receive current prices to estimate the value of the holdings</p>
+</li>
+<li>
+<p>Accumulate statistics and</p>
+</li>
+</ul>
+<p>Main methods:</p>
+<ul>
+<li>
+<p>mark_to_market(): estimate the value of the current holdings using the current
+  market prices</p>
+</li>
+<li>
+<p>...</p>
+</li>
+</ul>
+<p><strong>DataFramePortfolio</strong>: an implementation of a Portfolio backed by a DataFrame.
+This is used to simulate a system on an order-by-order basis. This should be
+equivalent to using a DatabasePortfolio but without the complexity of querying a
+DB.</p>
+<p><strong>DatabasePortfolio</strong>: an implementation of a Portfolio backed by an SQL
+Database to simulate systems where the Portfolio state is held in a database.
+This allows to simulate a system on an order-by-order basis.</p>
+<p><strong>Broker.</strong> A Broker is an object to place orders to the market and to receive
+fills, adapting Order and Fill objects to the corresponding market-specific
+objects. In practice Broker adapts the internal representation of Order and
+Fills to the ones that are specific to the target market.</p>
+<p>Responsibilities:
+- Submit orders to MarketOms
+- Wait to ensure that orders were properly accepted by MarketOms
+- Execute complex orders (e.g., TWAP, VWAP, pegged orders) interacting with the
+  target market
+- Receive fill information from the target market</p>
+<p>Interactions:
+- MarketData to receive prices and other information necessary to execute orders
+- MarketOms to place orders and receive fills</p>
+<p>Main methods:
+- submit_orders()
+- get_fills()</p>
+<p><strong>MarketOms</strong>. MarketOms is the interface that allows to place orders and
+receive back fills to the specific target market. This is provided as-is and
+it's not under control of the user or of the protocol</p>
+<ul>
+<li>E.g., a specific exchange API interface</li>
+</ul>
+<p><strong>OrderProcessor</strong></p>
+<ul>
+<li>TODO(gp): Maybe MockedMarketOms since that's the actual function?</li>
+</ul>
+<p><strong>OmsDb</strong></p>
+<p><strong>TO REORG</strong></p>
+<p>From ./oms/architecture.md</p>
+<p>Invariants and conventions</p>
+<ul>
+<li>
+<p>In this doc we use the new names for concepts and use "aka" to refer to the old
+  name, if needed</p>
+</li>
+<li>
+<p>We refer to:</p>
+</li>
+<li>The as-of-date for a query as <code>as_of_timestamp</code></li>
+<li>The actual time from <code>get_wall_clock_time()</code> as <code>wall_clock_timestamp</code></li>
+<li>Objects need to use <code>get_wall_clock_time()</code> to get the "actual" time</li>
+<li>We don't want to pass <code>wall_clock_timestamp</code> because this is dangerous</li>
+<li>
+<p>It is difficult to enforce that there is no future peeking when one object
+  tells another what time it is, since there is no way for the second object to
+  double check that the wall clock time is accurate</p>
+</li>
+<li>
+<p>We pass <code>wall_clock_timestamp</code> only when one "action" happens atomically but it
+  is split in multiple functions that need to all share this information. This
+  approach should be the exception to the rule of calling</p>
+</li>
+</ul>
+<p><code>get_wall_clock_time()</code></p>
+<ul>
+<li>
+<p>It's ok to ask for a view of the world as of <code>as_of_timestamp</code>, but then the
+  queried object needs to check that there is no future peeking by using
+  <code>get_wall_clock_time()</code></p>
+</li>
+<li>
+<p>Objects might need to get <code>event_loop</code></p>
+</li>
+<li>
+<p>TODO(gp): Clean it up so that we pass event loop all the times and event loop
+  has a reference to the global <code>get_wall_clock_time()</code></p>
+</li>
+<li>
+<p>The Optimizer only thinks in terms of dollar</p>
+</li>
+</ul>
+<p>Implementation</p>
+<p>process_forecasts()
+- Aka <code>place_trades()</code>
+- Act on the forecasts by:
+- Get the state of portfolio (by getting fills from previous clock)
+- Updating the portfolio holdings
+- Computing the optimal positions
+- Submitting the corresponding orders
+- <code>optimize_positions()</code>
+- Aka <code>optimize_and_update()</code>
+- Calls the Optimizer
+- <code>compute_target_positions()</code>
+- Aka <code>compute_trades()</code>
+- <code>submit_orders()</code>
+- Call <code>Broker</code>
+- <code>get_fills()</code>
+- Call <code>Broker</code>
+- For IS it is different
+- <code>update_portfolio()</code>
+- Call <code>Portfolio</code>
+- For IS it is different
+- It should not use any concrete implementation but only <code>Abstract\*</code></p>
+<p>Portfolio
+- <code>get_holdings()</code>
+- Abstract because IS, Mocked, Simulated have a different implementations
+- <code>mark_to_market()</code></p>
+<ul>
+<li>Not abstract</li>
+<li>-&gt; <code>get_holdings()</code>, <code>PriceInterface</code></li>
+<li><code>update_state()</code></li>
+<li>Abstract</li>
+<li>Use abstract but make it NotImplemented (we will get some static checks and
+  some other dynamic checks)</li>
+<li>We are trying not to mix static typing and duck typing</li>
+<li>CASH_ID, <code>_compute_statistics()</code> goes in <code>Portolio</code></li>
+</ul>
+<p>Broker
+- <code>submit_orders()</code>
+- <code>get_fills()</code></p>
+<p>Simulation</p>
+<p>DataFramePortfolio
+- This is what we call <code>Portfolio</code>
+- In RT we can run <code>DataFramePortfolio</code> and <code>ImplementedPortfolio</code> in parallel to
+  collect real and simulated behavior
+- <code>get_holdings()</code>
+- Store the holdings in a df
+- <code>update_state()</code>
+- Update the holdings with fills -&gt; <code>SimulatedBroker.get_fills()</code>
+- To make the simulated system closer to the implemented</p>
+<p>SimulatedBroker
+- <code>submit_orders()</code>
+- <code>get_fills()</code></p>
+<p>Implemented system</p>
+<p>ImplementedPortfolio
+- <code>get_holdings()</code>
+- Check self-consistency and assumptions
+- Check that no order is in flight otherwise we should assert or log an error
+- Query the DB and gets you the answer
+- <code>update_state()</code>
+- No-op since the portfolio is updated automatically</p>
+<p>ImplementedBroker
+- <code>submit_orders()</code>
+- Save files in the proper location
+- Wait for orders to be accepted
+- <code>get_fills</code>
+- No-op since the portfolio is updated automatically</p>
+<p>Mocked system
+- Our implementation of the implemented system where we replace DB with a mock
+- The mocked DB should be as similar as possible to the implemented DB</p>
+<p>DatabasePortfolio
+- <code>get_holdings()</code>
+- Same behavior of <code>ImplementedPortfolio</code> but using <code>OmsDb</code></p>
+<p>DatabaseBroker
+- <code>submit_orders()</code>
+- Same behavior of <code>ImplementedBroker</code> but using <code>OmsDb</code></p>
+<p>OmsDb
+- <code>submitted_orders</code> table (mocks S3)
+- Contain the submitted orders
+- <code>accepted_orders</code> table
+- <code>current_position</code> table</p>
+<p>OrderProcessor
+- Monitor <code>OmsDb.submitted_orders</code>
+- Update <code>OmsDb.accepted_orders</code>
+- Update <code>OmsDb.current_position</code> using <code>Fill</code> and updating the <code>Portfolio</code></p>
+<h1 id="oms">OMS</h1>
+<h2 id="high-level-invariants">High-level invariants</h2>
+<ul>
+<li>The notion of parent vs child orders is only on our side, CCXT only understands
+  orders</li>
+<li>We track data (e.g., orders, fills) into parallel OMS vs CCXT data structures</li>
+<li>OMS vs CCXT orders</li>
+<li>OMS vs CCXT fills</li>
+<li>CCXT trades vs fills</li>
+<li><code>Portfolio</code> only cares about parent orders</li>
+<li>How orders are executed is an implementation detail</li>
+<li>
+<p>Thus, we need to fold all child fills into an equivalent parent fill</p>
+</li>
+<li>
+<p>The data</p>
+</li>
+<li>
+<p><code>ccxt_order</code></p>
+</li>
+<li>Every time we submit an order to CCXT (parent or child) we get back a
+    <code>ccxt_order</code> object (aka <code>ccxt_order_response</code>)</li>
+<li>It's mainly a confirmation of the order</li>
+<li>The format is https://docs.ccxt.com/#/?id=order-structure</li>
+<li>
+<p>The most important info is the callback CCXT ID of the order (this is
+    the only way to do it)</p>
+</li>
+<li>
+<p><code>ccxt_trade</code></p>
+</li>
+<li>For each order (parent or child), we get back from CCXT 0 or more
+    <code>ccxt_trade</code>, each representing a partial fill (e.g., price, number of 
+    shares, fees)</li>
+<li>
+<p>E.g.,</p>
+<ul>
+<li>If we walk the book, we obviously get multiple <code>ccxt_trade</code></li>
+<li>If we match multiple trades even at the same price level, we might get 
+  different <code>ccxt_trade</code></li>
+</ul>
+</li>
+<li>
+<p><code>ccxt_fill</code></p>
+</li>
+<li>When an order closes, we can ask CCXT to summarize the results of
+    that order in terms of the composing trades</li>
+<li>We can't use <code>ccxt_fill</code> to create an <code>oms_fill</code> because it doesn't contain
+    enough info about prices and fees<ul>
+<li>We get some information about quantity, but we don't get fees and other
+  info (e.g., prices)</li>
+</ul>
+</li>
+<li>
+<p>We save this info to cross-check <code>ccxt_fill</code> vs <code>ccxt_trade</code></p>
+</li>
+<li>
+<p><code>oms_fill</code></p>
+</li>
+<li>It represents the fill of a parent order, since outside the execution system
+    (e.g., in <code>Portfolio</code>) we don't care about tracking individual fills</li>
+<li>For a parent order we need to convert multiple <code>ccxt_trades</code> into a single
+    <code>oms_fill</code></li>
+<li>TODO(gp): Unclear</li>
+<li>Get all the trades combined to the parent order to get a single OMS
+    fill<ul>
+<li>We use this v1</li>
+</ul>
+</li>
+<li>Another way is to query the state of an order<ul>
+<li>We use this in v2 prototype, but it's not sure that it's the final
+  approach</li>
+</ul>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

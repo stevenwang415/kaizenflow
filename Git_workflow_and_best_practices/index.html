@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Git workflow and best practices - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../GitHub_ZenHub_workflows/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Glossary/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#git-workflow-and-best-practices" class="nav-link">Git workflow and best practices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#before-you-start" class="nav-link">Before you start</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#readings" class="nav-link">Readings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#workflow" class="nav-link">Workflow</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#make-sure-your-local-master-is-in-sync-with-the-remote" class="nav-link">Make sure your local master is in sync with the remote.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#copied-to-system-clipboard" class="nav-link">Copied to system clipboard:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#best-practices" class="nav-link">Best Practices</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#do-not-check-in-large-data-files" class="nav-link">Do not check in large data files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#branch-workflow-best-practices" class="nav-link">Branch workflow best practices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pull-request-pr-best-practices" class="nav-link">Pull request (PR) best practices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#workflow-diagram" class="nav-link">Workflow diagram</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#deleting-a-branch" class="nav-link">Deleting a branch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#how-to-and-troubleshooting" class="nav-link">How-to and troubleshooting</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#do-not-mess-up-your-branch" class="nav-link">Do not mess up your branch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#analyzing-commits" class="nav-link">Analyzing commits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#conflicts" class="nav-link">Conflicts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#how-to-get-out-of-a-messyun-mergeable-branch" class="nav-link">How to get out of a messy/un-mergeable branch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#reverting" class="nav-link">Reverting</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#branching" class="nav-link">Branching</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#merging-master" class="nav-link">Merging master</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#rebasing" class="nav-link">Rebasing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#merging-pull-requests" class="nav-link">Merging pull requests</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#submodules" class="nav-link">Submodules</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#adding-a-submodule" class="nav-link">Adding a submodule</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#working-in-a-submodule" class="nav-link">Working in a submodule</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#updating-a-submodule-to-the-latest-commit" class="nav-link">Updating a submodule to the latest commit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#to-check-if-supermodule-and-amp-are-in-sync" class="nav-link">To check if supermodule and amp are in sync</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#roll-forward-git-submodules-pointers" class="nav-link">Roll forward git submodules pointers:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#to-clean-all-the-repos" class="nav-link">To clean all the repos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pull-a-branch-without-checkout" class="nav-link">Pull a branch without checkout</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#to-force-updating-all-the-submodules" class="nav-link">To force updating all the submodules</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="git-workflow-and-best-practices">Git workflow and best practices</h1>
+<!--ts-->
+<ul>
+<li><a href="#before-you-start">Before you start</a><ul>
+<li><a href="#readings">Readings</a></li>
+</ul>
+</li>
+<li><a href="#workflow">Workflow</a></li>
+<li><a href="#best-practices">Best Practices</a><ul>
+<li><a href="#do-not-check-in-large-data-files">Do not check in large data files</a></li>
+<li><a href="#branch-workflow-best-practices">Branch workflow best practices</a><ul>
+<li><a href="#branches-are-cheap">Branches are cheap</a></li>
+<li><a href="#always-work-in-a-branch">Always work in a branch</a></li>
+<li><a href="#keep-different-changes-in-separate-branches">Keep different changes in separate branches</a></li>
+</ul>
+</li>
+<li><a href="#pull-request-pr-best-practices">Pull request (PR) best practices</a></li>
+<li><a href="#workflow-diagram">Workflow diagram</a></li>
+<li><a href="#deleting-a-branch">Deleting a branch</a></li>
+</ul>
+</li>
+<li><a href="#how-to-and-troubleshooting">How-to and troubleshooting</a><ul>
+<li><a href="#do-not-mess-up-your-branch">Do not mess up your branch</a></li>
+<li><a href="#analyzing-commits">Analyzing commits</a><ul>
+<li><a href="#show-files-modified-in-a-commit">Show files modified in a commit</a></li>
+</ul>
+</li>
+<li><a href="#conflicts">Conflicts</a><ul>
+<li><a href="#getting-the-conflicting-files">Getting the conflicting files</a></li>
+<li><a href="#accepting-theirs">Accepting "theirs"</a></li>
+</ul>
+</li>
+<li><a href="#how-to-get-out-of-a-messyun-mergeable-branch">How to get out of a messy/un-mergeable branch</a></li>
+<li><a href="#reverting">Reverting</a><ul>
+<li><a href="#reverting-the-last-local-commit">Reverting the last local commit</a></li>
+</ul>
+</li>
+<li><a href="#branching">Branching</a><ul>
+<li><a href="#checking-what-work-has-been-done-in-a-branch">Checking what work has been done in a branch</a></li>
+<li><a href="#checking-if-you-need-to-merge-master-into-your-feature-branch">Checking if you need to merge master into your feature branch</a></li>
+<li><a href="#comparing-the-difference-of-a-directory-among-branches">Comparing the difference of a directory among branches</a></li>
+</ul>
+</li>
+<li><a href="#merging-master">Merging master</a></li>
+<li><a href="#rebasing">Rebasing</a></li>
+<li><a href="#merging-pull-requests">Merging pull requests</a></li>
+</ul>
+</li>
+<li><a href="#submodules">Submodules</a><ul>
+<li><a href="#adding-a-submodule">Adding a submodule</a></li>
+<li><a href="#working-in-a-submodule">Working in a submodule</a></li>
+<li><a href="#updating-a-submodule-to-the-latest-commit">Updating a submodule to the latest commit</a></li>
+<li><a href="#to-check-if-supermodule-and-amp-are-in-sync">To check if supermodule and amp are in sync</a></li>
+<li><a href="#roll-forward-git-submodules-pointers">Roll forward git submodules pointers:</a></li>
+<li><a href="#to-clean-all-the-repos">To clean all the repos</a></li>
+<li><a href="#pull-a-branch-without-checkout">Pull a branch without checkout</a></li>
+<li><a href="#to-force-updating-all-the-submodules">To force updating all the submodules</a></li>
+</ul>
+</li>
+</ul>
+<!--te-->
+<h1 id="before-you-start">Before you start</h1>
+<ul>
+<li>GitHub is the place where we keep our code</li>
+<li><code>git</code> is the tool (program) for version control</li>
+<li>We interact with GitHub via <code>git</code></li>
+<li>Use public key for authorization</li>
+<li>You can add a new public key here
+    <a href="https://github.com/settings/keys">GH -&gt; Personal settings -&gt; SSH keys</a></li>
+<li>More details about what is public key you can find in
+    <a href="https://github.com/cryptokaizen/cmamp/blob/master/documentation/general/ssh.md">ssh.md</a></li>
+</ul>
+<h2 id="readings">Readings</h2>
+<ul>
+<li>Read at least the first 3 chapters of
+  <a href="https://git-scm.com/book/en/v2">Git book</a></li>
+<li>Read about
+  <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git Submodules</a></li>
+<li>We use Git submodules to compose and share code about repos</li>
+</ul>
+<h1 id="workflow">Workflow</h1>
+<ul>
+<li>Run <code>git fetch</code>
+  ```
+  # Fetch all the data from origin.<blockquote>
+<p>git fetch</p>
+</blockquote>
+</li>
+</ul>
+<p># List all the branches.</p>
+<blockquote>
+<p>git branch -r
+  origin/HEAD -&gt; origin/master
+  origin/PTask274
+  ...
+  ```</p>
+</blockquote>
+<ul>
+<li>Checkout master and pull</li>
+<li>
+<p>You want to branch from the latest version of master to avoid a merge:
+    <code>``
+    # Checkout the</code>master` branch.
+    &gt; git checkout master</p>
+<h1 id="make-sure-your-local-master-is-in-sync-with-the-remote">Make sure your local <code>master</code> is in sync with the remote.</h1>
+<blockquote>
+<p>git pull --rebase
+<code>- Alternatively, and especially if you have local changes to move to a new
+branch, run</code>
+git checkout master
+i git_pull
+```</p>
+</blockquote>
+</li>
+<li>
+<p>Name a branch after its corresponding issue</p>
+</li>
+<li>
+<p>The canonical name for a new feature branch is obtained by running
+    <code>i gh_issue_title</code>:
+    ```
+    &gt; i gh_issue_title -i 274
+    INFO: &gt; cmd='/Users/saggese/src/venv/amp.client_venv/bin/invoke gh_issue_title -i 274'
+    report_memory_usage=False report_cpu_usage=False
+    ## gh_issue_title: issue_id='274', repo_short_name='current'
+    ## gh_login:
+    07:35:54 - INFO  lib_tasks_gh.py gh_login:48                            account='sorrentum'
+    export GIT_SSH_COMMAND='ssh -i /Users/saggese/.ssh/id_rsa.sorrentum.github'
+    gh auth login --with-token &lt;/Users/saggese/.ssh/github_pat.sorrentum.txt</p>
+<h1 id="copied-to-system-clipboard">Copied to system clipboard:</h1>
+<p>CmTask274_Update_names: https://github.com/sorrentum/sorrentum/pull/274
+<code>- Before running verify that GitHub cli `gh` works</code></p>
+<blockquote>
+<p>gh --version
+  gh version 2.29.0 (2023-05-10)
+  https://github.com/cli/cli/releases/tag/v2.29.0
+  <code>``
+  - The name is</code>CmTask274_Update_names<code>- To use multiple branches for a given task, append a numeral to the name,
+e.g.,</code>CmTask274_Update_names_v02`</p>
+</blockquote>
+</li>
+<li>
+<p>Create and checkout the branch
+  ```</p>
+<blockquote>
+<p>git branch my_feature
+git checkout my_feature
+  ```</p>
+</blockquote>
+</li>
+<li>Alternatively, you can create and checkout in one command with
+    <code>&gt; git checkout -b my_feature</code></li>
+<li>From this point on, you commit only in the branch and changes to master will
+    not affect your branch</li>
+<li>If the branch already exists, check out the branch by executing
+    <code>&gt; git checkout my_feature</code></li>
+<li>Commit your work early and often</li>
+<li>Commits on your feature branch do not affect master. Checkpoint your work
+    regularly by committing:
+    <code>&gt; git status On branch my_feature
+    &gt; git add ...
+    &gt; git commit
+    [my_feature 820b296] My feature is awesome!</code></li>
+<li>Commits stay local (not seen on GitHub) until you explicitly tell git to
+    "upload" the commits through git push (see next)</li>
+<li>Push your feature branch changes upstream</li>
+<li>When you commit, commits are local (not seen on GitHub)</li>
+<li>When you want your code to be pushed to the server (e.g., to back up or to
+    share the changes with someone else), you need to push the branch upstream
+    <code>&gt; git push -u origin my_feature
+    ...
+    30194fc..820b296  my_feature -&gt; my_feature
+    Branch 'my_feature' set up to track remote branch 'my_feature' from 'origin'.</code></li>
+<li>Note that <code>-u</code> tells git to set the upstream of this branch to origin</li>
+<li>This operation is needed only the first time you create the branch and not
+    for each <code>git push</code></li>
+<li>Merge <code>master</code> into your feature branch regularly</li>
+<li>Merge <code>master</code> into your feature branch at least once a day, if the branch
+    stays around that long:
+    <code># Get the .git from the server
+    &gt; git fetch
+    # Make your master up to origin/master.
+    &gt; git checkout master
+    &gt; git pull
+    # Merge master into my_feature branch.
+    &gt; git checkout my_feature
+    &gt; git merge master</code></li>
+<li>A simpler flow which should be equivalent<ul>
+<li>TODO(gp): Verify that
+  ```
+  # Get the .git from the server<blockquote>
+<p>git fetch
+  # Merge master into my_feature branch.
+git checkout my_feature
+git merge origin/master
+  ```</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>Repeat Steps 4-7 as needed</li>
+<li>Request a review of your work by making a pull request (PR)</li>
+<li>Verify that your work is ready for a review by going through this checklist:<ul>
+<li>The PR is self-contained</li>
+<li>The latest <code>master</code> has been merged into the feature branch</li>
+<li>All files in the PR have been linted with <code>linter.py</code></li>
+<li>All tests pass</li>
+</ul>
+</li>
+<li>If your work is ready for review, make a pull request<ul>
+<li>Use the GitHub UI (for now; we may replace with a script). Go to the
+  branch on the web interface and push "Compare &amp; pull request"</li>
+<li>Make sure that GP and Paul are assigned as reviewers, as well as anyone
+  else who may be interested</li>
+<li>Make sure that GP and Paul are assigned as assignees</li>
+</ul>
+</li>
+<li>Follow up on all comments and mark as resolved any requested changes that
+    you resolve</li>
+</ul>
+<h1 id="best-practices">Best Practices</h1>
+<h2 id="do-not-check-in-large-data-files">Do not check in large data files</h2>
+<ul>
+<li>Avoid checking in large data files</li>
+<li>The reason is that large files bloat the repo</li>
+<li>Once a large file is checked in, it never goes away</li>
+<li>Therefore, <strong>DO NOT CHECK IN DATA FILES IN EXCESS OF 500K</strong></li>
+<li>If in doubt (even on a branch), ask first!</li>
+<li>Sometimes is makes sense to check in some representative data for unit tests</li>
+<li>BUT, larger tests should obtain their data from s3 or MongoDB</li>
+</ul>
+<h2 id="branch-workflow-best-practices">Branch workflow best practices</h2>
+<h3 id="branches-are-cheap">Branches are cheap</h3>
+<ul>
+<li>One of the advantages of working with Git is that branches are cheap</li>
+</ul>
+<h3 id="master-is-sacred"><code>master</code> is sacred</h3>
+<ul>
+<li>In an ideal world <code>master</code> branch is sacred (see Platinum rule of Git)</li>
+<li>Development should never be done directly on master</li>
+<li>Changes to master should only happen by pull-request or merge</li>
+<li>One should avoid working in master except in rare cases, e.g., a simple
+    urgent bug-fix needed to unblock people</li>
+<li><code>master</code> should be always never broken (all tests are passing and it is
+    deployable)</li>
+</ul>
+<h3 id="always-work-in-a-branch">Always work in a branch</h3>
+<ul>
+<li>Generally it is best to be the sole contributor to your branch</li>
+<li>If you need to collaborate with somebody on a branch, remember that the
+    golden rule of rebase still applies to this "public" branch: "do not rebase
+    pushed commits"</li>
+<li>It is ok to open multiple branches for a given task if needed</li>
+<li>E.g., if you have multiple chunks of work or multiple people are working on
+    orthogonal changes</li>
+<li>It might be that the task is too big and needs to be broken in smaller bugs</li>
+<li>All the rules that apply to <code>master</code> apply also to a branch</li>
+<li>E.g., commit often, use meaningful commit messages.</li>
+<li>We are ok with a little looser attitude in your branch</li>
+<li>E.g., it might be ok to not run unit tests before each commit, but be
+    careful!</li>
+<li>Use a branch even if working on a research notebook</li>
+<li>Try to avoid modifying notebooks in multiple branches simultaneously, since
+    notebook merges can be painful</li>
+<li>Working in a branch in this case facilitates review</li>
+<li>Working in a branch protects the codebase from accidental pushes of code
+    changes outside of the notebook (e.g., hacks to get the notebook working
+    that need to be cleaned up)</li>
+</ul>
+<h3 id="keep-different-changes-in-separate-branches">Keep different changes in separate branches</h3>
+<ul>
+<li>It is easier for you to keep work sane and separated</li>
+<li>Cons of multiple conceptual changes in the same branches</li>
+<li>You are testing / debugging all at once which might make your life more
+  difficult</li>
+<li>Reviewing unrelated changes slows down the review process</li>
+<li>Packaging unrelated changes together that means no change gets merged until
+  all of the changes are accepted</li>
+</ul>
+<h2 id="pull-request-pr-best-practices">Pull request (PR) best practices</h2>
+<ul>
+<li>Make sure your PR is coherent</li>
+<li>It may not need to do everything the Task requires, but the PR should be
+    self-contained and not break anything</li>
+<li>If you absolutely need changes under review to keep going, create the new
+  branch from the old branch rather than from master (less ideal)</li>
+<li>Try to avoid branching from branches<ul>
+<li>This creates also dependencies on the order of committing branches</li>
+<li>You end up with a spiderweb of branches</li>
+</ul>
+</li>
+<li>Frequent small PRs are easier to review</li>
+<li>You will also experience faster review turnaround</li>
+<li>Reviewers like working on smaller changes more than working on larger ones</li>
+<li>PR review time does not scale linearly with lines changed (may be more like
+    exponential)</li>
+<li>Merging changes frequently means other people can more easily see how the code
+  is progressing earlier on in the process, and give you feedback</li>
+<li>E.g., "here it is a much simpler way of doing this", or even better "you
+    don't need to write any code, just do &lt;this_and_that&gt;"</li>
+<li>Merged changes are tested in the Jenkins build</li>
+</ul>
+<h2 id="workflow-diagram">Workflow diagram</h2>
+<h2 id="deleting-a-branch">Deleting a branch</h2>
+<ul>
+<li>You can run the script <code>dev_scripts/git/git_branch.sh</code> to get all the branches
+  together with some information, e.g., last commit and creator</li>
+<li>E.g., let's assume we believe that <code>PTask354_INFRA_Populate_S3_bucket</code> is
+  obsolete and we want to delete it:</li>
+<li>Get <code>master</code> up to date
+    <code>&gt; git checkout master
+    &gt; git fetch
+    &gt; git pull</code></li>
+<li>Merge <code>master</code> into the target branch</li>
+<li>Pull and merge
+    <code>&gt; git checkout PTask354_INFRA_Populate_S3_bucket
+    &gt; git pull
+    &gt; git merge master</code></li>
+<li>Resolve conflicts
+    <code>&gt; git commit
+    &gt; git pull</code></li>
+<li>Ask Git if the branch is merged<ul>
+<li>One approach is to ask Git if all the changes in master are also in the
+  branch
+  ```<blockquote>
+<p>git branch <code>PTask354_INFRA_Populate_S3_bucket</code> --no-merged PTask354_INFRA_Populate_S3_bucket
+  ```</p>
+</blockquote>
+</li>
+<li>Note that Git is very strict here, e.g.,
+  <code>PTask354_INFRA_Populate_S3_bucket</code> is not completely merged since I've
+  moved code "manually" (not only through <code>git cherry-pick, git merge</code>)</li>
+<li>One approach is to just merge <code>PTask354_INFRA_Populate_S3_bucket</code> into
+  master and run <code>git branch</code> again</li>
+</ul>
+</li>
+<li>Manually check if there is any textual difference<ul>
+<li>Another approach is to check what the differences are between the branch
+  and <code>origin/master</code>
+  ```<blockquote>
+<p>git log master..HEAD
+  6465b0c saggese, 25 seconds ago : Merge branch 'master' into PTask354_INFRA_Populate_S3_bucket  (HEAD -&gt; PTask354_INFRA_Populate_S3_bucket, origin/PTask354_INFRA_Populate_S3_bucket)
+git log HEAD..master
+  ```</p>
+</blockquote>
+</li>
+<li>Here we see that there are no textual differences</li>
+<li>So we can either merge the branch into <code>master</code> or just kill directly</li>
+</ul>
+</li>
+<li>Kill-kill-kill!<ul>
+<li>To delete both the local and remote branch you can do
+  ```<blockquote>
+<p>git branch -d PTask354_INFRA_Populate_S3_bucket
+git push origin --delete PTask354_INFRA_Populate_S3_bucket
+  ```</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="how-to-and-troubleshooting">How-to and troubleshooting</h1>
+<h2 id="do-not-mess-up-your-branch">Do not mess up your branch</h2>
+<ul>
+<li>If you are working in a branch, before doing <code>git push</code> make sure the branch
+  is not broken (e.g., from a mistake in merge / rebase mess)</li>
+<li>A way to check that the branch is sane is the following:</li>
+<li>Make sure that you don't have extra commits in your branch:<ul>
+<li>The difference between your branch and master
+  <code>bash &gt; git fetch &gt; git checkout &amp;lt;BRANCH&gt; &gt; git log origin/master..HEAD</code>
+  shows only commits made by you or, if you are not the only one working on
+  the branch, only commits belonging to the branch with the same <code>PTaskXYZ</code></li>
+<li>E.g., if George is working on <code>PTask275</code> and sees that something funny is
+  going on:
+  <code>a379826 Ringo, 3 weeks ago : LemTask54: finish dataflow through
+  cross-validation
+  33a46b2 George, 2 weeks ago : PTask275 Move class attributes docstrings to init, change logging</code></li>
+</ul>
+</li>
+<li>Make sure the files modified in your branch are only the file you expect to
+    be modified
+    <code>&gt; git fetch
+    &gt; git checkout &amp;lt;BRANCH&gt;
+    &gt; git diff --name-only master..HEAD</code></li>
+<li>If you see that there is a problem, don't push upstream (because the branch
+    will be broken for everybody) and ask a Git expert</li>
+</ul>
+<h2 id="analyzing-commits">Analyzing commits</h2>
+<h3 id="show-files-modified-in-a-commit">Show files modified in a commit</h3>
+<ul>
+<li>You can see the files modified in a given commit hash with:
+  ```<blockquote>
+<p>git show --name-only $HASH
+  ```</p>
+</blockquote>
+</li>
+<li>E.g.,
+  ```<blockquote>
+<p>git show --name-only 39a9e335298a3fe604896fa19296d20829801cf2</p>
+</blockquote>
+</li>
+</ul>
+<p>commit 39a9e335298a3fe604896fa19296d20829801cf2
+  Author: Julia &lt;julia@...&gt;
+  Date:   Fri Sep 27 11:43:41 2019</p>
+<p>PTask274 lint</p>
+<p>vendors/cme/utils.py
+  vendors/first_rate/utils.py
+  ```</p>
+<h2 id="conflicts">Conflicts</h2>
+<h3 id="getting-the-conflicting-files">Getting the conflicting files</h3>
+<ul>
+<li>To see the files in conflicts
+  <code>git diff --name-only --diff-filter=U</code></li>
+<li>This is what the script <code>git_conflict_files.sh</code> does</li>
+</ul>
+<h3 id="accepting-theirs">Accepting "theirs"</h3>
+<pre><code>&gt; git checkout --theirs $FILES
+&gt; git add $FILES
+</code></pre>
+<ul>
+<li>TODO(gp): Fix this ours and theirs. The first option represents the current
+  branch from which you executed the command before getting the conflicts, and
+  the second option refers to the branch where the changes are coming from.
+  ```<blockquote>
+<p>git show :1:README
+git show :2:README
+git show :3:README
+  ```</p>
+</blockquote>
+</li>
+<li>Stage #1 is the common ancestor of the files, stage #2 is the target-branch
+  version, and stage #3 is the version you are merging from.</li>
+</ul>
+<h2 id="how-to-get-out-of-a-messyun-mergeable-branch">How to get out of a messy/un-mergeable branch</h2>
+<ul>
+<li>If one screws up a branch:</li>
+<li>Rebase to master</li>
+<li>Resolve the conflicts<ul>
+<li>E.g., pick the <code>master</code> version when needed:
+  <code>git checkout --theirs ...; git add ...</code></li>
+</ul>
+</li>
+<li>Diff the changes in the branch vs another client at <code>master</code>
+    <code>&gt; diff_to_vimdiff.py --dir1 $DIR1/amp --dir2 $DIR2/amp --skip_vim
+    Saving log to file '/Users/saggese/src/...2/amp/dev_scripts/diff_to_vimdiff.py.log'
+    10-06_15:22 INFO : _parse_diff_output:36  : Reading '/tmp/tmp.diff_to_vimdiff.txt'
+    #       DIFF: README.md
+    #       DIFF: core/dataflow.py
+    #       DIFF: core/dataflow_core.py
+    #       DIFF: core/test/test_core.py
+    #       DIFF: dev_scripts/diff_to_vimdiff.py
+    #       ONLY: diff_to_vimdiff.py.log in $DIR1/dev_scripts
+    #       DIFF: dev_scripts/grc
+    #       ONLY: code_style.txt in $DIR2/docs/notes
+    ...
+    #       DIFF: vendors/test/test_vendors.py</code></li>
+<li>Diff / merge manually the files that are different
+    <code>&gt; diff_to_vimdiff.py --dir1 $DIR1/...2/amp --dir2 $DIR2/...3/amp --skip_vim
+    &gt; --only_diff_content
+    #       DIFF: README.md
+    #       DIFF: core/dataflow.py
+    #       DIFF: core/dataflow_core.py
+    #       DIFF: core/test/test_core.py
+    ...</code></li>
+</ul>
+<h2 id="reverting">Reverting</h2>
+<h3 id="reverting-the-last-local-commit">Reverting the last local commit</h3>
+<pre><code>&gt; git reset --soft HEAD~
+</code></pre>
+<h2 id="branching">Branching</h2>
+<h3 id="checking-what-work-has-been-done-in-a-branch">Checking what work has been done in a branch</h3>
+<ul>
+<li>Look at all the branches available:
+  ```
+  # Fetch all the data from origin.<blockquote>
+<p>git fetch
+  # List all the branches.
+git branch -r
+  origin/HEAD -&gt; origin/master
+  origin/PTask274
+  ...
+  ```</p>
+</blockquote>
+</li>
+<li>Go to the branch:
+  ```<blockquote>
+<p>git checkout PTask274
+  ```</p>
+</blockquote>
+</li>
+<li>Check what are the commits that are in the current branch HEAD but not in
+  <code>master</code>:
+  ```<blockquote>
+<p>gll master..HEAD
+git log master..HEAD
+  eb12233 Julia PTask274 verify dataset integrity ( 13 hours ago) Sat Sep 28 18:55:12 2019 (HEAD -&gt; PTask274, origin/PTask274) ...
+  a637594 saggese PTask274: Add tag for review ( 3 days ago) Thu Sep 26 17:13:33 2019
+  ```</p>
+</blockquote>
+</li>
+<li>To see the actual changes in a branch you can't do (Bad) \
+  <code>&gt; git diff master..HEAD</code> since <code>git diff</code> compares two commits and not a range
+  of commits like <code>git log</code> (yes, Git has a horrible API)</li>
+<li>What you need to do is to get the first commit in the branch and the last from
+  <code>git log</code> and compare them:
+  ```<blockquote>
+<p>git difftool a637594..eb12233
+gd a637594..eb12233
+  ```</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="checking-if-you-need-to-merge-master-into-your-feature-branch">Checking if you need to merge <code>master</code> into your feature branch</h3>
+<ul>
+<li>You can see what commits are in master but missing in your branch with:
+  ```<blockquote>
+<p>gll ..master
+  de51a7c saggese Improve script to help diffing trees in case of difficult merges. Add notes from reviews ( 5 hours ago) Sat Oct 5 11:24:11 2019 (origin/master, origin/HEAD, master)
+  8acd60c saggese Add a basic end-to-end unit test for the linter ( 19 hours ago) Fri Oct 4 21:28:09 2019 …
+  ```</p>
+</blockquote>
+</li>
+<li>You want to <code>rebase</code> your feature branch onto <code>master</code></li>
+</ul>
+<h3 id="comparing-the-difference-of-a-directory-among-branches">Comparing the difference of a directory among branches</h3>
+<ul>
+<li>This is useful if we want to focus on changes on a single dir
+  ```<blockquote>
+<p>git ll master..PTask274 vendors/cme
+  39a9e33 Julia PTask274 lint ( 2 days ago) Fri Sep 27 11:43:41 2019
+  c8e7e1a Julia PTask268 modify according to review16 ( 2 days ago) Fri Sep 27
+  11:41:47 2019
+  a637594 saggese PTask274: Add tag for review ( 3 days ago) Thu Sep 26 17:13:33
+  2019
+  <code></code>
+git diff --name-only a637594..33a46b2 -- vendors helpers
+  helpers/csv.py
+  vendors/cme/utils.py
+  vendors/first_rate/Task274_verify_datasets.ipynb
+  vendors/first_rate/Task274_verify_datasets.py
+  vendors/first_rate/reader.py
+  vendors/first_rate/utils.py
+  vendors/test/test_vendors.py
+  ```</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="merging-master">Merging <code>master</code></h2>
+<ul>
+<li>If your branch lives long, you want to apply changes made on master to show on
+  your branch</li>
+<li>Merge flow</li>
+<li>Assume your branch is clean</li>
+<li>E.g., everything is committed, or stashed</li>
+<li>Pull changes from <code>master</code> on the remote repo
+  ```<blockquote>
+<p>git checkout master
+git pull
+  ```</p>
+</blockquote>
+</li>
+<li>Checkout your feature branch
+  ```<blockquote>
+<p>git checkout my_feature
+  ```</p>
+</blockquote>
+</li>
+<li>Merge stuff from <code>master</code> to <code>my_feature</code>
+  ```<blockquote>
+<p>git merge master --no-ff
+  ... editor will open a message for the merge commit ...
+  ```</p>
+</blockquote>
+</li>
+<li>In few informal words, the <code>--no-ff</code> option means that commits are not
+  "inlined" (similar to rebase) even if possible, but a merge commit is always
+  used</li>
+<li>The problem is that if the commits are "inlined" then you can't revert the
+    change in one shot like we would do for a merge commit, but you need to
+    revert all the inlined changes</li>
+</ul>
+<h2 id="rebasing">Rebasing</h2>
+<ul>
+<li><strong>For now, we suggest avoiding the rebase flow</strong></li>
+<li>The reason is that rebase makes things cleaner when used properly, but can get
+  you into deep trouble if not used properly</li>
+<li>You can rebase onto <code>master</code>, i.e., you re-apply your changes to <code>master</code></li>
+<li>Not the other way around: that would be a disaster!
+  ```<blockquote>
+<p>git checkout my_feature
+  # See that you have that master doesn't have.
+git ll origin/master..
+  # See that master has that you don't have.
+git ll ..origin/master
+git rebase master
+git ll ..origin/master
+  # Now you see that there is nothing in master you don't have
+git ll origin/master..
+  # You can see that you are ahead of master
+  ```</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="merging-pull-requests">Merging pull requests</h2>
+<ul>
+<li>The procedure for manual merges is as follows</li>
+<li><strong>Do not merge yourself unless explicitly requested by a reviewer</strong></li>
+<li>Pull changes from remote <code>master</code> branch
+  ```<blockquote>
+<p>git checkout master
+git pull
+  ```</p>
+</blockquote>
+</li>
+<li>Merge your branch into <code>master</code> without fast-forward
+  ```<blockquote>
+<p>git merge --no-ff my_feature
+  ```</p>
+</blockquote>
+</li>
+<li>Push the newly merged master
+  ```<blockquote>
+<p>git push
+  ```</p>
+</blockquote>
+</li>
+<li>Delete the branch, if you are done with it:
+  ```<blockquote>
+<p>git branch -d my_feature
+  ```</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="submodules">Submodules</h1>
+<h2 id="adding-a-submodule">Adding a submodule</h2>
+<ul>
+<li>Following the instructions in
+  <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">https://git-scm.com/book/en/v2/Git-Tools-Submodules</a></li>
+</ul>
+<h2 id="working-in-a-submodule">Working in a submodule</h2>
+<ul>
+<li>When you work in a submodule, the flow should be like:</li>
+<li>Create a branch in a submodule</li>
+<li>Do your job</li>
+<li>Push the submodule branch</li>
+<li>Create a PR in the submodule when you are done</li>
+</ul>
+<h2 id="updating-a-submodule-to-the-latest-commit">Updating a submodule to the latest commit</h2>
+<ul>
+<li>After the submodule PR is merged:</li>
+<li>Checkout the submodule in the master branch and do <code>git pull</code></li>
+<li>In the main repo, create a branch like <code>PTask1234_update_submodule</code></li>
+<li>From the new branch do <code>git add &amp;lt;submodule_name&gt;</code>, e.g., <code>git add amp</code></li>
+<li>Commit changes, push</li>
+<li>Create a PR</li>
+</ul>
+<h2 id="to-check-if-supermodule-and-amp-are-in-sync">To check if supermodule and amp are in sync</h2>
+<ul>
+<li>Run the script:
+  ```<blockquote>
+<p>dev_scripts/git/git_submodules_are_updated.sh
+  ```</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="roll-forward-git-submodules-pointers">Roll forward git submodules pointers:</h2>
+<ul>
+<li>Run the script:
+  ```<blockquote>
+<p>dev_scripts/git/git_submodules_roll_fwd.sh
+  ```</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="to-clean-all-the-repos">To clean all the repos</h2>
+<pre><code>&gt; git submodule foreach git clean -fd
+</code></pre>
+<h2 id="pull-a-branch-without-checkout">Pull a branch without checkout</h2>
+<ul>
+<li>This is useful when merging <code>master</code> in a different branch and we don't want
+  to checkout master just to pull
+  ```<blockquote>
+<p>git fetch origin master:master
+  ```</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="to-force-updating-all-the-submodules">To force updating all the submodules</h2>
+<ul>
+<li>Run the script <code>&gt; dev_scripts/git/git_submodules_pull.sh</code> or
+  ```<blockquote>
+<p>git submodule update --init --recursive`
+git submodule foreach git pull --autostash
+  ```</p>
+</blockquote>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

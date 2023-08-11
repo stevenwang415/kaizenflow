@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>GitHub/ZenHub workflows - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../General_rules_of_collaboration/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Git_workflow_and_best_practices/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#githubzenhub-workflows" class="nav-link">GitHub/ZenHub workflows</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#concepts" class="nav-link">Concepts</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#epic" class="nav-link">Epic</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#issue" class="nav-link">Issue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#label" class="nav-link">Label</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pipeline" class="nav-link">Pipeline</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pr" class="nav-link">PR</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#issue-workflows" class="nav-link">Issue workflows</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#filing-a-new-issue" class="nav-link">Filing a new issue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#updating-an-issue" class="nav-link">Updating an issue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#closing-an-issue" class="nav-link">Closing an issue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#pr-workflows" class="nav-link">PR workflows</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#pr-labels" class="nav-link">PR labels</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#filing-a-new-pr" class="nav-link">Filing a new PR</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#review" class="nav-link">Review</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#addressing-comment" class="nav-link">Addressing comment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#coverage-reports-in-prs-discussion" class="nav-link">Coverage reports in PRs - discussion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="githubzenhub-workflows">GitHub/ZenHub workflows</h1>
+<!--ts-->
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#concepts">Concepts</a><ul>
+<li><a href="#epic">Epic</a><ul>
+<li><a href="#master-epics">Master Epics</a></li>
+<li><a href="#sub-epics">Sub-epics</a></li>
+</ul>
+</li>
+<li><a href="#issue">Issue</a></li>
+<li><a href="#label">Label</a></li>
+<li><a href="#pipeline">Pipeline</a></li>
+<li><a href="#pr">PR</a></li>
+</ul>
+</li>
+<li><a href="#issue-workflows">Issue workflows</a><ul>
+<li><a href="#filing-a-new-issue">Filing a new issue</a></li>
+<li><a href="#updating-an-issue">Updating an issue</a></li>
+<li><a href="#closing-an-issue">Closing an issue</a></li>
+</ul>
+</li>
+<li><a href="#pr-workflows">PR workflows</a><ul>
+<li><a href="#pr-labels">PR labels</a></li>
+<li><a href="#filing-a-new-pr">Filing a new PR</a><ul>
+<li><a href="#general-tips">General tips</a></li>
+<li><a href="#filing-process">Filing process</a></li>
+</ul>
+</li>
+<li><a href="#review">Review</a></li>
+<li><a href="#addressing-comment">Addressing comment</a></li>
+<li><a href="#coverage-reports-in-prs---discussion">Coverage reports in PRs - discussion</a></li>
+</ul>
+</li>
+</ul>
+<!--te-->
+
+<h1 id="introduction">Introduction</h1>
+<ul>
+<li>In the following we use the abbreviations below:</li>
+<li>GH = GitHub</li>
+<li>ZH = ZenHub</li>
+<li>PR = Pull Request</li>
+<li>RP = Responsible party (Team Leader)</li>
+<li>Everything we work on comes as a GH task</li>
+<li>We file tasks and then prioritize and distribute the workload</li>
+<li>We try to always work on high priority (aka, P0) tasks</li>
+<li>Issues vs bugs vs tasks<ul>
+<li>We call GH Issues "issues", and "tasks", (sometimes "tickets") interchangeably. We avoid to call them bugs since many times we use GH to track ideas, activities, and improvements, and not only defects in the code</li>
+<li>The best names are "tasks" and "issues"</li>
+</ul>
+</li>
+<li><a href="https://app.zenhub.com/workspaces/cm-615371012ed326001e044788/board?repos=586614470">ZenHub</a>
+  for project management</li>
+<li>We use ZH as project management layer on top of GH</li>
+<li>Please install the <a href="https://www.zenhub.com/extension">ZH extension</a> for GH. This is going to make your life easier</li>
+</ul>
+<h1 id="concepts">Concepts</h1>
+<h2 id="epic">Epic</h2>
+<ul>
+<li>An Epic pulls together Issues that are somehow related by their topic</li>
+<li>We distinguish Master Epics (e.g., <code>WEB3</code>) and sub-Epics (e.g., <code>WEB3 - DaoCross v0.1</code>)</li>
+<li>See the current list of Epics on GH
+  <a href="https://github.com/sorrentum/sorrentum/issues?q=is%3Aopen+is%3Aissue+label%3AEpic+">here</a></li>
+<li>We maintain all the information about what the Epic is about in its description</li>
+</ul>
+<h3 id="master-epics">Master Epics</h3>
+<ul>
+<li>Master Epics are long-running Epics (i.e., projects)</li>
+<li>E.g., <code>WEB3</code></li>
+<li>Each issue should belong to at least one Epic: either a sub-epic or a master Epic</li>
+<li>There is no need to add an issue to a Master Epic if it is already added to a sub-epic</li>
+</ul>
+<h3 id="sub-epics">Sub-epics</h3>
+<ul>
+<li>Master Epics can be broken down into smaller Epics (=sub-epics)</li>
+<li>E.g., <code>WEB3 - DaoCross v0.1</code></li>
+<li>Their titles should follow the pattern: <code>XYZ - ABC v*</code>, where:</li>
+<li><code>XYZ</code> - master Epic title</li>
+<li><code>ABC</code> - sub-epic title</li>
+<li><code>v*</code> - version</li>
+<li>Epics and sub-epics are typed as <code>EPIC - Sub-Epic</code>, i.e., the master epic is capitalized and the sub-epics are capitalized lower-case</li>
+<li>Sub-epics should have a short title and a smaller scope</li>
+<li>Some sub-epics are related to short term milestones or releases (e.g.,
+  <code>WEB3 - DaoCross - v0.1</code>), other sub-epics are for long-running activities
+  (e.g., <code>WEB3 - Good First Issue</code>)</li>
+<li>Sub-epics should belong to a Master Epic in ZH</li>
+<li>A sub-epic can be moved to <code>Done/Pre-prod</code> only if all issues nested in it
+    are moved to <code>Done/Pre-prod</code></li>
+</ul>
+<h2 id="issue">Issue</h2>
+<ul>
+<li>Issue is a piece of work to be done.</li>
+<li>Issues are combined into Epics by topic</li>
+<li>An issue has certain characteristics, i.e. labels</li>
+<li>An issue has a progress status, i.e. ZH pipeline (e.g.,
+  <code>Product backlog (P1)</code>, <code>In progress</code>, <code>Done/Pre-prod</code>)</li>
+<li>PRs are linked to work needed to complete an issue</li>
+</ul>
+<h2 id="label">Label</h2>
+<ul>
+<li>Labels are attributes of an issue (or PR), e.g., <code>good first issue</code>,
+  <code>PR_for_reviewers</code>, <code>duplicate</code>, etc.</li>
+<li>See the current list of labels and their descriptions
+  <a href="https://github.com/sorrentum/sorrentum/labels">here</a></li>
+</ul>
+<h2 id="pipeline">Pipeline</h2>
+<ul>
+<li>A ZH Pipeline represents the "progress" status of an Issue in our process</li>
+<li>We have the following Pipelines on the ZH board:</li>
+<li><code>New Issues</code><ul>
+<li>Any new GH Issue with unclear Epic / Pipeline goes here</li>
+</ul>
+</li>
+<li><code>Icebox (P2)</code><ul>
+<li>Low priority, unprioritized issues</li>
+</ul>
+</li>
+<li><code>Product Backlog (P1)</code><ul>
+<li>Issues of medium priority at the moment</li>
+</ul>
+</li>
+<li><code>Background</code><ul>
+<li>Tasks one can do in background, e.g. reading, updating documentation, etc.</li>
+</ul>
+</li>
+<li><code>Sprint backlog (P0)</code><ul>
+<li>Issues of high priority at the moment</li>
+</ul>
+</li>
+<li><code>In Progress</code><ul>
+<li>Issues that we are currently working on</li>
+</ul>
+</li>
+<li><code>Review/QA</code><ul>
+<li>Issues opened for review and testing</li>
+<li>Code is ready to be deployed pending feedback</li>
+</ul>
+</li>
+<li><code>Done/Pre-prod</code><ul>
+<li>Issues that are done and are waiting for closing</li>
+</ul>
+</li>
+<li><code>Epics</code><ul>
+<li>Both Master Epics and Sub-epics</li>
+</ul>
+</li>
+<li><code>Closed</code><ul>
+<li>Issues that are done and don't need a follow-up</li>
+<li>GP/RPs are responsible for closing</li>
+</ul>
+</li>
+</ul>
+<h2 id="pr">PR</h2>
+<ul>
+<li>A pull request is an event where a contributor asks to review code they want
+  to merge into a project</li>
+</ul>
+<h1 id="issue-workflows">Issue workflows</h1>
+<h2 id="filing-a-new-issue">Filing a new issue</h2>
+<ul>
+<li>Use an informative description (typically an action "Do this and that")</li>
+<li>We don't use a period at the end of the title</li>
+<li>If it is a “serious” problem (bug) put as much information about the Issue as
+  possible, e.g.,:</li>
+<li>What you are trying to achieve</li>
+<li>Command line you ran, e.g.,
+    <code>&gt; i lint -f defi/tulip/test/test_dao_cross_sol.py</code></li>
+<li><strong>Copy-paste</strong> the error and the stack trace from the cmd line, no screenshots, e.g.,
+    <code>Traceback (most recent call last):
+      File "/venv/bin/invoke", line 8, in &lt;module&gt;
+        sys.exit(program.run())
+      File "/venv/lib/python3.8/site-packages/invoke/program.py", line 373, in run
+        self.parse_collection()
+    ValueError: One and only one set-up config should be true:</code></li>
+<li>The log of the run<ul>
+<li>Maybe the same run using <code>-v DEBUG</code> to get more info on the problem</li>
+</ul>
+</li>
+<li>What the problem is</li>
+<li>Why the outcome is different from what you expected</li>
+<li>Use check boxes for "small" actions that need to be tracked in the issue (not
+  worth their own bug)</li>
+<li>An issue should be closed only after all the checkboxes have been addressed</li>
+<li>We use the <code>FYI @...</code> syntax to add "watchers"</li>
+<li>E.g., <code>FYI @cryptomtc</code> so that he receives notifications for this issue</li>
+<li>Authors and assignees receive all the emails in any case</li>
+<li>In general everybody should be subscribed to receiving all the notifications
+    and you can quickly go through them to know what's happening around you</li>
+<li>Assign an Issue to the right person for re-routing</li>
+<li>There should be a single assignee to a bug so we know who needs to do the
+    work</li>
+<li>Assign GP/current RPs if not sure</li>
+<li>Assign an Issue to one of the pipelines, ideally based on the urgency</li>
+<li>If you are not sure, leave it unassigned but <code>@tag</code> GP / RPs to make sure we
+  can take care of it</li>
+<li>Assign an Issue to the right Epic and Label</li>
+<li>Use <code>Blocking</code> label when an issue needs to be handled immediately, i.e. it
+    prevents you from making progress</li>
+<li>If you are unsure then you can leave it empty, but <code>@tag</code> GP / RPs to make
+    sure we can re-route and improve the Epics/Labels</li>
+</ul>
+<h2 id="updating-an-issue">Updating an issue</h2>
+<ul>
+<li>When you start working on an Issue, move it to the <code>In Progress</code> pipeline on
+  ZH</li>
+<li>Try to use <code>In Progress</code> only for Issues you are actively working on</li>
+<li>A rule of thumb is that you should not have more than 2-3 <code>In Progress</code>
+    Issues</li>
+<li>Give priority to Issues that are close to being completed, rather than
+    starting a new Issue</li>
+<li>Update an Issue on GH often, like at least once a day of work</li>
+<li>Show the progress to the team with quick updates</li>
+<li>Update your Issue with pointers to gdocs, PRs, notebooks</li>
+<li>If you have questions, post them on the bug and tag people</li>
+<li>Once the task, in your opinion, is done, move an issue to <code>Review/QA</code> pipeline
+  so that GP/RPs can review it</li>
+<li>If we decide to stop the work, add a <code>Paused</code> label and move it back to the
+  backlog, e.g., <code>Sprint backlog (P0)</code>, <code>Product backlog (P1)</code>, <code>Icebox (P2)</code></li>
+</ul>
+<h2 id="closing-an-issue">Closing an issue</h2>
+<ul>
+<li>A task is closed when PR has been reviewed and merged into <code>master</code></li>
+<li>When, in your opinion, there is no more work to be done on your side on an
+  Issue, please move it to the <code>Done/Pre-prod</code> or <code>Review/QA</code> pipeline, but do
+  not close it</li>
+<li>GP/RPs will close it after review</li>
+<li>If you made specific assumptions, or if there are loose ends, etc., add a
+  <code>TODO(user)</code>or file a follow-up bug</li>
+<li>Done means that something is DONE, not 99% done</li>
+<li>It means that the code is tested, readable and usable by other teammates</li>
+<li>Together we can decide that 99% done is good enough, but it should be a
+  conscious decision and not come as a surprise</li>
+</ul>
+<h1 id="pr-workflows">PR workflows</h1>
+<h2 id="pr-labels">PR labels</h2>
+<ul>
+<li><code>PR_for_authors</code></li>
+<li>There are changes to be addressed by an author of a PR</li>
+<li><code>PR_for_reviewers</code></li>
+<li>PR is ready for review by RPs</li>
+<li><code>PR_for_integrators</code></li>
+<li>PR is ready for the final round of review by GP, i.e. close to merge</li>
+</ul>
+<h2 id="filing-a-new-pr">Filing a new PR</h2>
+<h3 id="general-tips">General tips</h3>
+<ul>
+<li>Implement a feature in a branch (not master), once it is ready for review push
+  it and file a PR via GH interface</li>
+<li>We have invoke tasks to automate some of these tasks:
+  ```<blockquote>
+<p>i git_create_branch -i 828
+i git_create_branch -b Cmamp723_hello_world
+i gh_create_pr
+  ```</p>
+</blockquote>
+</li>
+<li>If you want to make sure you are going in a right direction or just to confirm
+  the interfaces you can also file a PR to discuss</li>
+<li>Mark PR as draft if it is not ready, use the <code>convert to draft</code> button</li>
+</ul>
+<h3 id="filing-process">Filing process</h3>
+<ul>
+<li>Add a description to help reviewers to understand what it is about and what
+  you want the focus to be</li>
+<li>Add a pointer in the description to the issue that PR is related to - this
+    will ease the GH navigation for you and reviewers</li>
+<li>Leave the assignee field empty</li>
+<li>This will be done by RPs</li>
+<li>Add reviewers to the reviewers list</li>
+<li>For optional review just do <code>@FYI</code> <code>person_name</code> in the description</li>
+<li>Add a corresponding label</li>
+<li>Usually the first label in the filed PR is <code>PR_for_reviewers</code></li>
+<li>If it is urgent/blocking, use the <code>Blocking</code> label</li>
+<li>Make sure that the corresponding tests pass</li>
+<li>Always lint before asking for a review</li>
+<li>Link a PR to an issue via ZH plugin feature</li>
+<li><code># TODO(Dan): Add a pic with example.</code></li>
+<li>If the output is a notebook:</li>
+<li>Publish a notebook, see
+    <a href="https://docs.google.com/document/d/1b3RptKVK6vFUc8upcz3n0nTZhTO0ZQ-Ay5I01nCp5WM/edit#heading=h.oi342wm38z0a">here</a></li>
+<li>Attach a cmd line to open a published notebook, see
+    <a href="https://docs.google.com/document/d/1b3RptKVK6vFUc8upcz3n0nTZhTO0ZQ-Ay5I01nCp5WM/edit#heading=h.i7m2jg6llfl2">here</a></li>
+</ul>
+<h2 id="review">Review</h2>
+<ul>
+<li>A reviewer should check the code:</li>
+<li>Architecture</li>
+<li>Conformity with specs</li>
+<li>Code style conventions</li>
+<li>Interfaces</li>
+<li>Mistakes</li>
+<li>Readability</li>
+<li>There are 2 possible outcomes of a review:</li>
+<li>There are changes to be addressed by author<ul>
+<li>A reviewer leaves comments to the code</li>
+<li>Marks PR as <code>PR_for_authors</code></li>
+</ul>
+</li>
+<li>A PR is ready to be merged:<ul>
+<li>Pass it to integrators and mark it as <code>PR_for_integrators</code></li>
+<li>Usually is placed by RPs after they approve PR</li>
+</ul>
+</li>
+</ul>
+<h2 id="addressing-comment">Addressing comment</h2>
+<ul>
+<li>If the reviewer's comment is clear to the author and agreed upon:</li>
+<li>The author addresses the comment with a code change and after changing the
+    code (everywhere the comment it applies) marks it as <code>RESOLVED</code> on the GH
+    interface</li>
+<li>Here we trust the authors to do a good job and to not skip / lose comments</li>
+<li>If the comment needs further discussion, the author adds a note explaining
+    why he/she disagrees and the discussion continues until consensus is reached</li>
+<li>Once all comments are addressed:</li>
+<li>Re-request the review</li>
+<li>Mark it as <code>PR_for_reviewers</code></li>
+</ul>
+<h2 id="coverage-reports-in-prs-discussion">Coverage reports in PRs - discussion</h2>
+<p>We should start posting coverage reports in PRs.</p>
+<p>The suggested process is:</p>
+<ul>
+<li>PR’s author posts coverage stats before (from master) and after the changes in
+  the format below. The report should contain only the files that were touched
+  in a PR.</li>
+<li>We have <code>run_coverage_report</code> invoke<ul>
+<li><code>TODO(*): Enable for Sorrentum and add usage examples.</code></li>
+</ul>
+</li>
+<li>Maybe we can automate it somehow, e.g., with GH actions. But we need to
+    start from something.
+    <code>Name                                    Stmts   Miss Branch BrPart  Cover
+    -------------------------------------------------------------------------
+    oms/locates.py                              7      7      2      0     0%
+    oms/oms_utils.py                           34     34      6      0     0%
+    oms/tasks.py                                3      3      0      0     0%
+    oms/oms_lib_tasks.py                       64     39      2      0    38%
+    oms/order.py                              101     30     22      0    64%
+    oms/test/oms_db_helper.py                  29     11      2      0    65%
+    oms/api.py                                154     47     36      2    70%
+    oms/broker.py                             200     31     50      9    81%
+    oms/pnl_simulator.py                      326     42     68      8    83%
+    oms/place_orders.py                       121      8     18      6    90%
+    oms/portfolio.py                          309     21     22      0    92%
+    oms/oms_db.py                              47      0     10      3    95%
+    oms/broker_example.py                      23      0      4      1    96%
+    oms/mr_market.py                           55      1     10      1    97%
+    oms/__init__.py                             0      0      0      0   100%
+    oms/call_optimizer.py                      31      0      0      0   100%
+    oms/devops/__init__.py                      0      0      0      0   100%
+    oms/devops/docker_scripts/__init__.py       0      0      0      0   100%
+    oms/order_example.py                       26      0      0      0   100%
+    oms/portfolio_example.py                   32      0      0      0   100%
+    -------------------------------------------------------------------------
+    TOTAL                                    1562    274    252     30    80%</code></li>
+<li>PR’s author also sends a link to S3 with the full html report so that a
+  reviewer can check that the new lines added are covered by the tests</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

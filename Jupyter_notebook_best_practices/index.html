@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Jupyter notebook best practices - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Imports_and_packages/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Reading_List/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#jupyter-notebook-best-practices" class="nav-link">Jupyter notebook best practices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#when-to-use-a-jupyter-notebook" class="nav-link">When to use a Jupyter notebook</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#general-structure-of-a-notebook" class="nav-link">General structure of a notebook</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#description" class="nav-link">Description</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#imports" class="nav-link">Imports</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#configuration" class="nav-link">Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#make-the-notebook-flow-clear" class="nav-link">Make the notebook flow clear</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#general-best-practices" class="nav-link">General best practices</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#update-calls-only-for-mastergallery-notebooks" class="nav-link">Update calls only for Master/Gallery notebooks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#keep-code-that-belongs-together-in-one-cell" class="nav-link">Keep code that belongs together in one cell</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#write-beautiful-code-even-in-notebooks" class="nav-link">Write beautiful code, even in notebooks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#show-how-data-is-transformed-as-you-go" class="nav-link">Show how data is transformed as you go</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#use-keyboard-shortcuts" class="nav-link">Use keyboard shortcuts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#strive-for-simplicity" class="nav-link">Strive for simplicity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dependencies-among-cells" class="nav-link">Dependencies among cells</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#re-execute-from-scratch" class="nav-link">Re-execute from scratch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#add-comments-for-complex-cells" class="nav-link">Add comments for complex cells</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#do-not-cut-paste-code" class="nav-link">Do not cut &amp; paste code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#avoid-wall-of-code-cell" class="nav-link">Avoid "wall-of-code" cell</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#avoid-data-biases" class="nav-link">Avoid data biases</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#avoid-hardwired-constants" class="nav-link">Avoid hardwired constants</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#explain-where-data-is-coming-from" class="nav-link">Explain where data is coming from</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fix-warnings" class="nav-link">Fix warnings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#make-cells-idempotent" class="nav-link">Make cells idempotent</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#always-look-at-the-discarded-data" class="nav-link">Always look at the discarded data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#use-a-progress-bar" class="nav-link">Use a progress bar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#notebooks-and-libraries" class="nav-link">Notebooks and libraries</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#pros" class="nav-link">Pros</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cons" class="nav-link">Cons</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#recommendations-for-plots" class="nav-link">Recommendations for plots</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#use-the-proper-y-scale" class="nav-link">Use the proper y-scale</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#make-each-plot-self-explanatory" class="nav-link">Make each plot self-explanatory</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#avoid-wall-of-text-tables" class="nav-link">Avoid wall-of-text tables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#use-common-axes-to-allow-visual-comparisons" class="nav-link">Use common axes to allow visual comparisons</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#use-the-right-plot" class="nav-link">Use the right plot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#useful-plugins" class="nav-link">Useful plugins</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#vim-bindings" class="nav-link">Vim bindings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#table-of-content" class="nav-link">Table of content</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#executetime" class="nav-link">ExecuteTime</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#spellchecker" class="nav-link">Spellchecker</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#autosavetime" class="nav-link">AutoSaveTime</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#notify" class="nav-link">Notify</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#jupytext" class="nav-link">Jupytext</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gspread" class="nav-link">Gspread</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="jupyter-notebook-best-practices">Jupyter notebook best practices</h1>
+<!-- toc -->
+
+<ul>
+<li><a href="#when-to-use-a-jupyter-notebook">When to use a Jupyter notebook</a></li>
+<li><a href="#general-structure-of-a-notebook">General structure of a notebook</a></li>
+<li><a href="#description">Description</a></li>
+<li><a href="#imports">Imports</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#make-the-notebook-flow-clear">Make the notebook flow clear</a></li>
+<li><a href="#general-best-practices">General best practices</a></li>
+<li><a href="#update-calls-only-for-mastergallery-notebooks">Update calls only for Master/Gallery notebooks</a><ul>
+<li><a href="#convention">Convention:</a></li>
+<li><a href="#rationale">Rationale:</a></li>
+</ul>
+</li>
+<li><a href="#keep-code-that-belongs-together-in-one-cell">Keep code that belongs together in one cell</a></li>
+<li><a href="#write-beautiful-code-even-in-notebooks">Write beautiful code, even in notebooks</a></li>
+<li><a href="#show-how-data-is-transformed-as-you-go">Show how data is transformed as you go</a></li>
+<li><a href="#use-keyboard-shortcuts">Use keyboard shortcuts</a></li>
+<li><a href="#strive-for-simplicity">Strive for simplicity</a></li>
+<li><a href="#dependencies-among-cells">Dependencies among cells</a></li>
+<li><a href="#re-execute-from-scratch">Re-execute from scratch</a></li>
+<li><a href="#add-comments-for-complex-cells">Add comments for complex cells</a></li>
+<li><a href="#do-not-cut--paste-code">Do not cut &amp; paste code</a></li>
+<li><a href="#avoid-wall-of-code-cell">Avoid "wall-of-code" cell</a></li>
+<li><a href="#avoid-data-biases">Avoid data biases</a></li>
+<li><a href="#avoid-hardwired-constants">Avoid hardwired constants</a></li>
+<li><a href="#explain-where-data-is-coming-from">Explain where data is coming from</a></li>
+<li><a href="#fix-warnings">Fix warnings</a></li>
+<li><a href="#make-cells-idempotent">Make cells idempotent</a></li>
+<li><a href="#always-look-at-the-discarded-data">Always look at the discarded data</a></li>
+<li><a href="#use-a-progress-bar">Use a progress bar</a></li>
+<li><a href="#notebooks-and-libraries">Notebooks and libraries</a></li>
+<li><a href="#pros">Pros</a></li>
+<li><a href="#cons">Cons</a></li>
+<li><a href="#recommendations-for-plots">Recommendations for plots</a></li>
+<li><a href="#use-the-proper-y-scale">Use the proper y-scale</a></li>
+<li><a href="#make-each-plot-self-explanatory">Make each plot self-explanatory</a></li>
+<li><a href="#avoid-wall-of-text-tables">Avoid wall-of-text tables</a></li>
+<li><a href="#use-common-axes-to-allow-visual-comparisons">Use common axes to allow visual comparisons</a></li>
+<li><a href="#use-the-right-plot">Use the right plot</a></li>
+<li><a href="#useful-plugins">Useful plugins</a></li>
+<li><a href="#vim-bindings">Vim bindings</a></li>
+<li><a href="#table-of-content">Table of content</a></li>
+<li><a href="#executetime">ExecuteTime</a></li>
+<li><a href="#spellchecker">Spellchecker</a></li>
+<li><a href="#autosavetime">AutoSaveTime</a></li>
+<li><a href="#notify">Notify</a></li>
+<li><a href="#jupytext">Jupytext</a></li>
+<li><a href="#gspread">Gspread</a></li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="when-to-use-a-jupyter-notebook">When to use a Jupyter notebook</h1>
+<ul>
+<li>A notebook can be used for various goals:</li>
+<li>Tutorial / gallery<ul>
+<li>Show how some code works (e.g., functions in <code>signal_processing.py</code> or
+  <code>data_encyclopedia.ipynb</code>)</li>
+<li>The code should always work</li>
+<li>We might want to add unit tests for it</li>
+</ul>
+</li>
+<li>Prototyping / one-off<ul>
+<li>E.g.,</li>
+<li>We prototype some code, before it becomes library code</li>
+<li>We did some one-off analysis</li>
+</ul>
+</li>
+<li>Analysis<ul>
+<li>Aka "master" notebooks</li>
+<li>The notebook should always work so we need to treat it as part of the code
+  base</li>
+<li>We might want to add unit tests for it</li>
+</ul>
+</li>
+</ul>
+<h1 id="general-structure-of-a-notebook">General structure of a notebook</h1>
+<h2 id="description">Description</h2>
+<ul>
+<li>At the top of the notebook add a description section explaining a notebook's
+  goal and what it does, e.g.,</li>
+</ul>
+<p>```
+  # Description</p>
+<p>This notebook was used for prototyping / debugging code that was moved in the file <code>abc.py</code>
+  ```</p>
+<ul>
+<li>Convert section headers and cells with description text to a Markdown format
+  by selecting a cell and then at Jupyter interface do
+  <code>Cell -&gt; Cell Type -&gt; Markdown</code></li>
+</ul>
+<h2 id="imports">Imports</h2>
+<ul>
+<li>Add a code section importing the needed libraries</li>
+<li>Autoreload modules to keep Jupyter and local code updated in real-time</li>
+<li>Standard imports, e.g. <code>os</code></li>
+<li>Third-party imports, e.g. <code>pandas</code></li>
+<li>Local imports from our lib</li>
+<li>It's better to put all the imports in one cell and separate different import
+  types by 1 empty line, e.g.:</li>
+</ul>
+<p>```
+  # Imports</p>
+<p>%load_ext autoreload
+  %autoreload 2</p>
+<p>import logging
+  import os</p>
+<p>import matplotlib.pyplot as plt
+  import pandas as pd</p>
+<p>import helpers.dbg as dbg
+  import helpers.env as env
+  import helpers.printing as prnt
+  import core.explore as exp
+  import core.signal_processing as sigp
+  ...
+  ```</p>
+<ul>
+<li>In this way executing one cell is enough to configure the notebook</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<ul>
+<li>You can configure the notebooks with some utils, logging, and report info on
+  how the notebook was executed (e.g., Git commit, libs, etc.) by using the
+  following cell:</li>
+</ul>
+<p>```
+  # Configure logger.
+  hdbg.init_logger(verbosity=logging.INFO)
+  _LOG = logging.getLogger(<strong>name</strong>)</p>
+<p># Print system signature.
+  _LOG.info("%s", henv.get_system_signature()[0])</p>
+<p># Configure the notebook style.
+  hprint.config_notebook()
+  ```</p>
+<ul>
+<li>The output of the cell looks like:
+  <code>INFO: &gt; cmd='/venv/lib/python3.8/site-packages/ipykernel_launcher.py -f /home/.local/share/jupyter/runtime/kernel-a48f60fd-0f96-48b4-82d8-879385f2be91.json'
+  WARNING: Running in Jupyter
+  DEBUG Effective logging level=10
+  DEBUG Shut up 1 modules: asyncio
+  DEBUG &gt; (cd . &amp;&amp; cd "$(git rev-parse --show-toplevel)/.." &amp;&amp; (git rev-parse --is-inside-work-tree | grep -q true)) 2&gt;&amp;1
+  DEBUG &gt; (git rev-parse --show-toplevel) 2&gt;&amp;1
+  ...
+  # Packages
+  python: 3.8.10
+  cvxopt: 1.3.0
+  cvxpy: 1.2.2
+  gluonnlp: ?
+  gluonts: 0.6.7
+  joblib: 1.2.0
+  mxnet: 1.9.1
+  numpy: 1.23.4
+  pandas: 1.5.1
+  pyarrow: 10.0.0
+  scipy: 1.9.3
+  seaborn: 0.12.1
+  sklearn: 1.1.3
+  statsmodels: 0.13.5</code></li>
+</ul>
+<h1 id="make-the-notebook-flow-clear">Make the notebook flow clear</h1>
+<ul>
+<li>Each notebook needs to follow a clear and logical flow, e.g:</li>
+<li>Load data</li>
+<li>Compute stats</li>
+<li>Clean data</li>
+<li>Compute stats</li>
+<li>Do analysis</li>
+<li>Show results</li>
+<li>The flow should be highlighted using headings in markdown:
+  <code># Level 1
+  ## Level 2
+  ### Level 3</code></li>
+<li>Use the extension for navigating the notebook (see our suggestions for Jupyter
+  plug-ins)</li>
+<li>Keep related code and analysis close together so:</li>
+<li>Readers can understand the logical flow</li>
+<li>One could "easily" split the notebook in parts (e.g., when it becomes too
+    big)</li>
+<li>You can collapse the cells and don't scroll back and forth too much</li>
+</ul>
+<h1 id="general-best-practices">General best practices</h1>
+<h2 id="update-calls-only-for-mastergallery-notebooks">Update calls only for Master/Gallery notebooks</h2>
+<h3 id="convention">Convention:</h3>
+<ul>
+<li>We do our best to update the calls in the Master/Gallery notebooks but we
+  don't guarantee that the fix is correct</li>
+<li>For other notebooks we either do the fix (e.g., changing a name of a function)
+  and tweak the call to enforce the old behavior, or even not do anything if
+  there are too many changes</li>
+</ul>
+<h3 id="rationale">Rationale:</h3>
+<ul>
+<li>We have dozens of ad-hoc research notebooks</li>
+<li>When a piece of code is updated (e.g., <code>ImClient</code>) the change should be
+  propagated everywhere in the code base, including the notebooks</li>
+<li>This results in excessive amount of maintenance work which we want to avoid</li>
+</ul>
+<h2 id="keep-code-that-belongs-together-in-one-cell">Keep code that belongs together in one cell</h2>
+<ul>
+<li>It's often useful to keep in a cell computation that needs to be always
+  executed together</li>
+<li>E.g., compute something and then print results</li>
+<li>In this way a single cell execution computes all data together</li>
+<li>Often computation starts in multiple cells, e.g., to inline debugging, and
+  once we are more confident that it works correctly we can merge it in a cell
+  (or even better in a function)</li>
+</ul>
+<h2 id="write-beautiful-code-even-in-notebooks">Write beautiful code, even in notebooks</h2>
+<ul>
+<li>Follow the conventions and suggestions for
+  <a href="../Coding_Style_Guide/">Python code style</a></li>
+<li>When prototyping with a notebook, the code can be of lower quality than code,
+  but still needs to be readable and robust</li>
+<li>In our opinion it's just better to always do write robust and readable code:
+  it doesn't buy much time to cut corners</li>
+</ul>
+<h2 id="show-how-data-is-transformed-as-you-go">Show how data is transformed as you go</h2>
+<ul>
+<li>Print a few lines of data structures (e.g., <code>df.head(3)</code>) so one can see how
+  data is transformed through the cells</li>
+</ul>
+<h2 id="use-keyboard-shortcuts">Use keyboard shortcuts</h2>
+<ul>
+<li>Learn the default keyboard shortcuts to edit efficiently</li>
+<li>You can use the vim plug-in (see below) and become 3x more ninja</li>
+</ul>
+<h2 id="strive-for-simplicity">Strive for simplicity</h2>
+<ul>
+<li>Always make the notebook easy to be understood and run by somebody else</li>
+<li>Explain what happens</li>
+<li>Organize the code in a logical way</li>
+<li>Use decent variable names</li>
+<li>Comment the results, when possible / needed</li>
+</ul>
+<h2 id="dependencies-among-cells">Dependencies among cells</h2>
+<ul>
+<li>Try to avoid dependencies between cells</li>
+<li>Even better avoid any dependency between cells, e.g.:</li>
+<li>Put all the imports in one cell at the beginning, so with one cell execution
+    you can make sure that all the imports are done</li>
+<li>Compare this approach with the case where the imports are randomly sprinkled
+    in the notebook, then you need to go execute them one by one if you
+    re-initialize the notebook</li>
+<li>For the same reason group functions in one cell that you can easily re-execute</li>
+</ul>
+<h2 id="re-execute-from-scratch">Re-execute from scratch</h2>
+<ul>
+<li>Once in a while (e.g., once a day)</li>
+<li>Commit your changes</li>
+<li>Make sure you can re-execute everything from the top with
+  <code>Kernel -&gt; Restart &amp; Clean output</code> and then <code>Kernel -&gt; Run all</code></li>
+<li>Visually verify that the results didn't change, so that there is no weird
+  state or dependency in the code</li>
+<li>Before a commit (and definitively before a PR) do a clean run</li>
+</ul>
+<h2 id="add-comments-for-complex-cells">Add comments for complex cells</h2>
+<ul>
+<li>When a cell is too long, explain in a comment what a cell does, e.g.,
+  <code>## Count stocks with all nans.
+  num_nans = np.isnan(rets).sum(axis=0)
+  num_nans /= rets.shape[0]
+  num_nans = num_nans.sort_values(ascending=False)
+  num_stocks_with_no_nans = (num_nans == 0.0).sum()
+  print("num_stocks_with_no_nans=%s" % hprint.perc(num_stocks_with_no_nans, rets.shape[1]))</code></li>
+<li>Another approach is to factor out the code in functions with clear names and
+  simplify the flow</li>
+</ul>
+<h2 id="do-not-cut-paste-code">Do not cut &amp; paste code</h2>
+<ul>
+<li>Cutting + paste + modify is <em>NEVER</em> a good idea</li>
+<li>It takes more time to clean up cut &amp; paste code than doing right in the first
+  place</li>
+<li>Just make a function out of the code and call it!</li>
+</ul>
+<h2 id="avoid-wall-of-code-cell">Avoid "wall-of-code" cell</h2>
+<ul>
+<li>Obvious</li>
+</ul>
+<h2 id="avoid-data-biases">Avoid data biases</h2>
+<ul>
+<li>Try to compute statistics on the entire data set so that results are
+  representative and not dependent on a particular slice of the data</li>
+<li>You can sample the data and check stability of the results</li>
+<li>If it takes too long to compute the statistics on the entire data set, report
+  the problem and we can think of how to speed it up</li>
+</ul>
+<h2 id="avoid-hardwired-constants">Avoid hardwired constants</h2>
+<ul>
+<li>Don't use hardwired constants</li>
+<li>Try to parametrize the code</li>
+</ul>
+<h2 id="explain-where-data-is-coming-from">Explain where data is coming from</h2>
+<ul>
+<li>If you are using data from a file (e.g., <code>/data/wd/RP_1yr_13_companies.pkl</code>),
+  explain in a comment how the file was generated</li>
+<li>Ideally report a command line to regenerate the data</li>
+<li>The goal is for other people to be able to re-run the notebook from scratch</li>
+</ul>
+<h2 id="fix-warnings">Fix warnings</h2>
+<ul>
+<li>A notebook should run without warnings</li>
+<li>Warnings can't be ignored since they indicate that the code is relying on a
+  feature that will change in the future, e.g.,
+  <code>FutureWarning: Sorting because non-concatenation axis is
+  not aligned. A future version of pandas will change to not sort by
+  default.
+  To accept the future behavior, pass 'sort=False'.
+  To retain the current behavior and silence the warning, pass 'sort=True'.</code></li>
+<li>Another example: after a cell execution the following warning appears:
+  <code>A value is trying to be set on a copy of a slice from a DataFrame
+  See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy</code></li>
+<li>This is a typical pandas warning telling us that we created a view on a
+    dataframe (e.g., by slicing) and we are modifying the underlying data
+    through the view</li>
+<li>This is dangerous since it can create unexpected side effects and coupling
+    between pieces of code that can be painful to debug and fix</li>
+<li>If we don't fix the issue now, the next time we create a conda environment the
+  code might either break or (even worse) have a different behavior, i.e.,
+  <em>silent failure</em></li>
+<li>It's better to fix the warning now that we can verify that the code does what
+  we want to do, instead of fixing it later when we don't remember anymore what
+  exactly we were doing</li>
+<li>If you have warnings in your code or notebook you can't be sure that the code
+  is doing exactly what you think it is doing</li>
+<li>For what we know your code might be deleting your hard-disk, moving money
+    from your account to mine, starting World War 3, ...</li>
+<li>You don't ever want to program by coincidence</li>
+<li>Typically the warnings are informative and tell us what's the issue and how to
+  fix it, so please fix your code</li>
+<li>If it's not obvious how to interpret or fix a warning file a bug, file a bug
+    reporting clearly a repro case and the error message</li>
+</ul>
+<h2 id="make-cells-idempotent">Make cells idempotent</h2>
+<ul>
+<li>Try to make a notebook cell able of being executed multiple times without
+  changing its output value, e.g.,</li>
+<li><em>Bad</em>
+    <code>df["id"] = df["id"] + 1</code><ul>
+<li>This computation is not idempotent, since if you execute it multiple times
+  is going to increment the column <code>id</code> at every iteration</li>
+</ul>
+</li>
+<li><em>Good</em>
+    <code>df["incremented_df"] = df["id"] + 1</code><ul>
+<li>A better approach is to always create a new "copy"</li>
+</ul>
+</li>
+<li>Another example:</li>
+<li><em>Bad</em>
+    <code>tmp = normalize(tmp)</code></li>
+<li><em>Good</em>
+    <code>tmp_after_normalize = normalize(tmp)</code><ul>
+<li>In this way it's easy to add another stage in the pipeline without
+  changing everything</li>
+<li>Of course the names <code>tmp_1</code>, <code>tmp_2</code> are a horrible idea since they are
+  not self-explanatory and adding a new stage screws up the numbering</li>
+</ul>
+</li>
+<li>For data frames and variables is a good idea to create copies of the data
+  along the way:
+  <code>df_without_1s = df[df["id"] != 1].copy()</code></li>
+</ul>
+<h2 id="always-look-at-the-discarded-data">Always look at the discarded data</h2>
+<ul>
+<li>Filtering the data is a risky operation since once the data is dropped, nobody
+  is going to go back and double check what exactly happened</li>
+<li>Everything downstream (e.g., all the results, all the conclusions, all the
+  decisions based on those conclusions) rely on the filtering being correct</li>
+<li>Any time there is a <code>dropna</code> or a filtering / masking operation, e.g.:
+  <code>compu_data = compu_data.dropna(subset=["CIK"])</code>
+  or
+  <code>selected_metrics = [...]
+  compu_data = compu_data[compu_data["item"].apply(lambda x : x in selected_metrics)]
+  compu_data = compu_data[compu_data["datadate"].apply(date_is_quarter_end)]</code></li>
+<li>Always count what percentage of the rows you dropped (e.g., do a back of the
+  envelope check that you are dropping what you would expect)
+  <code>import helpers.printing as hprint
+  ...
+  n_rows = compu_form_df.shape[0]
+  compu_form_df = compu_form_df.drop_duplicates()
+  n_rows_after = compu_form_df.shape[0]
+  _LOG.debug("After dropping duplicates kept: %s", hprint.perc(n_rows_after, n_rows))</code></li>
+<li>Make absolutely sure you are not dropping important data</li>
+<li>E.g., has the distribution of the data changed in the way you would expect?</li>
+</ul>
+<h2 id="use-a-progress-bar">Use a progress bar</h2>
+<ul>
+<li>Always use progress bars (even in notebooks) so that user can see how long it
+  will take for a certain computation.</li>
+<li>It is also possible to let <code>tqdm</code> automatically choose between console or
+  notebook versions by using
+  <code>from tqdm.autonotebook import tqdm</code></li>
+</ul>
+<h1 id="notebooks-and-libraries">Notebooks and libraries</h1>
+<ul>
+<li>It's ok to use functions in notebooks when building the analysis to leverage
+  notebook interactivity</li>
+<li>Once the notebook is "stable", often it's better to move the code in a
+  library, i.e., a python file.</li>
+<li>Make sure you add autoreload modules in <code>Imports</code> section
+  <code>%load_ext autoreload
+  %autoreload 2</code></li>
+<li>Otherwise, if you change a function in the lib, the notebook will not pull
+    this change and use the old version of the function</li>
+</ul>
+<h2 id="pros">Pros</h2>
+<ul>
+<li>The same notebook code can be used for different notebooks</li>
+<li>E.g., the function to read the data from disk is an obvious example</li>
+<li>More people can reuse the same code for different analyses</li>
+<li>If one changes the code in a library, Git can help tracking changes and
+  merging, while notebooks are difficult to diff / merge</li>
+<li>Cleaning up / commenting / untangling the code can help reason carefully about
+  the assumptions to find issues</li>
+<li>The notebook becomes more streamlined and easy to understand since now it's a
+  sequence of functions <code>do_this_and_that</code> and presenting the results</li>
+<li>One can speed up / parallelize analyses with multiprocessing</li>
+<li>Notebooks are not great for this</li>
+<li>E.g., when one does the analyses on a small subset of the data and then
+    wants to run on the entire large dataset</li>
+<li>The exploratory analysis can be moved towards modeling and then production</li>
+</ul>
+<h2 id="cons">Cons</h2>
+<ul>
+<li>One have to scroll back and forth between notebook and the libraries to
+  execute the cell with the functions and fix all the possible mistakes</li>
+</ul>
+<h1 id="recommendations-for-plots">Recommendations for plots</h1>
+<h2 id="use-the-proper-y-scale">Use the proper y-scale</h2>
+<ul>
+<li>If one value can vary from -1.0 to 1.0, force the y-scale between those limits
+  so that the values are absolutes, unless this would squash the plot</li>
+</ul>
+<h2 id="make-each-plot-self-explanatory">Make each plot self-explanatory</h2>
+<ul>
+<li>Make sure that each plot has a descriptive title, x and y label</li>
+<li>Explain the set-up of a plot / analysis</li>
+<li>E.g., what is the universe of stocks used? What is the period of time?</li>
+<li>Add this information also to the plots</li>
+</ul>
+<h2 id="avoid-wall-of-text-tables">Avoid wall-of-text tables</h2>
+<ul>
+<li>Try to use plots summarizing the results besides the raw results in a table</li>
+</ul>
+<h2 id="use-common-axes-to-allow-visual-comparisons">Use common axes to allow visual comparisons</h2>
+<ul>
+<li>Try to use same axes for multiple graphs when possible to allow visual
+  comparison between graphs</li>
+<li>If that's not possible or convenient make individual plots with different
+  scales and add a plot with multiple graphs inside on the same axis (e.g., with
+  y-log)</li>
+</ul>
+<h2 id="use-the-right-plot">Use the right plot</h2>
+<ul>
+<li>Pick the right type of graph to make your point</li>
+<li><code>pandas</code>, <code>seaborn</code>, <code>matplotlib</code> are your friends</li>
+</ul>
+<h1 id="useful-plugins">Useful plugins</h1>
+<ul>
+<li>You can access the extensions menu:</li>
+<li><code>Edit -&gt; nbextensions config</code></li>
+<li><code>http://localhost:XYZ/nbextensions/</code></li>
+</ul>
+<h2 id="vim-bindings">Vim bindings</h2>
+<ul>
+<li><a href="https://github.com/lambdalisue/jupyter-vim-binding/wiki/Installation">VIM binding</a>
+  will change your life</li>
+</ul>
+<h2 id="table-of-content">Table of content</h2>
+<ul>
+<li>To see the entire logical flow of the notebook, when you use the headers
+  properly</li>
+</ul>
+<h2 id="executetime">ExecuteTime</h2>
+<ul>
+<li>To see how long each cell takes to execute</li>
+</ul>
+<h2 id="spellchecker">Spellchecker</h2>
+<ul>
+<li>To improve your English!</li>
+</ul>
+<h2 id="autosavetime">AutoSaveTime</h2>
+<ul>
+<li>To save the code automatically every minute</li>
+</ul>
+<h2 id="notify">Notify</h2>
+<ul>
+<li>Show a browser notification when kernel becomes idle</li>
+</ul>
+<h2 id="jupytext">Jupytext</h2>
+<ul>
+<li>We use Jupytext as standard part of our development flow</li>
+<li>See <code>documentation/general/jupytext.md</code></li>
+</ul>
+<h2 id="gspread">Gspread</h2>
+<ul>
+<li>Allow to read g-sheets in Jupyter Notebook</li>
+<li>First, one needs to configure Google API, just follow the instructions from
+  <a href="https://docs.gspread.org/en/latest/oauth2.html#enable-api-access">here</a></li>
+<li>Useful links:</li>
+<li><a href="https://docs.gspread.org/en/latest/user-guide.html#examples-of-gspread-usage">Examples of gspread Usage</a></li>
+<li><a href="https://stackoverflow.com/questions/68721853/how-to-fix-google-sheets-api-has-not-been-used-in-project">Enabling Gsheet API</a></li>
+<li><a href="https://stackoverflow.com/questions/38949318/google-sheets-api-returns-the-caller-does-not-have-permission-when-using-serve">Adding service email if it’s not working</a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

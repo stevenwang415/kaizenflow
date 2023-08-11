@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>First Review Process - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Email/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../From_zero_to_modeling/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#first-review-process" class="nav-link">First Review Process</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#read-python-style-guide" class="nav-link">Read Python Style Guide</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#run-linter" class="nav-link">Run linter</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#compare-your-code-to-example-code" class="nav-link">Compare your code to example code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#save-reviewer-time" class="nav-link">Save Reviewer time</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">```</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#look-at-examples-of-the-first-reviews" class="nav-link">Look at examples of the first reviews</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="first-review-process">First Review Process</h1>
+<!-- toc -->
+
+<ul>
+<li><a href="#read-python-style-guide">Read Python Style Guide</a></li>
+<li><a href="#run-linter">Run linter</a></li>
+<li><a href="#compare-your-code-to-example-code">Compare your code to example code</a></li>
+<li><a href="#save-reviewer-time">Save Reviewer time</a></li>
+<li><a href="#assign-reviewers">Assign Reviewers</a></li>
+<li><a href="#mention-the-issue">Mention the issue</a></li>
+<li><a href="#resolve-conversations">Resolve conversations</a></li>
+<li><a href="#merge-master-to-your-branch">Merge master to your branch</a></li>
+<li><a href="#ask-for-reviews">Ask for reviews</a></li>
+<li><a href="#do-not-use-screenshots">Do not use screenshots</a></li>
+<li><a href="#report-bugs-correctly">Report bugs correctly</a></li>
+<li><a href="#look-at-examples-of-the-first-reviews">Look at examples of the first reviews</a></li>
+</ul>
+<!-- tocstop -->
+
+<p>We understand that receiving feedback on your code can be a difficult process,
+but it is an important part of our development workflow. Here we have gathered
+some helpful tips and resources to guide you through your first review.</p>
+<h2 id="read-python-style-guide">Read Python Style Guide</h2>
+<ul>
+<li>Before submitting your code for review, we highly recommend that you read the
+  <a href="../Coding_Style_Guide/">Python Style Guide</a>, which outlines the major
+  conventions and best practices for writing Python code.</li>
+<li>Adhering to these standards will help ensure that your code is easy to read,
+  maintain, and understand for other members of the team.</li>
+</ul>
+<h2 id="run-linter">Run linter</h2>
+<ul>
+<li>Linter is a tool that checks (and tries to fix automatically) your code for
+  syntax errors, style violations, and other issues.</li>
+<li>Run it on all the changed files to automatically catch any code issues before
+  filing any PR or before requesting a review!</li>
+<li>To be able to run the linter, you need to you need to set up your client first
+  since you're outside Docker:</li>
+<li>The instructions are available at
+    <a href="Sorrentum_development_setup.md.md">Sorrentum_development_setup.md</a></li>
+<li>In practice you need to have run
+    <code>&gt; source dev_scripts/setenv_amp.sh</code></li>
+<li>Run the linter with <code>invoke</code> command (which is abbreviated as <code>i</code>) and pass
+  all the files you need to lint in brackets after the <code>--files</code> option,
+  separated by a space:
+  ```<blockquote>
+<p>i lint --files "defi/tulip/implementation/order.py defi/tulip/implementation/order_matching.py"
+  ```</p>
+</blockquote>
+</li>
+<li>Output example:
+    <code>defi/tulip/implementation/order_matching.py:14: error: Cannot find implementation or library stub for module named 'defi.dao_cross'  [import]
+    defi/tulip/implementation/order_matching.py:69: error: Need type annotation for 'buy_heap' (hint: "buy_heap: List[&lt;type&gt;] = ...")  [var-annotated]
+    defi/tulip/implementation/order_matching.py:70: error: Need type annotation for 'sell_heap' (hint: "sell_heap: List[&lt;type&gt;] = ...")  [var-annotated]
+    ...</code></li>
+<li><code>i lint</code> has options for many workflows. E.g., you can automatically lint
+    all the files that you touched in your PR with <code>--branch</code>, the files in the
+    last commit with <code>--last-commit</code>. You can look at all the options with:
+    <code>&gt; i lint --help</code></li>
+<li>Fix the lints</li>
+<li>No need to obsessively fix all of them - just crucial and obvious ones</li>
+<li>Post unresolved lints in your PR so Reviewer could see them and know which
+    should be fixed and which are not</li>
+</ul>
+<h2 id="compare-your-code-to-example-code">Compare your code to example code</h2>
+<ul>
+<li>To get an idea of what well-formatted and well-organized code looks like, we
+  suggest taking a look at some examples of code that adhere to our standards.</li>
+<li>We try to maintain universal approaches to all the parts of the code, so when
+  looking at a code example, check for:</li>
+<li>Code style</li>
+<li>Docstrings and comments</li>
+<li>Type hints</li>
+<li>Containing directory structure</li>
+<li>Here are some links to example code:</li>
+<li>Classes and functions:<ul>
+<li><code>defi/tulip/implementation/order.py</code></li>
+<li><code>defi/tulip/implementation/order_matching.py</code></li>
+</ul>
+</li>
+<li>Unit tests:<ul>
+<li><code>defi/tulip/test/test_order_matching.py</code></li>
+<li><code>defi/tulip/test/test_optimize.py</code></li>
+</ul>
+</li>
+<li>Scripts:<ul>
+<li><code>dev_scripts/replace_text.py</code></li>
+<li><code>dev_scripts/lint_md.sh</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="save-reviewer-time">Save Reviewer time</h2>
+<h3 id="assign-reviewers">Assign Reviewers</h3>
+<ul>
+<li>Make sure to select a Reviewer in a corresponding GitHub field so he/she gets
+  notified</li>
+<li><img width="313" alt="" src="https://github.com/sorrentum/sorrentum/assets/31514660/f8534c49-bff6-4d59-9037-d70dc03d5ff9"></li>
+<li>Junior contributors should assign Team Leaders (e.g., Grisha, DanY, Samarth,
+    ...) to review their PR<ul>
+<li>Team Leaders will assign integrators (GP &amp; Paul) themselves after all
+  their comments are implemented</li>
+</ul>
+</li>
+<li>Ping the assigned Reviewer in the issue if nothing happens in 24 hours</li>
+<li>If you want to keep someone notified about changes in the PR but do not want
+    to make him/her a Reviewer, type <code>FYI @github_name</code> in a comment section</li>
+</ul>
+<h3 id="mention-the-issue">Mention the issue</h3>
+<ul>
+<li>Mention the corresponding issue in the PR description to ease the navigation</li>
+<li>E.g., see an
+    <a href="https://github.com/sorrentum/sorrentum/pull/288#issue-1729654983">example</a><ul>
+<li><img width="505" alt="" src="https://github.com/sorrentum/sorrentum/assets/31514660/69fbabec-300c-4f7c-94fc-45c5da5a6817"></li>
+</ul>
+</li>
+</ul>
+<h3 id="resolve-conversations">Resolve conversations</h3>
+<ul>
+<li>When you've implemented a comment from a Reviewer, press
+  <code>Resolve conversation</code> button so the Reviewer knows that you actually took
+  care of it</li>
+<li><img width="328" alt="" src="https://github.com/sorrentum/sorrentum/assets/31514660/a4c79d73-62bd-419b-b3cf-e8011621ba3c"></li>
+</ul>
+<h3 id="merge-master-to-your-branch">Merge master to your branch</h3>
+<ul>
+<li>Before any PR review request do <code>i git_merge_master</code> in order to keep the code
+  updated</li>
+<li>Resolve conflicts if there are any</li>
+<li>Do not forget to push it since this action is a commit itself</li>
+<li>Actually, a useful practice is to merge master to your branch every time you
+  to get back to work on it</li>
+<li>This way you make sure that your branch is always using a relevant code and
+    avoid huge merge conflicts</li>
+<li><strong>NEVER</strong> press <code>Squash and merge</code> button yourself</li>
+<li>You need to merge master branch to your branch - not vice verca!</li>
+<li>This is a strictly Team Leaders and Integrators responsibility</li>
+</ul>
+<h3 id="ask-for-reviews">Ask for reviews</h3>
+<ul>
+<li>When you've implemented all the comments and need another round of review:</li>
+<li>Press the circling arrows sign next to the Reviewer for the ping<ul>
+<li><img width="280" alt="" src="https://github.com/sorrentum/sorrentum/assets/31514660/4f924f4f-abab-40be-975d-a4fa81d9af3b"></li>
+</ul>
+</li>
+<li>Remove <code>PR_for_authors</code> and add <code>PR_for_reviewers</code> label (labels
+    <a href="https://github.com/sorrentum/sorrentum/blob/master/docs/GitHub_ZenHub_workflows.md#pr-labels">desc</a>)<ul>
+<li><img width="271" alt="" src="https://github.com/sorrentum/sorrentum/assets/31514660/3580bf34-dcba-431b-af5c-5ae65f7597c3"></li>
+</ul>
+</li>
+</ul>
+<h3 id="do-not-use-screenshots">Do not use screenshots</h3>
+<ul>
+<li>Stack trace and logs are much more convenient to use for debugging</li>
+<li>Screenshots are often too small to capture both input and return logs while
+  consuming a lot of basically useless memory</li>
+<li>The exceptions are plots and non-code information</li>
+<li>
+<p>Examples:</p>
+</li>
+<li>
+<p><em>Bad</em></p>
+<p><img width="677" alt="scree" src="https://github.com/sorrentum/sorrentum/assets/31514660/699cd1c5-53d2-403b-a0d7-96c66d4360ce"></p>
+</li>
+<li>
+<p><em>Good</em></p>
+<p>Input:</p>
+<p><code>type_ = "supply"
+supply_curve1 = ddcrsede.get_supply_demand_discrete_curve(
+    type_, supply_orders_df1
+)
+supply_curve1</code></p>
+<p>Error:</p>
+<h2 id="_1">```</h2>
+<p>NameError                                 Traceback (most recent call last)
+Cell In [5], line 2
+      1 type_ = "supply"
+----&gt; 2 supply_curve1 = ddcrsede.get_supply_demand_discrete_curve(
+      3     type_, supply_orders_df1
+      4 )
+      5 supply_curve1</p>
+<p>NameError: name 'ddcrsede' is not defined
+```</p>
+</li>
+</ul>
+<h3 id="report-bugs-correctly">Report bugs correctly</h3>
+<ul>
+<li>Whenever you face any errors put as much information about the issue as
+  possible, e.g.,:</li>
+<li>What you are trying to achieve</li>
+<li>Command line you ran, e.g.,
+    <code>&gt; i lint -f defi/tulip/test/test_dao_cross_sol.py</code></li>
+<li><strong>Copy-paste</strong> the error and the stack trace from the cmd line, <strong>no
+    screenshots</strong>, e.g.,
+    <code>Traceback (most recent call last):
+      File "/venv/bin/invoke", line 8, in &lt;module&gt;
+        sys.exit(program.run())
+      File "/venv/lib/python3.8/site-packages/invoke/program.py", line 373, in run
+        self.parse_collection()
+    ValueError: One and only one set-up config should be true:</code></li>
+<li>The log of the run<ul>
+<li>Maybe the same run using <code>-v DEBUG</code> to get more info on the problem</li>
+</ul>
+</li>
+<li>What the problem is</li>
+<li>Why the outcome is different from what you expected</li>
+<li>E.g. on how to report any issues<ul>
+<li>https://github.com/sorrentum/sorrentum/issues/370#issue-1782574355</li>
+</ul>
+</li>
+</ul>
+<h2 id="look-at-examples-of-the-first-reviews">Look at examples of the first reviews</h2>
+<ul>
+<li>It can be helpful to review some examples of previous first reviews to get an
+  idea of what common issues are and how to address them.</li>
+<li>Here are some links to a few "painful" first reviews:</li>
+<li>Adding unit tests:<ul>
+<li>https://github.com/sorrentum/sorrentum/pull/166</li>
+<li>https://github.com/sorrentum/sorrentum/pull/186</li>
+</ul>
+</li>
+<li>Writing scripts:<ul>
+<li>https://github.com/sorrentum/sorrentum/pull/267</li>
+<li>https://github.com/sorrentum/sorrentum/pull/276</li>
+</ul>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

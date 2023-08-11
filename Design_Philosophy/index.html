@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Design Philosophy - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../DataPull/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Development_workflow/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#design-philosophy" class="nav-link">Design Philosophy</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#measure-seven-times-cut-once-russian-proverb" class="nav-link">Measure seven times, cut once (Russian proverb)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hacker-laws" class="nav-link">Hacker laws</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#keep-it-simple" class="nav-link">Keep it simple</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tips-from-a-pro" class="nav-link">Tips from a pro</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#architecture" class="nav-link">Architecture</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#use-design-patterns" class="nav-link">Use design patterns</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#functions" class="nav-link">Functions</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#avoid-modifying-the-function-input" class="nav-link">Avoid modifying the function input</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#prefer-pure-functions-by-default" class="nav-link">Prefer pure functions by default</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="design-philosophy">Design Philosophy</h1>
+<!-- toc -->
+
+<ul>
+<li><a href="#design-philosophy">Design Philosophy</a></li>
+<li><a href="#measure-seven-times-cut-once-russian-proverb">Measure seven times, cut once (Russian proverb)</a></li>
+<li><a href="#hacker-laws">Hacker laws</a></li>
+<li><a href="#keep-it-simple">Keep it simple</a></li>
+<li><a href="#tips-from-a-pro">Tips from a pro</a><ul>
+<li><a href="#designing-software-systems-is-tricky">Designing software systems is tricky</a></li>
+<li><a href="#get-advice-early">Get Advice Early!</a></li>
+<li><a href="#interfaces">Interfaces</a></li>
+</ul>
+</li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#use-design-patterns">Use design patterns</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#avoid-modifying-the-function-input">Avoid modifying the function input</a></li>
+<li><a href="#prefer-pure-functions-by-default">Prefer pure functions by default</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="measure-seven-times-cut-once-russian-proverb">Measure seven times, cut once (Russian proverb)</h2>
+<ul>
+<li>Before doing any work, sit down and plan</li>
+<li>Describe somewhere <em>in writing</em> your high-level plan. Put it in a Google doc to make it easier to collaborate and review.<ul>
+<li>What should the code do?</li>
+<li>What are the functionalities you want to implement?</li>
+<li>What are the functionalities you don’t want to implement? (what are you
+  explicitly considering to be out-of-scope?)</li>
+<li>What is more important, what is less important? E.g., in terms of P0, P1,
+  P2</li>
+<li>What are the requirements/invariants?</li>
+<li>What are the semantics of the entities involved?</li>
+<li>What are the analyses, the comparisons, and the plots?</li>
+<li>What are the ideas (expressed without any code!)?</li>
+<li>ETA: Spend quality time thinking about it (e.g., 30 mins, 1 hr)</li>
+</ul>
+</li>
+<li>Review the plan<ul>
+<li>Look at the plan again with fresh eyes (e.g., go for a 5-min walk)</li>
+<li>Does the plan make sense?</li>
+<li>What can you remove?</li>
+<li>Can you make things simpler?</li>
+<li>What is not elegant?</li>
+<li>What entity is a special case of another?</li>
+<li>What is similar to what?</li>
+<li>ETA: Spend 30 mins thinking</li>
+</ul>
+</li>
+<li>Ask for someone to review the plan<ul>
+<li>Don’t be ashamed of asking for advice</li>
+</ul>
+</li>
+<li>Implement a design<ul>
+<li>Transform the plan into high-level code, e.g.,</li>
+<li>What are the objects / functions involved?</li>
+<li>What are the responsibilities of each class / function?</li>
+<li>What are the code invariants?</li>
+<li>What are the data structures?</li>
+<li>Write the interfaces</li>
+<li>Only the interfaces! Refrain from implementing the logic</li>
+<li>Comment the interfaces clearly</li>
+<li>Think of how the objects / functions interact (who does what, what is the data passed around)</li>
+<li>Sprinkle TODOs with ideas about potential problems, simpler approaches</li>
+<li>ETA: Spend 1/2 day, 1 day</li>
+</ul>
+</li>
+<li>Do a PR of the design</li>
+<li>
+<p>Once we converge on the design:</p>
+<ul>
+<li>Implement the functions</li>
+<li>Unit test</li>
+<li>PR</li>
+</ul>
+</li>
+<li>
+<p>Remember:</p>
+</li>
+<li>We want to do quick interactions: every day there is communication, update and discussion</li>
+<li>Do not disappear for one week and come back with something that makes sense only to you, or that you didn’t get buy-in from others on</li>
+</ul>
+<h2 id="hacker-laws">Hacker laws</h2>
+<ul>
+<li>A list of interesting "laws" (some are more rule of thumbs / heuristics) related to computing:</li>
+<li><a href="https://github.com/dwmkerr/hacker-laws">hacker-laws</a></li>
+</ul>
+<h2 id="keep-it-simple">Keep it simple</h2>
+<ul>
+<li>Follow the <a href="https://en.wikipedia.org/wiki/KISS_principle">KISS principle</a>.</li>
+<li>Pursue simple, elegant solutions. Some things are inherently complex, but even complex systems can (and should) be broken down into simple pieces.</li>
+<li>Designs that are simple are easier to</li>
+<li>Understand</li>
+<li>Modify</li>
+<li>Debug</li>
+</ul>
+<h2 id="tips-from-a-pro">Tips from a pro</h2>
+<ul>
+<li>Adapted from <a href="https://www.slideshare.net/adrianionel/software-engineering-advice-from-googles-jeff-dean-for-big-distributed-systems">these slides</a> from a Stanford talk given by <a href="https://en.wikipedia.org/wiki/Jeff_Dean_(computer_scientist)">Jeff Dean</a>
+  (the Chuck Norris of SWE)</li>
+</ul>
+<h3 id="designing-software-systems-is-tricky">Designing software systems is tricky</h3>
+<ul>
+<li>Need to balance:</li>
+<li>Simplicity [note that this comes first!]</li>
+<li>Scalability</li>
+<li>Performance</li>
+<li>Reliability</li>
+<li>Generality</li>
+<li>Features [note that this comes last!]</li>
+</ul>
+<h3 id="get-advice-early">Get Advice Early!</h3>
+<ul>
+<li>Get advice</li>
+<li>Before you write any code</li>
+<li>Before you write any lengthy design documents [notice the implicit assumption that there is a design documented!]</li>
+<li>Before writing a doc or code</li>
+<li>Jot down some rough ideas (a few paragraphs)</li>
+<li>Chat about the design with colleagues</li>
+<li>Consider discussing multiple potential designs</li>
+</ul>
+<h3 id="interfaces">Interfaces</h3>
+<ul>
+<li>Think carefully about interfaces in your system!</li>
+<li>Imagine other hypothetical clients trying to use your interface</li>
+<li>Document precisely, but avoid constraining the implementation</li>
+<li>Get feedback on your interfaces before implementing!</li>
+<li>The best way to learn is to look at well-designed interfaces</li>
+</ul>
+<h1 id="architecture">Architecture</h1>
+<h2 id="use-design-patterns">Use design patterns</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Software_design_pattern">Design patterns</a>
+  are idioms or recipes for solving problems that commonly appear in software
+  engineering across projects and even languages. The classical introduction to
+  design patterns is the so-called "Gang of Four" <a href="https://www.amazon.com/Design-Patterns-Object-Oriented-Addison-Wesley-Professional-ebook/dp/B000SEIBB8">book</a>.</li>
+<li>A free python-focused reference is available <a href="https://python-3-patterns-idioms-test.readthedocs.io/en/latest/">here</a>.</li>
+<li>Expanding your knowledge of design patterns is a worthwhile investment, because design patterns</li>
+<li>Capture elegant solutions that have been developed by many experienced programmers over a long period of time</li>
+<li>Provide a framework and reference point for software architecture</li>
+<li>Are widely used and well-known and therefore quickly recognized by skilled programmers</li>
+<li>In other words, by using design patterns, you</li>
+<li>Don’t have to re-invent the wheel</li>
+<li>Simplify the high-level picture of your code</li>
+<li>Make it easier for other people to understand your code</li>
+</ul>
+<h1 id="functions">Functions</h1>
+<h2 id="avoid-modifying-the-function-input">Avoid modifying the function input</h2>
+<ul>
+<li>If, for example, a function <code>f</code> accepts a dataframe <code>df</code> as its (sole) argument, then, ideally, <code>f(df)</code> will not modify <code>df</code>. If modifications are desired, then instead one can do:</li>
+</ul>
+<p><code>def f(df):
+    df = df.copy()
+    ...
+    return df</code>
+  in the function so that <code>f(df)</code> returns the desired new dataframe without modifying the dataframe that was passed in to the function.</p>
+<ul>
+<li>
+<p>In some cases the memory costs associated with the copy are prohibitive, and
+  so modifying in-place is appropriate. If such is the case, state it explicitly
+  in the docstring.</p>
+</li>
+<li>
+<p>Functions that do not modify the input are especially convenient to have in notebook settings. In particular, using them makes it easy to write blocks of code in a notebook that will return the same results when re-executed out of order.</p>
+</li>
+</ul>
+<h2 id="prefer-pure-functions-by-default">Prefer pure functions by default</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Pure_function">Pure functions</a>
+  have two key properties:</li>
+<li>If the function arguments do not change, then the return value returned does
+    not change (in contrast to, e.g., functions that rely upon global state)</li>
+<li>Function evaluation does not have
+    <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">side effects</a></li>
+<li>Some nice properties enjoyed by pure functions are:</li>
+<li>They are easy to understand and easy to test</li>
+<li>Using pure functions makes refactoring easier</li>
+<li>They allow <a href="https://en.wikipedia.org/wiki/Method_chaining">chaining</a>
+    in an elegant way</li>
+<li>They are often a natural choice for data manipulation and analysis</li>
+<li>They are convenient in notebooks</li>
+<li>Though it is good to develop an appreciation for <a href="https://en.wikipedia.org/wiki/Functional_programming">functional programming</a>, and we like to adopt that style when appropriate, we recognize that it is not pragmatic to dogmatically insist upon a functional style (especially in our domain and when using Python).</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

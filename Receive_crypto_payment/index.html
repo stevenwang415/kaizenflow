@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Receive crypto payment - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Reading_List/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Scrum_methodology/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#choose-a-crypto-wallet-type" class="nav-link">Choose a crypto wallet type</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#public-private-keys" class="nav-link">Public / private keys</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#what-do-people-in-the-team-use" class="nav-link">What do people in the team use</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#choose-a-crypto-currency-to-receive-money-in" class="nav-link">Choose a crypto currency to receive money in</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#send-a-crypto-wallet-address" class="nav-link">Send a crypto wallet address</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#do-a-test-transfer" class="nav-link">Do a test transfer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#cash-out-crypto" class="nav-link">Cash out crypto</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#bank-account" class="nav-link">Bank account</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cash" class="nav-link">Cash</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<!--ts-->
+<ul>
+<li><a href="#choose-a-crypto-wallet-type">Choose a crypto wallet type</a><ul>
+<li><a href="#public--private-keys">Public / private keys</a></li>
+<li><a href="#what-do-people-in-the-team-use">What do people in the team use</a><ul>
+<li><a href="#beginner">Beginner</a></li>
+<li><a href="#advanced">Advanced</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#choose-a-crypto-currency-to-receive-money-in">Choose a crypto currency to receive money in</a></li>
+<li><a href="#send-a-crypto-wallet-address">Send a crypto wallet address</a></li>
+<li><a href="#do-a-test-transfer">Do a test transfer</a></li>
+<li><a href="#cash-out-crypto">Cash out crypto</a><ul>
+<li><a href="#bank-account">Bank account</a></li>
+<li><a href="#cash">Cash</a></li>
+</ul>
+</li>
+</ul>
+<!--te-->
+
+<h1 id="choose-a-crypto-wallet-type">Choose a crypto wallet type</h1>
+<ul>
+<li>Https://academy.binance.com/en/articles/crypto-wallet-types-explained</li>
+<li>Https://www.blockchain-council.org/blockchain/types-of-crypto-wallets-explained/</li>
+</ul>
+<h2 id="public-private-keys">Public / private keys</h2>
+<p>See the explanation
+<a href="https://www.gemini.com/cryptopedia/public-private-keys-cryptography">here</a></p>
+<p>TLDR:</p>
+<ul>
+<li>Send a public key to receive a transaction, see it as a wallet address</li>
+<li>Private key is needed to prove ownership or spend the funds associated with
+  your public address, see it as a password</li>
+</ul>
+<h2 id="what-do-people-in-the-team-use">What do people in the team use</h2>
+<h3 id="beginner">Beginner</h3>
+<p>Mobile / desktop hot wallet <a href="https://www.exodus.com/">Exodus</a></p>
+<p>Pros:</p>
+<ul>
+<li>Easy to set up</li>
+<li>Has a mobile app which is easy to use</li>
+<li>Built-in exchange (e.g., allows to exchange BTC to ETH inside the app)</li>
+<li>Allows to sell crypto and receive fiat money to a bank account via the app,
+  see
+  <a href="https://www.exodus.com/support/article/2435-sell-crypto-moonpay#mobile">here</a></li>
+<li>Customer support</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>A swap may include a
+  <a href="https://www.exodus.com/support/article/1591-what-is-an-exchange-spread">spread</a></li>
+<li>As any hot wallet is vulnerable to hackers attacks</li>
+<li>It is not recommended to store significant amount of money</li>
+</ul>
+<h3 id="advanced">Advanced</h3>
+<p>If you are experienced and / or own a lot of crypto you might want to have a
+cold wallet on your laptop, holding the bulk of your bitcoin and transfer among
+different website on-line wallets.</p>
+<p>https://bitcoin.org/en/choose-your-wallet</p>
+<h1 id="choose-a-crypto-currency-to-receive-money-in">Choose a crypto currency to receive money in</h1>
+<ul>
+<li>One can either receive a payment in BTC or in one of the Stablecoins (USDT is
+  a preference)</li>
+<li>People in the team prefer to use Stablecoins since Stablecoins pursue price
+  stability</li>
+</ul>
+<h1 id="send-a-crypto-wallet-address">Send a crypto wallet address</h1>
+<p>Send your crypto wallet address to GP together with an invoice via email. E.g.,</p>
+<pre><code>Hi GP,
+
+Please find my invoice for the period [a, b] attached. I would like to receive the money in USDT ERC20.
+
+My crypto wallet address is: 0x5ce3d650703f745B9C0cf20E322204b00bF59205
+</code></pre>
+<h1 id="do-a-test-transfer">Do a test transfer</h1>
+<p>For the first time GP sends a test transfer (e.g., 100$) just to confirm that a
+wallet address provided works.</p>
+<p>After a wallet address is "verified" send the full amount (exluding the test
+transfer amount).</p>
+<h1 id="cash-out-crypto">Cash out crypto</h1>
+<h2 id="bank-account">Bank account</h2>
+<p>There are some 3rd party services that buy crypto money from you and send fiat
+money to your bank account</p>
+<p>E.g.,</p>
+<ul>
+<li><a href="https://www.exodus.com/support/article/2435-sell-crypto-moonpay#mobile">Built-in Exodus crypto withdrawal
+  service</a></li>
+<li><a href="https://help.coinbase.com/en/coinbase/trading-and-funding/buying-selling-or-converting-crypto/how-do-i-sell-or-cash-out-my-digital-currency">Coinbase cash out serivce</a></li>
+<li><a href="https://p2p.binance.com/en/trade/all-payments/USDT?fiat=USD">Binance P2P</a></li>
+</ul>
+<h2 id="cash">Cash</h2>
+<p>There are some crypto ATMs in the USA, see
+<a href="https://coinatmradar.com/country/226/bitcoin-atm-united-states/">here</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Buildmeister process - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Code_review/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#buildmeister-process" class="nav-link">Buildmeister process</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#general" class="nav-link">General</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#notification-system" class="nav-link">Notification system</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#buildmeister-instructions" class="nav-link">Buildmeister instructions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#post-mortem-analysis-tbd" class="nav-link">Post-mortem analysis (TBD)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="buildmeister-process">Buildmeister process</h1>
+<!-- toc -->
+
+<ul>
+<li><a href="#general">General</a></li>
+<li><a href="#notification-system">Notification system</a></li>
+<li><a href="#buildmeister-instructions">Buildmeister instructions</a><ul>
+<li><a href="#update_amp_submodule-fails"><code>update_amp_submodule</code> fails</a></li>
+</ul>
+</li>
+<li><a href="#post-mortem-analysis-tbd">Post-mortem analysis (TBD)</a></li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="general">General</h1>
+<ul>
+<li>Buildmeister rotates every 2 weeks</li>
+<li>To see who is the Buildmeister now refer to <a href="https://docs.google.com/spreadsheets/d/1Ab6a3BVeLX1l1B3_A6rNY9pHRsofeoCw2ip2dkQ6SdA/edit#gid=0"><span class="underline">Buildmeister gsheet</span></a></li>
+<li>Each rotation should be confirmed by a 'handshake' between the outgoing
+    Buildmeister and the new one in the related Telegram chat</li>
+<li>Buildmeister is responsible for:</li>
+<li>Pushing team members to fix broken tests</li>
+<li>Conducting post-mortem analysis<ul>
+<li>Why did the break happen?</li>
+<li>What can we avoid the problem, especially through process and automation</li>
+</ul>
+</li>
+<li>Testing workflows are available via github actions:</li>
+<li>Testing workflows that need to be checked:<ul>
+<li>cmamp:</li>
+<li><a href="https://github.com/cryptokaizen/cmamp/actions/workflows/fast_tests.yml"><span class="underline">Fast tests</span></a></li>
+<li><a href="https://github.com/cryptokaizen/cmamp/actions/workflows/slow_tests.yml"><span class="underline">Slow tests</span></a></li>
+<li>dev_tools:</li>
+<li><a href="https://github.com/alphamatic/dev_tools/actions/workflows/fast_tests.yml"><span class="underline">Fast tests</span></a></li>
+<li><a href="https://github.com/alphamatic/dev_tools/actions/workflows/slow_tests.yml"><span class="underline">Slow tests</span></a></li>
+</ul>
+</li>
+<li>Refer to .github dir in the repo for update schedule of GH actions</li>
+<li>Additional information about the <a href="https://github.com/sorrentum/sorrentum/blob/master/docs/Unit_tests.md"><span class="underline">tests</span></a> and <a href="https://docs.google.com/document/d/1M8I2qt5CuCw7537_1yayeZhIfh_VoeHT26h5jgSEm3Q/edit"><span class="underline">gdoc</span></a></li>
+</ul>
+<h1 id="notification-system">Notification system</h1>
+<ul>
+<li><code>@CK_cmamp_buildbot</code> notifies the team about breaks via Telegram channel <code>CK build notifications</code></li>
+<li>A notification contains:</li>
+<li>Failing tests type: fast/slow/super-slow</li>
+<li>Repo</li>
+<li>Branch</li>
+<li>Event</li>
+<li>Link to a failing run</li>
+</ul>
+<p>Example:
+- <img src="Buildmeister_process_figs/image1.png" style="width:3.40625in;height:1.82292in" /></p>
+<h1 id="buildmeister-instructions">Buildmeister instructions</h1>
+<ul>
+<li>You receive a break notification from <code>@CK_cmamp_buildbot</code></li>
+<li>Have a look at the message</li>
+<li>Do it right away, this is always your highest priority task</li>
+<li>
+<p>Notify the team</p>
+</li>
+<li>
+<p>Post on the <code>CK build notifications</code> Telegram channel what tests broke, e.g.,<br />
+<code>FAILED knowledge_graph/vendors/test/test_utils.py::TestClean::test_clean</code></p>
+</li>
+<li>If unsure about the cause of failure (chance that failure is temporary):<ul>
+<li>Do a quick run locally for failed test</li>
+<li>If test is specific and can not be run locally, rerun the regressions</li>
+</ul>
+</li>
+<li>Ask if somebody knows what is the problem<ul>
+<li>If you know who is in charge of that test (you can use <code>git blame</code>) ask
+    directly</li>
+</ul>
+</li>
+<li>If the offender says that it's fixing the bug right away, let him / her do it</li>
+<li>
+<p>Otherwise file a bug to track the issue</p>
+</li>
+<li>
+<p>File an Issue in GH / ZH to report the failing tests and the errors</p>
+</li>
+<li>Example:<br />
+<a href="https://github.com/cryptokaizen/cmamp/issues/4386"><span class="underline">https://app.zenhub.com/workspaces/cm-615371012ed326001e044788/issues/alphamatic/dev_tools/318</span></a></li>
+<li>Issue title template <code>Build fail - {repo} {test type} ({run number})</code><ul>
+<li>Example: <code>Build fail - Cmamp fast_tests (1442077107)</code></li>
+</ul>
+</li>
+<li>Paste the URL of the failing run<ul>
+<li>Example: <a href="https://github.com/alphamatic/dev_tools/actions/runs/1497955663"><span class="underline">https://github.com/alphamatic/dev_tools/actions/runs/1497955663</span></a></li>
+</ul>
+</li>
+<li>Provide as much information as possible to give an understanding of the
+    problem</li>
+<li>List all the tests with FAILED status in a github run, e.g.,<br />
+<code>FAILED knowledge_graph/vendors/test/test_p1_utils.py::TestClean::test_clean
+    FAILED knowledge_graph/vendors/nbsc/test/test_nbsc_utils.py::TestExposeNBSCMetadata::test_expose_nbsc_metadata</code></li>
+<li>Stack trace or part of it (if it's too large)<br />
+    ```
+    Traceback (most recent call last): File
+    "/.../automl/hypotheses/test/test*rh_generator.py", line 104, in test1
+    kg_metadata, * = p1ut.load_release(version="0.5.2") File
+    "/.../knowledge_graph/vendors/utils.py", line 53, in load_release % version,
+    File "/.../amp/helpers/dbg.py", line 335, in dassert_dir_exists _dfatal(txt,
+    msg, *args) File "/.../amp/helpers/dbg.py", line 97, in _dfatal
+    dfatal(dfatal_txt) File "/.../amp/helpers/dbg.py", line 48, in dfatal raise
+    assertion_type(ret) AssertionError:
+    ##############################################################################<ul>
+<li>Failed assertion * dir='/fsx/research/data/kg/releases/timeseries_db/v0.5.2'
+doesn't exist or it's not a dir The requested version 0.5.2 has no directory
+associated with it.
+```</li>
+</ul>
+</li>
+<li>Add the issue to the
+    <a href="https://app.zenhub.com/workspaces/cm-615371012ed326001e044788/issues/cryptokaizen/cmamp/167"><span class="underline">BUILD - Breaks</span></a> Epic so that we can track it</li>
+<li>If the failures are not connected to each other, file separate issues for each
+    of the potential root cause</li>
+<li>
+<p>Keep issues grouped according to the codebase organization</p>
+</li>
+<li>
+<p>Post the issue reference on Telegram channel CK build notifications</p>
+</li>
+<li>You can quickly discuss there who will take care of the broken tests, assign
+    that person</li>
+<li>You can use <code>git blame</code> to see who wrote the test</li>
+<li>
+<p>Otherwise, assign it to the person who can reroute</p>
+</li>
+<li>
+<p>Our policy is "fix it or revert"</p>
+</li>
+<li>
+<p>The build needs to go back to green within 1 hr</p>
+<ul>
+<li>Either the person responsible for the break fixes the bug within 1 hour</li>
+<li>Or you need to push the responsible person to disable the test</li>
+<li>Do not make the decision about disabling the test yourself!</li>
+<li>First, check with the responsible person, and if he / she is ok with
+  disabling, do it</li>
+<li>NB! Disabling the test is not the first choice, it's a measure of last
+  resort!</li>
+</ul>
+</li>
+<li>
+<p>Regularly check issues that belong to the Epic <a href="https://app.zenhub.com/workspaces/cm-615371012ed326001e044788/issues/cryptokaizen/cmamp/167"><span class="underline">BUILD - Breaks</span></a>.</p>
+</li>
+<li>You have to update the break issues if the problem was solved or partially
+    solved.</li>
+<li>
+<p>Pay special attention to the failures which resulted in disabling tests</p>
+</li>
+<li>
+<p>When your time of the Buildmeister duties is over, confirm the rotation with
+  the next responsible person in the related Telegram chat.</p>
+</li>
+</ul>
+<h3 id="update_amp_submodule-fails"><code>update_amp_submodule</code> fails</h3>
+<ul>
+<li>
+<p>When this happens, the first thing to do is attempt to update the <code>amp</code>
+  pointer manually</p>
+</li>
+<li>
+<p>Instructions:
+    <code>&gt; cd src/dev_tools1 
+    &gt; git checkout master 
+    &gt; git pull --recurse-submodules 
+    &gt; cd amp 
+    &gt; git checkout master 
+    &gt; git pull origin master 
+    &gt; cd .. 
+    &gt; git add "amp" 
+    &gt; git commit -m "Update amp pointer"</code>
+There is also an invoke target <code>git_roll_amp_forward</code> that does an equivalent
+operation</p>
+</li>
+</ul>
+<h1 id="post-mortem-analysis-tbd">Post-mortem analysis (TBD)</h1>
+<ul>
+<li>We want to understand on why builds are broken so that we can improve the
+  system to make it more robust</li>
+<li>In order to do that, we need to understand the failure modes of the system</li>
+<li>
+<p>For this reason we keep a log of all the issues and what was the root cause</p>
+</li>
+<li>
+<p>After each break fill the
+  <a href="https://docs.google.com/spreadsheets/d/1AajgLnRQka9-W8mKOkobg8QOzaEVOnIMlDi8wWVATeA/edit#gid=1363431255">Buildmeister spreadsheet sheet "Post-mortem breaks analysis"</a></p>
+</li>
+<li>
+<p><code>Date</code> column:</p>
+</li>
+<li>Enter the date when the break took place</li>
+<li>
+<p>Keep the bug ordered in reverse chronological order (i.e., most recent dates
+    first)</p>
+</li>
+<li>
+<p><code>Repo</code> column:</p>
+</li>
+<li>
+<p>Specify the repo where break occurred</p>
+<ul>
+<li><code>amp</code></li>
+<li>...</li>
+</ul>
+</li>
+<li>
+<p><code>Test type</code> column:</p>
+</li>
+<li>
+<p>Specify the type of the failing tests</p>
+<ul>
+<li>Fast</li>
+<li>Slow</li>
+<li>Super-slow</li>
+</ul>
+</li>
+<li>
+<p><code>Link</code> column:</p>
+</li>
+<li>
+<p>Provide a link to a failing run</p>
+</li>
+<li>
+<p><code>Reason</code> column:</p>
+</li>
+<li>
+<p>Specify the reason of the break</p>
+<ul>
+<li>Merged a branch with broken tests</li>
+<li>Master was not merged in a branch</li>
+<li>Merged broken slow tests without knowing that</li>
+<li>Underlying data changed</li>
+</ul>
+</li>
+<li>
+<p><code>Issue</code> column:</p>
+</li>
+<li>
+<p>Provide the link to the ZH issue with the break description</p>
+</li>
+<li>
+<p><code>Solution</code> column:</p>
+</li>
+<li>Provide the solution description of the problem<ul>
+<li>Problem that led to the break was solved</li>
+<li>Failing tests were disabled, i.e. problem was not solved</li>
+</ul>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

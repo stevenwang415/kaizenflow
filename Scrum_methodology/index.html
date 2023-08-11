@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Scrum Methodology - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Receive_crypto_payment/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Signing_up_for_Sorrentum/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#scrum-methodology" class="nav-link">Scrum Methodology</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#roles" class="nav-link">Roles</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#goal-of-scrum-methodology" class="nav-link">Goal of Scrum methodology</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#metaphor-for-the-roles-in-terms-of-a-race-car" class="nav-link">Metaphor for the roles in terms of a race car</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#scrummaster" class="nav-link">ScrumMaster</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#productowner" class="nav-link">ProductOwner</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#devteam" class="nav-link">DevTeam</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#artifacts" class="nav-link">Artifacts</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#product-backlog" class="nav-link">Product backlog</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#product-backlog-items" class="nav-link">Product backlog items</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#complexity-of-pbi" class="nav-link">Complexity of PBI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#high-priority-vs-lower-priority-tasks" class="nav-link">High-priority vs lower-priority tasks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sprint-backlog" class="nav-link">Sprint backlog</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#the-burndown" class="nav-link">The burndown</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#the-meetings" class="nav-link">The meetings</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#planning-meeting" class="nav-link">Planning meeting</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#part-one-of-sprint-planning-meeting" class="nav-link">Part one of sprint planning meeting</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#part-two-of-sprint-planning-meeting" class="nav-link">Part two of sprint planning meeting</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#daily-scrum" class="nav-link">Daily scrum</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#daily-scrum-questions" class="nav-link">Daily scrum: questions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#what-the-daily-scrum-is-not" class="nav-link">What the daily scrum is not</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sprint-review" class="nav-link">Sprint review</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sprint-retrospective" class="nav-link">Sprint retrospective</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sprint-retrospective-questions" class="nav-link">Sprint retrospective: questions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="scrum-methodology">Scrum Methodology</h1>
+<!-- toc -->
+<ul>
+<li><a href="#roles">Roles</a></li>
+<li><a href="#goal-of-scrum-methodology">Goal of Scrum methodology</a></li>
+<li><a href="#metaphor-for-the-roles-in-terms-of-a-race-car">Metaphor for the roles in terms of a race car</a></li>
+<li><a href="#scrummaster">ScrumMaster</a></li>
+<li><a href="#productowner">ProductOwner</a></li>
+<li><a href="#devteam">DevTeam</a></li>
+<li><a href="#artifacts">Artifacts</a></li>
+<li><a href="#product-backlog">Product backlog</a></li>
+<li><a href="#product-backlog-items">Product backlog items</a></li>
+<li><a href="#complexity-of-pbi">Complexity of PBI</a></li>
+<li><a href="#high-priority-vs-lower-priority-tasks">High-priority vs lower-priority tasks</a></li>
+<li><a href="#sprint-backlog">Sprint backlog</a></li>
+<li><a href="#the-burndown">The burndown</a></li>
+<li><a href="#the-meetings">The meetings</a></li>
+<li><a href="#planning-meeting">Planning meeting</a></li>
+<li><a href="#part-one-of-sprint-planning-meeting">Part one of sprint planning meeting</a></li>
+<li><a href="#part-two-of-sprint-planning-meeting">Part two of sprint planning meeting</a></li>
+<li><a href="#daily-scrum">Daily scrum</a></li>
+<li><a href="#daily-scrum-questions">Daily scrum: questions</a></li>
+<li><a href="#what-the-daily-scrum-is-not">What the daily scrum is not</a></li>
+<li><a href="#sprint-review">Sprint review</a></li>
+<li><a href="#sprint-retrospective">Sprint retrospective</a></li>
+<li><a href="#sprint-retrospective-questions">Sprint retrospective: questions</a></li>
+</ul>
+<!-- tocstop -->
+
+<ul>
+<li>From "Lacey, The Scrum Field Guide: Practical Advice for Your First Year,
+  2012"</li>
+</ul>
+<h1 id="roles">Roles</h1>
+<h2 id="goal-of-scrum-methodology">Goal of Scrum methodology</h2>
+<ul>
+<li>Work in the interests of customers and stakeholders to turn the vision into a
+  working product</li>
+</ul>
+<h2 id="metaphor-for-the-roles-in-terms-of-a-race-car">Metaphor for the roles in terms of a race car</h2>
+<ul>
+<li>
+<p>ProductOwner = driver</p>
+</li>
+<li>
+<p>DevTeam = engine</p>
+</li>
+<li>
+<p>ScrumMaster = lubricants and sensors</p>
+</li>
+</ul>
+<h2 id="scrummaster">ScrumMaster</h2>
+<ul>
+<li>
+<p>Identify when the team is not performing to its ability</p>
+</li>
+<li>
+<p>Assist in correcting the issues</p>
+</li>
+<li>
+<p>Notice non-verbal cues</p>
+</li>
+<li>
+<p>Is comfortable with conflict</p>
+</li>
+<li>
+<p>Can build trust and earn respect</p>
+</li>
+</ul>
+<h2 id="productowner">ProductOwner</h2>
+<ul>
+<li>
+<p>Represent the customers</p>
+</li>
+<li>
+<p>Point the car in the correct direction</p>
+</li>
+<li>
+<p>Adjust the car direction to stay on course</p>
+</li>
+<li>
+<p>Make decisions about official release</p>
+</li>
+<li>
+<p>Ultimately he is responsible for success or failure of the projects</p>
+</li>
+<li>
+<p>Decide:</p>
+</li>
+<li>
+<p>What is developed</p>
+</li>
+<li>
+<p>When it is developed</p>
+</li>
+<li>
+<p>Whether the product meets expectations</p>
+</li>
+</ul>
+<h2 id="devteam">DevTeam</h2>
+<ul>
+<li>
+<p>Aka Team, Development team, Core team</p>
+</li>
+<li>
+<p>Developers, testers, architects, designers</p>
+</li>
+<li>
+<p>Cross-functionality is a good thing</p>
+</li>
+<li>
+<p>The ideal team size is 6 plus / minus 2</p>
+</li>
+</ul>
+<h1 id="artifacts">Artifacts</h1>
+<h2 id="product-backlog">Product backlog</h2>
+<ul>
+<li>
+<p>= master list of all features and functionalities needed to implement the
+  vision into the product</p>
+</li>
+<li>
+<p>The ProductOwner keeps the backlog:</p>
+</li>
+<li>
+<p>Prioritized</p>
+</li>
+<li>
+<p>Up to date</p>
+</li>
+<li>
+<p>Clear</p>
+</li>
+<li>
+<p>The backlog is never complete:</p>
+</li>
+<li>
+<p>Items are added and removed</p>
+</li>
+<li>
+<p>Reordered based on priority, value, or risk</p>
+</li>
+</ul>
+<h2 id="product-backlog-items">Product backlog items</h2>
+<ul>
+<li>
+<p>Aka PBI</p>
+</li>
+<li>
+<p>E.g., bugs, features, enhancements, non-functional requirements</p>
+</li>
+</ul>
+<h2 id="complexity-of-pbi">Complexity of PBI</h2>
+<ul>
+<li>
+<p>ProductOwner and the DevTeam estimate the size of each task</p>
+</li>
+<li>
+<p>The complexity of each task can be expressed in different ways:</p>
+</li>
+<li>
+<p>Points</p>
+</li>
+<li>
+<p>T-shirt size (S, M, L, XL)</p>
+</li>
+</ul>
+<h2 id="high-priority-vs-lower-priority-tasks">High-priority vs lower-priority tasks</h2>
+<ul>
+<li>
+<p>High-priority stories should be small and clear</p>
+</li>
+<li>
+<p>So they can be brought into the sprint</p>
+</li>
+<li>
+<p>Lower-priority items can be large and fuzzy</p>
+</li>
+<li>
+<p>Bigger stories are decomposed into smaller chunks</p>
+</li>
+</ul>
+<h2 id="sprint-backlog">Sprint backlog</h2>
+<ul>
+<li>
+<p>= output of the planning meeting</p>
+</li>
+<li>
+<p>List of tasks that need to complete during the sprint</p>
+</li>
+<li>
+<p>Sprint backlog tasks have an estimate in hours</p>
+</li>
+<li>
+<p>The DevTeam keeps the sprint backlog up to date</p>
+</li>
+<li>
+<p>During a sprint</p>
+</li>
+<li>
+<p>New tasks are discovered</p>
+</li>
+<li>
+<p>Tasks are adjusted (in terms of description or estimated hours)</p>
+</li>
+<li>
+<p>Tasks are marked as done</p>
+</li>
+</ul>
+<h2 id="the-burndown">The burndown</h2>
+<ul>
+<li>
+<p>Communicate how much work is remaining and what is the team velocity</p>
+</li>
+<li>
+<p>It is updated at the end of each day</p>
+</li>
+<li>
+<p>Plot the number of hours remaining (y-axis) against the number of days
+  remaining (x-axis)</p>
+</li>
+</ul>
+<h1 id="the-meetings">The meetings</h1>
+<h2 id="planning-meeting">Planning meeting</h2>
+<ul>
+<li>
+<p>Each sprint begins with a sprint planning attended by the team, ScrumMaster,
+  ProductOwner</p>
+</li>
+<li>
+<p>Typically one needs two hours per number of weeks to plan the sprint</p>
+</li>
+<li>
+<p>For a 1-month sprint, 8 hours of meeting</p>
+</li>
+<li>
+<p>For 2-week sprint, 4 hours of meeting</p>
+</li>
+</ul>
+<h2 id="part-one-of-sprint-planning-meeting">Part one of sprint planning meeting</h2>
+<ul>
+<li>
+<p>Review of potential product backlog items for the sprint</p>
+</li>
+<li>
+<p>ProductOwner describes what the goal of the meeting is</p>
+</li>
+<li>
+<p>DevTeam asks questions to drive away ambiguity</p>
+</li>
+<li>
+<p>Outcome is one-sentence description of the desired outcome of the sprint</p>
+</li>
+</ul>
+<h2 id="part-two-of-sprint-planning-meeting">Part two of sprint planning meeting</h2>
+<ul>
+<li>
+<p>Many DevTeams discuss how to implement the tasks</p>
+</li>
+<li>
+<p>The ProductOwner doesn't need to be present</p>
+</li>
+<li>
+<p>The ScrumMaster can be present facilitating the process</p>
+</li>
+<li>
+<p>The DevTeam discusses and decides the implementation of the tasks</p>
+</li>
+<li>
+<p>Decompose backlog items into work tasks</p>
+</li>
+<li>
+<p>Estimate tasks in terms of hours</p>
+</li>
+</ul>
+<h2 id="daily-scrum">Daily scrum</h2>
+<ul>
+<li>
+<p>Aka daily stand-up</p>
+</li>
+<li>
+<p>Give the DevTeam the opportunity to sync daily, at the same time, and at the
+  same place</p>
+</li>
+</ul>
+<h2 id="daily-scrum-questions">Daily scrum: questions</h2>
+<ul>
+<li>
+<p>The 3 most frequent questions are:</p>
+</li>
+<li>
+<p>What have you accomplished since the last meeting?</p>
+</li>
+<li>
+<p>What will you accomplish today?</p>
+</li>
+<li>
+<p>What obstacles are in your way?</p>
+</li>
+</ul>
+<h2 id="what-the-daily-scrum-is-not">What the daily scrum is not</h2>
+<ul>
+<li>
+<p>The daily scrum is not a deep-dive problem-solving meeting</p>
+</li>
+<li>
+<p>Any other issues need to be taken offline</p>
+</li>
+<li>
+<p>It is not a status report meeting to the ScrumMaster</p>
+</li>
+<li>
+<p>The purpose is for the DevTeam members to talk to each other</p>
+</li>
+<li>
+<p>The ProductOwner is in "listen-only" mode</p>
+</li>
+</ul>
+<h2 id="sprint-review">Sprint review</h2>
+<ul>
+<li>
+<p>On the last day of the sprint, the DevTeam holds a sprint review</p>
+</li>
+<li>
+<p>Everybody should join</p>
+</li>
+<li>
+<p>ScrumMaster</p>
+</li>
+<li>
+<p>ProductOwner</p>
+</li>
+<li>
+<p>DevTeam</p>
+</li>
+<li>
+<p>Customers, key stakeholders</p>
+</li>
+<li>
+<p>Executives</p>
+</li>
+<li>
+<p>DevTeam</p>
+</li>
+<li>
+<p>Recaps the goal of the sprint</p>
+</li>
+<li>
+<p>Presents the work done</p>
+</li>
+<li>
+<p>Customers</p>
+</li>
+<li>
+<p>Review the progress made on the project</p>
+</li>
+<li>
+<p>Accept changes</p>
+</li>
+<li>
+<p>Ask for changes</p>
+</li>
+</ul>
+<h2 id="sprint-retrospective">Sprint retrospective</h2>
+<ul>
+<li>After the sprint review, the retrospective is a way to identify how to improve
+  process and execution</li>
+</ul>
+<h2 id="sprint-retrospective-questions">Sprint retrospective: questions</h2>
+<ul>
+<li>
+<p>What went well during the sprint?</p>
+</li>
+<li>
+<p>What could be improved in the next sprint?</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

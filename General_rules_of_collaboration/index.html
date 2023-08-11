@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>General Rules of Collaboration - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../From_zero_to_modeling/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../GitHub_ZenHub_workflows/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#general-rules-of-collaboration" class="nav-link">General Rules of Collaboration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ask-somebody-if-you-have-any-doubts" class="nav-link">Ask somebody if you have any doubts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ping-team-leaders-when-you-are-out-of-tasks" class="nav-link">Ping Team Leaders when you are out of tasks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#collaboration" class="nav-link">Collaboration</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#why-do-we-need-to-follow-this-handbook" class="nav-link">Why do we need to follow this handbook?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sync-ups" class="nav-link">Sync-ups</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#communication" class="nav-link">Communication</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#vacationsooto-time" class="nav-link">Vacations/OOTO time</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#improve-your-english" class="nav-link">Improve your English!</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="general-rules-of-collaboration">General Rules of Collaboration</h1>
+<!-- toc -->
+
+<ul>
+<li><a href="#ask-somebody-if-you-have-any-doubts">Ask somebody if you have any doubts</a></li>
+<li><a href="#ping-team-leaders-when-you-are-out-of-tasks">Ping Team Leaders when you are out of tasks</a></li>
+<li><a href="#collaboration">Collaboration</a></li>
+<li><a href="#why-do-we-need-to-follow-this-handbook">Why do we need to follow this handbook?</a><ul>
+<li><a href="#learning-from-each-other">Learning from each other</a></li>
+<li><a href="#consistency-and-process">Consistency and process</a></li>
+</ul>
+</li>
+<li><a href="#sync-ups">Sync-ups</a><ul>
+<li><a href="#all-hands-meetings">All-hands meetings</a></li>
+<li><a href="#technical-sync-ups">Technical sync-ups</a></li>
+<li><a href="#ad-hoc-meetings">Ad-hoc meetings</a></li>
+<li><a href="#org-emails">Org emails</a></li>
+<li><a href="#synchronization-point">Synchronization point</a></li>
+<li><a href="#morning-email">Morning email</a></li>
+</ul>
+</li>
+<li><a href="#communication">Communication</a><ul>
+<li><a href="#use-the-right-form-of-communication">Use the right form of communication</a></li>
+<li><a href="#dry-also-applies-to-documentation">DRY also applies to documentation</a></li>
+<li><a href="#avoid-write-once-code-and-research">Avoid write-once code and research</a></li>
+<li><a href="#consistency">Consistency</a></li>
+<li><a href="#training-period">Training period</a></li>
+<li><a href="#go-slowly-to-go-faster">Go slowly to go faster</a></li>
+</ul>
+</li>
+<li><a href="#improve-your-english">Improve your English!</a><ul>
+<li><a href="#study-an-english-grammar-book">Study an English grammar book</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="ask-somebody-if-you-have-any-doubts">Ask somebody if you have any doubts</h1>
+<ul>
+<li>If you have doubts on how to do something you want to do:</li>
+<li>Look in the <a href="/docs/README.md">documentation</a> and our
+    <a href="https://drive.google.com/drive/u/0/folders/1LXwKpmaFWJI-887IoA50sVC8-dw_1L8I">Google drive</a></li>
+<li>Google search is your friend</li>
+<li>Ask your team-members<ul>
+<li>Learn
+  <a href="http://www.catb.org/~esr/faqs/smart-questions.html">how to ask questions</a>
+  first</li>
+<li>Note that often people tell you his / her interpretation or their
+  workaround for a problem, which might not be the best approach, so be
+  careful and always think for yourself</li>
+<li>Don't hesitate to ask anyone, even GP &amp; Paul</li>
+</ul>
+</li>
+</ul>
+<h1 id="ping-team-leaders-when-you-are-out-of-tasks">Ping Team Leaders when you are out of tasks</h1>
+<ul>
+<li>When you're close to being out of tasks or all your ongoing PRs are waiting
+  for review and are close to being merged, feel free to ping us in the Telegram
+  chat to ask for more issues</li>
+<li>In this way, Team Leaders can quickly assign you another issue, before you run
+  out of work</li>
+<li>The goal is for everyone to have 2 issues to work on at the same time to avoid
+  getting blocked on us</li>
+</ul>
+<h1 id="collaboration">Collaboration</h1>
+<h2 id="why-do-we-need-to-follow-this-handbook">Why do we need to follow this handbook?</h2>
+<h3 id="learning-from-each-other">Learning from each other</h3>
+<ul>
+<li>Proper research and software engineering practices allow us to:</li>
+<li>Learn from each other</li>
+<li>Accumulate and distill the wisdom of experts</li>
+<li>Share lessons learned from our mistakes along the way</li>
+</ul>
+<h3 id="consistency-and-process">Consistency and process</h3>
+<ul>
+<li>Consistency is a crucial enabler to make teams faster</li>
+<li>Productivity increases when team members "work in the same way", i.e., there
+  is a single official way of performing a task, so that it's possible and easy
+  to:</li>
+<li>Re-use research and software components</li>
+<li>Help each other in debugging issues</li>
+<li>Add/transfer new people to teams</li>
+<li>Work on multiple projects simultaneously</li>
+<li>Learn from each other's experience and mistakes</li>
+<li>Review each other's work looking for errors and improvements</li>
+<li>...</li>
+<li>We are not going to discuss and debate the rationale, but instead assume the
+  above as self-evident truth</li>
+</ul>
+<h2 id="sync-ups">Sync-ups</h2>
+<ul>
+<li>We meet regularly every week and with different audiences to check on the
+  progress of the many projects we work on</li>
+</ul>
+<h3 id="all-hands-meetings">All-hands meetings</h3>
+<ul>
+<li>All-hands meeting on Mondays has the following goals:</li>
+<li>Summarize ongoing projects and their status<ul>
+<li>Review the ZenHub board and share the achieved milestones</li>
+<li>Discuss blocking tasks across projects</li>
+</ul>
+</li>
+<li>Discuss topics of general interest<ul>
+<li>E.g., organization, process</li>
+</ul>
+</li>
+<li>Talk about the team, hiring, customers</li>
+</ul>
+<h3 id="technical-sync-ups">Technical sync-ups</h3>
+<ul>
+<li>We meet one or two times per week for each of the projects (e.g., IM, WEB3)</li>
+<li>Please check your calendar to make sure the times work and the invited
+  participants are correct</li>
+<li>The people running the day-to-day project should update the meeting agenda in
+  the Gdoc</li>
+<li>Try to do it one day before so that everybody knows ahead of time what we
+    need to talk about and can come prepared</li>
+<li>Typically 2-3 issues are more than enough to fill one hour of discussion</li>
+<li>Give priority to tasks that are controversial, blocking, or finished</li>
+<li>No reason to linger on the successes or the easy stuff</li>
+<li>Send an email or tag a comment to Gdocs to broadcast the agenda</li>
+<li>It's ok to skip a meeting when the agenda is empty, or keep it short when
+  there is not much to discuss</li>
+<li>We don't have to fill one hour every time</li>
+</ul>
+<h3 id="ad-hoc-meetings">Ad-hoc meetings</h3>
+<ul>
+<li>Don't hesitate to ask for a quick meeting if you are unsure about:</li>
+<li>What exactly needs to be done in a GitHub Issue</li>
+<li>How to set-up something (e.g., environment, docker)</li>
+<li>Better safe than sorry</li>
+</ul>
+<h3 id="org-emails">Org emails</h3>
+<ul>
+<li>GP &amp; Paul may send emails with the subject starting with "ORG:" pointing to
+  interesting docs that are of general interest and relevance</li>
+<li>Please make sure to read the docs carefully and internalize what we suggest to
+  do and, especially, the rationale of the proposed solutions</li>
+<li>It's ok to acknowledge the email replying to <code>all@crypto-kaizen.com</code></li>
+</ul>
+<h3 id="synchronization-point">Synchronization point</h3>
+<ul>
+<li>We understand that most of the time everybody is head-down making progress on
+  their tasks</li>
+<li>This is great!</li>
+<li>However, sometimes we need synchronization:</li>
+<li>We need to stop the progress for a bit when requested</li>
+<li>Do an urgent task</li>
+<li>Acknowledge that the task is done</li>
+<li>Go back to pushing</li>
+<li>The procedure is:</li>
+<li>One of us (e.g., GP or Paul) creates a GitHub task, with:<ul>
+<li>Detailed instructions</li>
+<li>The list of all of the persons in charge of executing the task</li>
+</ul>
+</li>
+<li>Send a ping with the link on Telegram if the task is urgent</li>
+<li>Everybody does what's asked</li>
+<li>Mark on the GitHub task your name</li>
+</ul>
+<h3 id="morning-email">Morning email</h3>
+<ul>
+<li>First thing in the morning, send an email to <code>all@crypto-kaizen.com</code> if you
+  are <strong>full-time</strong> or to <code>contributors@crypto-kaizen.com</code> if you are <strong>interns
+  or collaborators</strong> to broadcast what you are planning to work on during that
+  day</li>
+<li>
+<p>If you are a collaborator or intern, follow the steps to join the mailing
+  group</p>
+</li>
+<li>
+<p>Visit the
+    <a href="https://groups.google.com/a/crypto-kaizen.com/g/contributors/">group</a></p>
+</li>
+<li>
+<p>Click “ask to join group”</p>
+<p><img alt="alt_text" src="../Morning_Emails_Figs/1_Visits.png" /></p>
+</li>
+<li>
+<p>Choose the following settings</p>
+<p><img alt="alt_text" src="../Morning_Emails_Figs/2_Settings.png" /></p>
+</li>
+<li>
+<p>Wait for the confirmation e-mail, one for the group managers will approve
+    your request. It should look like this:
+    <img alt="alt_text" src="../Morning_Emails_Figs/3_Request.png" /></p>
+</li>
+<li>
+<p>The goal is:</p>
+</li>
+<li>Think about what you are going to work on for the day, so you have a clear
+    plan</li>
+<li>Let Team Leaders know that you're going work today and what is your workload</li>
+<li>Make sure people blocked on your tasks know that / whether you are working
+    on those tasks</li>
+<li>Broadcast if you are blocked or if you don't have tasks</li>
+<li>The process is:</li>
+<li>Stick to using <code>TODO</code> (all caps) as the email subject, and the suggested
+    format, so that it's easy to filter emails and see what everybody is doing
+    today and what was going on in the previous days</li>
+<li>Specify how many hours are you going to work today<ul>
+<li>At Monday we also specify an estimation for a week</li>
+<li>No need to be too specific, give just an approximation</li>
+</ul>
+</li>
+<li>List all the tasks you're going to work during the day in priority order</li>
+<li>Add a hyperlink to the corresponding GitHub issue to each task in order to
+    ease the navigation<ul>
+<li><img width="381" alt="Снимок экрана 2023-05-29 в 02 59 55" src="https://github.com/sorrentum/sorrentum/assets/31514660/0d2fbba4-1e6c-4c39-9c04-7ffc4acdde81"></li>
+</ul>
+</li>
+<li>Communicate realistic ETAs<ul>
+<li>No reason to be optimistic: complex things take time to be done correctly</li>
+<li>Use a date in the usual format, e.g. 2023-05-10</li>
+<li>Add "today", "yesterday", "tomorrow", "end of week" so that it's easier to
+  parse</li>
+<li>If your original ETA needs to be updated (e.g., you thought that you would
+  have finished a task by yesterday, but it's taking longer) keep the older
+  ETA and add the new one, e.g.,
+  ```</li>
+<li>Create matching service #261<ul>
+<li>ETA: today (2023-05-25)</li>
+<li>Original ETA: yesterday (2023-05-24)</li>
+<li>Reason: it was more complex than what we thought
+        or</li>
+<li>Reason: I had to context switch to ...
+  ```</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Full example:</li>
+</ul>
+<p>```
+  Subject: TODO</p>
+<p>Hi everybody!</p>
+<p>This week I'm going to work ~40 hours</p>
+<p>Today I'm going to work ~8 hours on:</p>
+<ul>
+<li>Create matching service #261<ul>
+<li>ETA: today (2023-05-25)</li>
+<li>Original ETA: yesterday (2023-05-24)</li>
+<li>Reason: it was more complex than what we thought</li>
+</ul>
+</li>
+<li>SorrTask154: Create linear supply/demand curves #177<ul>
+<li>Implement requested changes and lead to merge</li>
+<li>ETA: tomorrow (2023-05-26)</li>
+</ul>
+</li>
+<li>Background tasks<ul>
+<li>Help Toma with creating TWAP/VWAP external adapter</li>
+<li>Publish documentation about Jupyter notebooks</li>
+<li>Technical sync-up with GP</li>
+</ul>
+</li>
+<li>Blocked on SorrTaskXYZ: Fix the world before it explodes #666</li>
+<li>
+<p>I'm running out of tasks!
+  ```</p>
+</li>
+<li>
+<p>Example image:</p>
+</li>
+</ul>
+<p><img alt="alt_text" src="../Morning_Emails_Figs/image.png" /></p>
+<h2 id="communication">Communication</h2>
+<h3 id="use-the-right-form-of-communication">Use the right form of communication</h3>
+<ul>
+<li>GitHub</li>
+<li>This is a major form of communication about technical details, so if you
+    have any questions about any particular issue or PR, discuss it there first,
+    e.g.:<ul>
+<li>Clarify issue specs</li>
+<li>Ask for help with debugging</li>
+<li>PR reviews</li>
+</ul>
+</li>
+<li>Asana</li>
+<li>Is concerned with all the non-technical issues in general, e.g.:<ul>
+<li>Work organization tasks</li>
+<li>Marketing and funding</li>
+<li>On-boarding process</li>
+</ul>
+</li>
+<li>Telegram</li>
+<li>This is our messenger for tight interaction (like a debug session) or
+    immediacy (e.g., "are you ready for the sync up?")</li>
+<li>Please, avoid discussing anything that can be discussed at GitHub or Asana<ul>
+<li>You often need to reference some comments and ideas in other places like
+  issues or messages and it is impossible to reference a Telegram message
+  outside of it</li>
+<li>It is much easier for all reviewers to catch up with all the thinking
+  process if it is logged at one place - Telegram is never a place for this</li>
+</ul>
+</li>
+<li>Jupyter notebooks</li>
+<li>Generally used to implement and describe research in detail<ul>
+<li><code>Master</code> notebooks are intended to be used as tools for demonstrative
+  analysis with visible stats and plots</li>
+</ul>
+</li>
+<li>Markdown files</li>
+<li>Document instructions, process, design closely related to code</li>
+<li>Notes that need to be close to the code itself</li>
+<li>Documents that need to be authoritative and long-term (e.g., reviewed,
+    tracked carefully)</li>
+<li>Google docs</li>
+<li>Document research in a descriptive way</li>
+<li>Explain what are the results independently on how they were reached</li>
+<li>Emails</li>
+<li><code>TODO</code>s primarily</li>
+<li>Rarely used for any other purpose</li>
+<li>Exceptions are to send non-urgent information to everybody</li>
+<li>There should be little replication among these forms of documentation</li>
+<li>It's not ok to file a bug and then ping on Telegram unless it's urgent</li>
+<li>Google Form</li>
+<li>When you want to ask a question anonymously use https://forms.gle/KMQgobqbyxhoTR9n6</li>
+<li>The question will be discussed at the all hands meeting</li>
+</ul>
+<h3 id="dry-also-applies-to-documentation">DRY also applies to documentation</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>! Do not Repeat
+  Yourself</li>
+<li>E.g., it's not a good idea to cut &amp; paste pieces of Gdocs in a GitHub bug,
+  rather just point to the relevant session on Gdocs from the GitHub bug</li>
+</ul>
+<h3 id="avoid-write-once-code-and-research">Avoid write-once code and research</h3>
+<ul>
+<li>Code and research is:</li>
+<li>Written once by a few people</li>
+<li>Read many times by many people</li>
+<li>Therefore it is essential to invest in the process of writing it heavily</li>
+</ul>
+<h3 id="consistency">Consistency</h3>
+<ul>
+<li>Coding/research across our group is done with consistent procedures, code
+  layout, and naming conventions</li>
+</ul>
+<h3 id="training-period">Training period</h3>
+<ul>
+<li>When you start working with us, you need to go through a period of training in
+  following the procedures and conventions described in this handbook</li>
+<li>We understand that this is a painful process for you:</li>
+<li>You need to change your old habits for new habits that you might disagree
+    with, or not comprehend</li>
+<li>You need to rework your code/notebooks that are already correctly working
+    until it adheres to the new conventions</li>
+<li>Understand that this is also a painful process for the reviewers:</li>
+<li>On top of their usual workload, they need to:<ul>
+<li>Invest time to explain to you how we do things</li>
+<li>Answer your questions</li>
+<li>Try to convey the sense of why these procedures are important</li>
+</ul>
+</li>
+<li>In a few words, nobody <em>enjoys</em> this process, and yet it is necessary,
+  mandatory, and even beneficial</li>
+<li>The process acquaintance can take several days if you are open and patient,
+  but months if you resist or treat it as an afterthought</li>
+<li>Our suggestion is to accept these rules as the existence of gravity</li>
+</ul>
+<h3 id="go-slowly-to-go-faster">Go slowly to go faster</h3>
+<ul>
+<li>Once you reach proficiency, you will be moving much faster and make up for the
+  invested time</li>
+<li>In fact, everyone will be much quicker, because everyone will be able to
+    look at any part of the codebase or any notebook and get oriented quickly</li>
+</ul>
+<h2 id="vacationsooto-time">Vacations/OOTO time</h2>
+<ul>
+<li>We use <a href="https://calendar.google.com/calendar/u/0?cid=Y19kYWRlOGU0NTUwMzhiMDllMmUzNDk1OWM2YzFkYWNhYTVmMTAzYjdjZmNiODQ1MDkzOWZhMTBkZDY2NWI3ZjJhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20">vacation calendar</a> to announce time off</li>
+<li>If you are a part of <em>@all</em> mailing group you should be able to access this calendar with your company email</li>
+<li>Create an event in it, whenever you have planned time off in order to let your colleagues know in advance</li>
+</ul>
+<h2 id="improve-your-english">Improve your English!</h2>
+<ul>
+<li>Make sure you have English checker in all your tools:</li>
+<li>Pycharm: you can use
+    <a href="https://plugins.jetbrains.com/plugin/12175-grazie">this</a> plugin</li>
+<li>Vim: <code>set spell</code></li>
+<li>Google docs: Grammarly</li>
+<li>GitHub and web: Grammarly</li>
+<li>Email client: TBD</li>
+<li>These tools are going to help you improve since you can see the mistake as you
+  go</li>
+<li>Feel free to use <a href="https://translate.google.com/">Google Translate</a> when you
+  are not sure about a word or a phrase</li>
+<li>What's the point of doing an excellent job if you can't communicate it?</li>
+</ul>
+<h3 id="study-an-english-grammar-book">Study an English grammar book</h3>
+<ul>
+<li>I used
+  <a href="https://www.amazon.com/English-Grammar-Use-Self-study-Intermediate/dp/0521189063/ref=sr_1_3?ie=UTF8&amp;qid=1536765989&amp;sr=8-3&amp;keywords=English+Grammar+in+Use">this</a>
+  when I learned English (late in life at 25 starting from
+  no-English-whatsoever, so you can do it too)</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

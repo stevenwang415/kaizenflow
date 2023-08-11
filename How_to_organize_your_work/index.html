@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Golden rules - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Sorrentum_development_setup/" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../How_to_integrate_repos/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Imports_and_packages/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#golden-rules" class="nav-link">Golden rules</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#roles" class="nav-link">Roles</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#tech-leads" class="nav-link">Tech leads</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#developers" class="nav-link">Developers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#how-to-organize-your-research" class="nav-link">How to organize your research</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#about-the-project-you-choose" class="nav-link">About the project you choose</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="golden-rules">Golden rules</h1>
+<ul>
+<li>Please <code>watch</code>, <code>star</code> and <code>fork</code> the repo.</li>
+<li>"Remember to treat others the way you want to be treated"</li>
+<li>Everybody comes from a different place and different skill-level, somebody has
+  a job, somebody has a full-time work</li>
+<li>Let's be polite, helpful, and supportive to each other</li>
+<li>I'll remind you an adage that I tell myself when my teammates drive me crazy:
+  "If you want to go fast, go alone; if you want to go far, go together"</li>
+<li>While being assigned a warm-up issue:</li>
+<li>We highly value the importance of following instructions to ensure efficient
+    task completion. We intentionally select straightforward and simple issues
+    as the first tasks for you. So as your first step you should put primary
+    focus on following the rules. Failure to do so can result in wasting more of
+    our time than saving it.</li>
+<li>A pledge to put in the time you committed and not disappear</li>
+<li>If we don't find that you can meaningfully contribute, we will give you a
+    warning and help you improve, we will suggest you how to fill in your
+    knowledge gaps, and start not putting the time to help since we don't have
+    enough resources</li>
+<li>If we decide that you are not ready to contribute, we will drop you, without
+    discussions: this is our sole decision for the good of the project and the
+    other contributors</li>
+<li>You can study and try again in 6 months</li>
+</ul>
+<h1 id="roles">Roles</h1>
+<h2 id="tech-leads">Tech leads</h2>
+<ul>
+<li>
+<p>Tech leads are contributors that have put more effort in Sorrentum and / or
+  have more experience in research and development</p>
+</li>
+<li>
+<p>The same project (e.g., Web3, Model, Arbitrage, NLP) can have multiple tech
+  leads</p>
+</li>
+<li>
+<p>One becomes a tech lead by technical excellence and dedication, and for no
+    other reason (e.g., seniority or degree)</p>
+</li>
+<li>
+<p>What tech leads do:</p>
+</li>
+<li>
+<p>Organize the work in their specific project together with GP / Paul and the
+    other full-time contributors</p>
+</li>
+<li>Help young team members, e.g., answering their questions, showing how we do
+    things</li>
+<li>Answer other team members questions, even in different projects</li>
+<li>Following our process, advertising it, and explaining it to new team members</li>
+<li>Understand what other people in your team are doing and coordinate with them</li>
+<li>
+<p>Make sure code, notebooks, and data are reused and shared</p>
+</li>
+<li>
+<p>What tech leads gain from being a tech lead:</p>
+</li>
+<li>Learn how to run a research / dev team</li>
+<li>Practice leadership skills (which mainly entail technical excellence and
+    patience)</li>
+<li>Work closely with GP / Paul</li>
+<li>Material benefits (e.g., higher Sorrentum bonuses once the reward system is
+    in place)</li>
+</ul>
+<h2 id="developers">Developers</h2>
+<ul>
+<li>People on teams working on the same project or on related projects can:</li>
+<li>work together on the same tasks (you can coordinate on GitHub, Telegram, or
+     do a Zoom)</li>
+<li>work together and split the work (still you need coordination)</li>
+<li>each can "replicate" the work so that both of you understand (no
+     coordination)</li>
+</ul>
+<h1 id="how-to-organize-your-research">How to organize your research</h1>
+<ul>
+<li>
+<p>The GH issues are for:</p>
+</li>
+<li>
+<p>reporting issues (e.g., "I am getting this error. What should I do?")</p>
+</li>
+<li>
+<p>updates (e.g., "I've made a bunch of progress and the details are in the
+    gdoc <link>)</p>
+</li>
+<li>
+<p>Commit the code in a PR (even the same PR) so that it's easier to review the
+  details together</p>
+</li>
+<li>
+<p>You can say "this is what I'm doing, what do you think?"</p>
+</li>
+<li>E.g., create a dir like 'SorrIssueXYZ_...' under
+    https://github.com/sorrentum/sorrentum/tree/master/sorrentum_sandbox/examples/ml_projects</li>
+<li>
+<p>E.g., see the PR under https://github.com/sorrentum/sorrentum/pull/31</p>
+</li>
+<li>
+<p>Work in the Docker container so that you use the standard flow and it's easy
+  to collaborate</p>
+</li>
+<li>
+<p>It's ok if you want to use your different flow, but still try to commit
+    often</p>
+</li>
+<li>
+<p>Save all the files in
+  <a href="https://drive.google.com/drive/u/0/folders/1eKj6u_cbQM0ZLZ4wRJ6xPM1oqIKwusUo">Project dir</a></p>
+</li>
+<li>
+<p>You can use <a href="https://www.google.com/drive/download/">Google Desktop</a> to keep
+    the dir synced locally on your computer so when you work on your project the
+    data is always in sync with what others view</p>
+</li>
+<li>
+<p>Keep a detailed research log in a Google Doc in the
+  <a href="https://drive.google.com/drive/u/0/folders/1eKj6u_cbQM0ZLZ4wRJ6xPM1oqIKwusUo">Project dir</a></p>
+</li>
+<li>
+<p>Document what you are doing, take screenshot, explain the results</p>
+</li>
+<li>
+<p>You can make progress <em>only</em> if you are organized and consistent</p>
+</li>
+<li>
+<p>Avoid emails any time possible</p>
+</li>
+<li>
+<p>Communication should happen on GitHub around specific Issues</p>
+</li>
+<li>
+<p>Read <a href="../General_rules_of_collaboration/">General Rules of Collaboration</a> for
+    more details</p>
+</li>
+<li>
+<p>Use Telegram chat when you are blocked on something</p>
+</li>
+<li>
+<p>Try to use GitHub Issues when not urgent to provide context</p>
+</li>
+<li>
+<p>Don't abuse Telegram, learning what is urgent and what's not</p>
+</li>
+<li>
+<p>On GitHub</p>
+</li>
+<li>
+<p>Provide context about the problem</p>
+</li>
+<li>Explain clearly what is the problem and what you are trying to do</li>
+<li>
+<p>Writing good bug updates is an art that takes time</p>
+</li>
+<li>
+<p>When you are done with your task and you need more work ping your project chat</p>
+</li>
+<li>
+<p>Work with your team (especially if you are a tech lead)</p>
+</li>
+<li>Answer other people questions</li>
+<li>Understand what other people in your team are doing</li>
+<li>Coordinate with them</li>
+<li>We can only make progress together as a team and not as a single person (get
+    over being shy)</li>
+</ul>
+<h1 id="about-the-project-you-choose">About the project you choose</h1>
+<ul>
+<li>We let you pick the project you like because we believe that one needs to be
+  excited about something to work on that through the late night, on Sat and
+  Sunday</li>
+<li>
+<p>On the other side, in 15 years of leading, mentoring, hiring, and firing
+  people I've never found one person not complaining about their project being
+  "boring"</p>
+</li>
+<li>
+<p>People working on exploratory analysis want to do machine learning</p>
+</li>
+<li>People want to do "machine learning" when 95% of the machine learning work
+    is building data pipelines and doing exploratory analysis</li>
+<li>People running models complain about that being uninspiring and would rather
+    to do exploratory analysis</li>
+<li>People writing code want to do machine learning (since that's the cool
+    stuff!)</li>
+<li>
+<p>Software engineers would like to be lawyers (since they want to interact
+    with people and computers), and lawyers want to be engineers (since they
+    can't take dealing with people anymore)</p>
+</li>
+<li>
+<p>The problem is that everything is interesting and boring at the same time. It
+  depends on your mindset</p>
+</li>
+<li>If you say "this is boring", it will be boring for sure</li>
+<li>If you look for finding interesting pieces in what you need to do, it will
+    become suddenly super interesting</li>
+<li>The people that succeed are the ones that do their best at their job no
+    matter what, that find joy in solving whatever problem brings value</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

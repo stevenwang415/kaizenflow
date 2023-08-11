@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Sorrentum development setup - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Buildmeister_process/" class="nav-link">Buildmeister process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Code_review/" class="nav-link">Code review</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Codebase_clean_up_scripts/" class="nav-link">Codebase clean-up scripts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Coding_Style_Guide/" class="nav-link">Sorrentum - Python Style Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Contributor_Scorecard/" class="nav-link">Contributor Scorecard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataFlow/" class="nav-link">DataFlow specification</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../DataPull/" class="nav-link">DataPull</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Design_Philosophy/" class="nav-link">Design Philosophy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Development_workflow/" class="nav-link">Development Workflow</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Documentation_about_guidelines/" class="nav-link">Documentation about guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Email/" class="nav-link">Email</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../First_review_process/" class="nav-link">First Review Process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../From_zero_to_modeling/" class="nav-link">From zero to modeling</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../General_rules_of_collaboration/" class="nav-link">General Rules of Collaboration</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../GitHub_ZenHub_workflows/" class="nav-link">GitHub/ZenHub workflows</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Git_workflow_and_best_practices/" class="nav-link">Git workflow and best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Glossary/" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Gsheet_into_pandas/" class="nav-link">Gsheet into pandas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../HTMLcov_server/" class="nav-link">HTMLcov server</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_integrate_repos/" class="nav-link">How to integrate repos</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../How_to_organize_your_work/" class="nav-link">Golden rules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Imports_and_packages/" class="nav-link">Imports and packages</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Jupyter_notebook_best_practices/" class="nav-link">Jupyter notebook best practices</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Reading_List/" class="nav-link">Reading List</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Receive_crypto_payment/" class="nav-link">Receive crypto payment</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Scrum_methodology/" class="nav-link">Scrum Methodology</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Signing_up_for_Sorrentum/" class="nav-link">Signing up to the project</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Sorrentum development setup</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Telegram/" class="nav-link">Telegram</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tools-PyCharm/" class="nav-link">Running PyCharm remotely</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Type_hints/" class="nav-link">Type hints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Unit_tests/" class="nav-link">Unit tests</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Visual_Studio_Code/" class="nav-link">Visual Studio Code</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Workflows/" class="nav-link">Navigate stack of failed test</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Signing_up_for_Sorrentum/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Telegram/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#supporting-os" class="nav-link">Supporting OS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#getting-a-first-issue-to-work-on-aka-warm-up-issue" class="nav-link">Getting a first issue to work on (aka warm-up issue)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#how-to-contribute-code-short-version" class="nav-link">How to contribute code (short version)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#cloning-the-code" class="nav-link">Cloning the code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#sorrentum-dev-docker-container-aka-dev-container-cmamp-container" class="nav-link">Sorrentum Dev Docker container (aka dev container, cmamp container)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#supporting-os">Supporting OS</a></li>
+<li><a href="#getting-a-first-issue-to-work-on-aka-warm-up-issue">Getting a first issue to work on (aka warm-up issue)</a></li>
+<li><a href="#how-to-contribute-code-short-version">How to contribute code (short version)</a></li>
+<li><a href="#cloning-the-code">Cloning the code</a></li>
+<li><a href="#sorrentum-dev-docker-container-aka-dev-container-cmamp-container">Sorrentum Dev Docker container (aka dev container, cmamp container)</a></li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="supporting-os">Supporting OS</h1>
+<ul>
+<li>We support Mac x86, Apple Silicon and Linux Ubuntu</li>
+<li>If you are using Windows,</li>
+<li>Install VMWare software</li>
+<li>Reference video for installing
+    <a href="https://www.youtube.com/watch?v=NhlhJFKmzpk&amp;ab_channel=ProgrammingKnowledge">ubuntu</a>
+    on VMWare software</li>
+<li>Make sure you set up your git and github</li>
+<li>Install
+    <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">docker</a>
+    on your Ubuntu VM</li>
+</ul>
+<h1 id="getting-a-first-issue-to-work-on-aka-warm-up-issue">Getting a first issue to work on (aka warm-up issue)</h1>
+<ul>
+<li>
+<p>The goal is to get comfortable with the development system</p>
+</li>
+<li>
+<p>We mark certain bugs as "good-as-first-bug"</p>
+</li>
+<li>
+<p>Typical warm-up issues are:</p>
+</li>
+<li>Write unit tests</li>
+<li>Copy-paste-modify (ideally refactor and then change) code</li>
+<li>Simple refactoring</li>
+</ul>
+<h1 id="how-to-contribute-code-short-version">How to contribute code (short version)</h1>
+<ul>
+<li>Make sure you are familiar with our coding style</li>
+<li>Create a branch of your assigned issues/bugs</li>
+<li>E.g., for a GitHub issue with the name "Expose the linter container to
+    Sorrentum contributors #63", the branch name should be
+    <code>SorrTask63_Expose_the_linter_container_to_Sorrentum_contributors</code></li>
+<li>This step is automated through the <code>invoke</code> flow (see docs for more info)</li>
+<li>Run the
+  <a href="https://github.com/sorrentum/sorrentum/blob/master/docs/First_review_process.md#run-linter">linter</a>
+  on your code before pushing.</li>
+<li>Do <code>git commit</code> and <code>git push</code> together so the latest changes are readily
+  visible</li>
+<li>Make sure your branch is up-to-date with the master branch</li>
+<li>Create a Pull Request (PR) from your branch</li>
+<li>Add your assigned reviewers for your PR so that they are informed of your PR</li>
+<li>After being reviewed, the PR will be merged to the master branch by your
+  reviewers</li>
+</ul>
+<h1 id="cloning-the-code">Cloning the code</h1>
+<ul>
+<li>All the source code should go under <code>~/src</code> (e.g., <code>/Users/&lt;YOUR_USER&gt;/src</code> on
+  a Mac PC)</li>
+<li>The path to the local repo folder should look like this
+  <code>~/src/{REPO_NAME}{IDX}</code> where</li>
+<li><code>IDX</code> is an integer</li>
+<li><code>REPO_NAME</code> is a name of the repository</li>
+<li>To clone the repo, use the cloning command described in
+  <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository">the Github official documentation</a></li>
+<li>Example of cloning command:</li>
+</ul>
+<p>```
+  # Sometimes it does not work.</p>
+<blockquote>
+<p>git clone git@github.com:sorrentum/sorrentum.git ~/src/sorrentum1
+  # Alternative command.
+git clone https://github.com/sorrentum/sorrentum.git ~/src/sorrentum1
+  ```</p>
+</blockquote>
+<h1 id="sorrentum-dev-docker-container-aka-dev-container-cmamp-container">Sorrentum Dev Docker container (aka dev container, cmamp container)</h1>
+<ul>
+<li>
+<p>Get familiar with Docker if you are not (e.g.,
+  https://docs.docker.com/get-started/overview/)</p>
+</li>
+<li>
+<p>We work in a Docker container that has all the required dependencies installed</p>
+</li>
+<li>
+<p>You can use PyCharm / VS code on your laptop to edit code, but you want to
+    run code inside the dev container since this makes sure everyone is running
+    with the same system, and it makes it easy to share code and reproduce
+    problems</p>
+</li>
+<li>
+<p>Install Docker Desktop on your PC</p>
+</li>
+<li>
+<p>Links:</p>
+<ul>
+<li><a href="https://docs.docker.com/desktop/install/mac-install/">Mac</a></li>
+<li><a href="https://docs.docker.com/desktop/install/linux-install/">Linux</a></li>
+<li><a href="https://docs.docker.com/desktop/install/windows-install/">Windows</a></li>
+</ul>
+</li>
+<li>
+<p>Check the installation by running:</p>
+<p>```</p>
+<blockquote>
+<p>docker pull hello-world
+Using default tag: latest
+latest: Pulling from library/hello-world
+Digest: sha256:fc6cf906cbfa013e80938cdf0bb199fbdbb86d6e3e013783e5a766f50f5dbce0
+Status: Image is up to date for hello-world:latest
+docker.io/library/hello-world:latest
+```</p>
+</blockquote>
+</li>
+<li>
+<p>Common problems with Docker</p>
+</li>
+<li>
+<p>Mac DNS problem, try step 5 from the
+    <a href="https://medium.com/freethreads/mac-os-docker-error-response-from-daemon-net-http-request-canceled-while-waiting-for-connection-7d1069eb4ca9">article</a>
+    and repeat the cmd below:</p>
+<p>```</p>
+<blockquote>
+<p>docker pull hello-world
+Error response from daemon: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+```</p>
+</blockquote>
+</li>
+<li>
+<p>Linux sudo problem, see
+    <a href="https://stackoverflow.com/questions/48568172/docker-sock-permission-denied">here</a>
+    for the solution</p>
+<p>```</p>
+<blockquote>
+<p>docker pull hello-world
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get   http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/json: dial unix /var/run/docker.sock: connect: permission denied
+```</p>
+</blockquote>
+</li>
+<li>
+<p>Thin environment</p>
+</li>
+<li>
+<p>Build the thin environment; this is done once</p>
+<p>```</p>
+<blockquote>
+<p>source dev_scripts/client_setup/build.sh
+ ```</p>
+</blockquote>
+</li>
+<li>
+<p>Activate the thin environment; make sure it is always activated</p>
+<p>```</p>
+<blockquote>
+<p>source dev_scripts/setenv_amp.sh
+ ```</p>
+</blockquote>
+</li>
+<li>
+<p>If you see output like this, your environment is successfully built! If not
+     and you encounter any issues, please post them under your designated
+     on-boarding issue</p>
+<p><code>alias sp='echo '\''source ~/.profile'\''; source ~/.profile'
+ alias vi='/usr/bin/vi'
+ alias vim='/usr/bin/vi'
+ alias vimdiff='/usr/bin/vi -d'
+ alias vip='vim -c "source ~/.vimrc_priv"'
+ alias w='which'
+ ==&gt; SUCCESS &lt;==</code></p>
+</li>
+<li>
+<p>Docker image</p>
+</li>
+<li>
+<p>Pull the latest cmamp image; this is done once</p>
+<p>```</p>
+<blockquote>
+<p>i docker_pull
+ or
+docker pull sorrentum/cmamp:latest
+ ```</p>
+</blockquote>
+</li>
+<li>
+<p>Pull the latest dev_tools image; this is done onec</p>
+<p>```</p>
+<blockquote>
+<p>i docker_pull_dev_tools
+ or
+docker pull sorrentum/dev_tools:prod
+ ```</p>
+</blockquote>
+</li>
+<li>
+<p>Git</p>
+</li>
+<li>
+<p>Get the latest version of <code>master</code></p>
+<p>```
+ # To update your feature branch with the latest changes from master run
+ # the cmd below from a feature branch, i.e. not from master.</p>
+<blockquote>
+<p>i git_merge_master
+ # If you are on <code>master</code> just pull the remote changes.
+i git_pull
+ ```</p>
+</blockquote>
+</li>
+<li>
+<p>Basic Docker commands</p>
+</li>
+<li>
+<p>Start a Docker container</p>
+<p>```</p>
+<blockquote>
+<p>i docker_bash
+ ```</p>
+</blockquote>
+</li>
+</ul>
+<p>Ignore all the warnings that do not prevent you from running the tests, e.g.,</p>
+<p><code>WARNING: The AM_AWS_ACCESS_KEY_ID variable is not set. Defaulting to a blank string.
+  WARNING: The AM_AWS_DEFAULT_REGION variable is not set. Defaulting to a blank string.
+  WARNING: The AM_AWS_SECRET_ACCESS_KEY variable is not set. Defaulting to a blank string.
+  WARNING: The AM_FORCE_TEST_FAIL variable is not set. Defaulting to a blank string.
+  WARNING: The CK_AWS_ACCESS_KEY_ID variable is not set. Defaulting to a blank string.
+  WARNING: The CK_AWS_DEFAULT_REGION variable is not set. Defaulting to a blank string.
+  WARNING: The CK_AWS_SECRET_ACCESS_KEY variable is not set. Defaulting to a blank string.
+  WARNING: The CK_TELEGRAM_TOKEN variable is not set. Defaulting to a blank string.</code></p>
+<p>```</p>
+<hr />
+<p>This code is not in sync with the container:
+  code_version='1.4.1' != container_version='1.4.0'</p>
+<hr />
+<p>You need to:
+  - merge origin/master into your branch with <code>invoke git_merge_master</code>
+  - pull the latest container with <code>invoke docker_pull</code>
+  ```</p>
+<ol>
+<li>
+<p>Start a Jupyter server</p>
+<p>```</p>
+<blockquote>
+<p>i docker_jupyter
+ ```</p>
+</blockquote>
+</li>
+</ol>
+<p>To open a Jupyter notebook in a local web-browser:</p>
+<ul>
+<li>In the output from the cmd above find an assigned port, e.g.,
+    <code>[I 14:52:26.824 NotebookApp] http://0044e866de8d:10091/</code> -&gt; port is <code>10091</code></li>
+<li>Add the port to the link like so: <code>http://localhost:10091/</code> or
+    <code>http://127.0.0.1:10091</code></li>
+<li>Copy-paste the link into a web-browser and update the page</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
